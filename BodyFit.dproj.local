@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/09/09 06:40:06.000.451,=C:\Users\jaira\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/10/31 11:15:27.000.630,=C:\Users\jaira\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/10/31 11:15:51.000.718,=C:\Users\jaira\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 12:51:44.000.003,=C:\Users\jaira\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/11/26 11:46:54.000.425,=C:\Users\jaira\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/11 06:57:27.000.419,=C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/15 00:19:13.000.422,=C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/19 20:16:18.000.555,=C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/03/19 20:50:07.000.396,C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\UnitPrincipal.pas</Transaction>
+    <Transaction>2024/03/19 20:50:07.000.396,C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.fmx=C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\UnitPrincipal.fmx</Transaction>
+    <Transaction>2024/03/19 20:50:14.000.070,C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\BodyFit.dproj</Transaction>
+    <Transaction>2024/03/19 20:54:43.010,D:\Projetos\Delphi\BodyFit\UnitPrincipal.fmx=C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\UnitPrincipal.fmx</Transaction>
+    <Transaction>2024/03/19 20:54:43.010,D:\Projetos\Delphi\BodyFit\UnitPrincipal.pas=C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\UnitPrincipal.pas</Transaction>
+    <Transaction>2024/03/19 20:54:57.655,D:\Projetos\Delphi\BodyFit\BodyFit.dproj=C:\Users\Jair\OneDrive\Documentos\Embarcadero\Studio\Projects\BodyFit.dproj</Transaction>
+    <Transaction>2024/03/19 21:06:58.380,=D:\Projetos\Delphi\BodyFit\Unit2.pas</Transaction>
+    <Transaction>2024/03/19 21:20:17.872,D:\Projetos\Delphi\BodyFit\UnitCliente.fmx=D:\Projetos\Delphi\BodyFit\Unit2.fmx</Transaction>
+    <Transaction>2024/03/19 21:20:17.872,D:\Projetos\Delphi\BodyFit\UnitCliente.pas=D:\Projetos\Delphi\BodyFit\Unit2.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android="RQCT700DW3M" Android64="RQCT700DW3M"/>
+	</ActiveMobileDevice>
+</BorlandProject>

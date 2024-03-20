@@ -1,0 +1,63 @@
+unit UnitCliente;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts, FMX.TabControl;
+
+type
+  TFrmCliente = class(TForm)
+    Rectangle1: TRectangle;
+    Label1: TLabel;
+    Image1: TImage;
+    TabControl: TTabControl;
+    tbMenuCliente: TTabItem;
+    tbIncCli: TTabItem;
+    tbDelCli: TTabItem;
+    Image5: TImage;
+    Layout2: TLayout;
+    Layout1: TLayout;
+    rectCliente: TRectangle;
+    Rectangle3: TRectangle;
+    Image2: TImage;
+    btnCliente: TSpeedButton;
+    rectConfig: TRectangle;
+    Rectangle4: TRectangle;
+    Image3: TImage;
+    btnConfig: TSpeedButton;
+    rectBioimped: TRectangle;
+    Rectangle6: TRectangle;
+    Image4: TImage;
+    btnBioimped: TSpeedButton;
+    procedure Image5Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCliente: TFrmCliente;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrmCliente.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := TCloseAction.caFree;
+  FrmCliente := nil;
+end;
+
+procedure TFrmCliente.Image5Click(Sender: TObject);
+begin
+  if not TabControl.TabIndex = 0 then
+    TabControl.GotoVisibleTab(0)
+  else
+    Close;
+end;
+
+end.

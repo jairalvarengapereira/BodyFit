@@ -1,0 +1,42 @@
+unit UnitPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
+  FMX.Objects, FMX.Controls.Presentation, FMX.StdCtrls;
+
+type
+  TFrmPrincipal = class(TForm)
+    Rectangle1: TRectangle;
+    Label1: TLabel;
+    Image1: TImage;
+    Layout1: TLayout;
+    rectMenuCliente: TRectangle;
+    Rectangle3: TRectangle;
+    rectMenuConfig: TRectangle;
+    Rectangle5: TRectangle;
+    rectMenuBioimp: TRectangle;
+    Rectangle7: TRectangle;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
+    Clientes: TLabel;
+    Label3: TLabel;
+    Label2: TLabel;
+    SpeedButton1: TSpeedButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+
+end.
