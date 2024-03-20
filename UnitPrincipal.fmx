@@ -2,18 +2,18 @@ object FrmPrincipal: TFrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 584
-  ClientWidth = 312
+  ClientHeight = 600
+  ClientWidth = 300
   Fill.Kind = Solid
   Position = MainFormCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
-  DesignerMasterStyle = 0
+  DesignerMasterStyle = 3
   object Rectangle1: TRectangle
     Align = Top
     Fill.Kind = None
-    Size.Width = 312.000000000000000000
+    Size.Width = 300.000000000000000000
     Size.Height = 57.000000000000000000
     Size.PlatformDefault = False
     Stroke.Color = xFF948B6D
@@ -21,7 +21,7 @@ object FrmPrincipal: TFrmPrincipal
       Align = Contents
       StyledSettings = [Family]
       Locked = True
-      Size.Width = 312.000000000000000000
+      Size.Width = 300.000000000000000000
       Size.Height = 57.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Size = 18.000000000000000000
@@ -5228,9 +5228,7 @@ object FrmPrincipal: TFrmPrincipal
     end
   end
   object Layout1: TLayout
-    Align = Scale
-    Position.X = 21.000000000000000000
-    Position.Y = 203.000000000000000000
+    Align = Center
     Size.Width = 269.000000000000000000
     Size.Height = 235.000000000000000000
     Size.PlatformDefault = False
@@ -5577,13 +5575,14 @@ object FrmPrincipal: TFrmPrincipal
         Align = Contents
         StyledSettings = [Family]
         Size.Width = 269.000000000000000000
-        Size.Height = 50.737594604492190000
+        Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         Text = 'Clientes'
         TextSettings.Font.Size = 20.000000000000000000
         TextSettings.Font.StyleExt = {00060000000000000004000000}
         TextSettings.FontColor = claWhite
         TextSettings.Trimming = None
+        OnClick = btnClienteClick
       end
     end
     object rectConfig: TRectangle
@@ -6165,7 +6164,7 @@ object FrmPrincipal: TFrmPrincipal
         Align = Contents
         StyledSettings = [Family]
         Size.Width = 269.000000000000000000
-        Size.Height = 51.000000000000000000
+        Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         Text = 'Confgura'#231#227'o'
         TextSettings.Font.Size = 20.000000000000000000
@@ -6524,7 +6523,7 @@ object FrmPrincipal: TFrmPrincipal
         Align = Contents
         StyledSettings = [Family]
         Size.Width = 271.000000000000000000
-        Size.Height = 51.000000000000000000
+        Size.Height = 48.000000000000000000
         Size.PlatformDefault = False
         Text = 'Bioimped'#226'ncia'
         TextSettings.Font.Size = 20.000000000000000000

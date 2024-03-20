@@ -2,19 +2,20 @@ object FrmCliente: TFrmCliente
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 572
-  ClientWidth = 376
+  ClientHeight = 600
+  ClientWidth = 300
   Fill.Kind = Solid
   Position = MainFormCenter
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnClose = FormClose
-  DesignerMasterStyle = 0
+  OnShow = FormShow
+  DesignerMasterStyle = 3
   object Rectangle1: TRectangle
     Align = Top
     Fill.Kind = None
-    Size.Width = 376.000000000000000000
+    Size.Width = 300.000000000000000000
     Size.Height = 57.000000000000000000
     Size.PlatformDefault = False
     Stroke.Color = xFF948B6D
@@ -22,7 +23,7 @@ object FrmCliente: TFrmCliente
       Align = Contents
       StyledSettings = [Family]
       Locked = True
-      Size.Width = 376.000000000000000000
+      Size.Width = 300.000000000000000000
       Size.Height = 57.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Size = 18.000000000000000000
@@ -45077,7 +45078,7 @@ object FrmCliente: TFrmCliente
         end>
       Align = Right
       Margins.Right = 10.000000000000000000
-      Position.X = 316.000000000000000000
+      Position.X = 240.000000000000000000
       Size.Width = 50.000000000000000000
       Size.Height = 57.000000000000000000
       Size.PlatformDefault = False
@@ -45086,36 +45087,37 @@ object FrmCliente: TFrmCliente
   end
   object TabControl: TTabControl
     Align = Client
-    Size.Width = 376.000000000000000000
-    Size.Height = 515.000000000000000000
+    Size.Width = 300.000000000000000000
+    Size.Height = 543.000000000000000000
     Size.PlatformDefault = False
-    TabIndex = 0
+    TabHeight = 49.000000000000000000
+    TabIndex = 2
     TabOrder = 1
     TabPosition = None
     Sizes = (
-      376s
-      515s
-      376s
-      515s
-      376s
-      515s)
-    object tbMenuCliente: TTabItem
+      300s
+      543s
+      300s
+      543s
+      300s
+      543s)
+    object tbMenu: TTabItem
       CustomIcon = <
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
-      Text = 'tbMenuCliente'
+      Text = 'tbMenu'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
       object Layout1: TLayout
-        Align = Scale
-        Position.X = 45.415683746337890000
-        Position.Y = 140.000000000000000000
-        Size.Width = 284.112396240234400000
+        Align = Center
+        Size.Width = 269.000000000000000000
         Size.Height = 235.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
@@ -45142,7 +45144,7 @@ object FrmCliente: TFrmCliente
           Fill.Gradient.StartPosition.Y = 0.500000000000000000
           Fill.Gradient.StopPosition.X = 1.000000000000000000
           Fill.Gradient.StopPosition.Y = 0.500000000000000000
-          Size.Width = 284.112396240234400000
+          Size.Width = 269.000000000000000000
           Size.Height = 50.737594604492190000
           Size.PlatformDefault = False
           Stroke.Color = xFF948B6D
@@ -45156,7 +45158,7 @@ object FrmCliente: TFrmCliente
             Margins.Top = 3.000000000000000000
             Margins.Right = 3.000000000000000000
             Margins.Bottom = 3.000000000000000000
-            Position.X = 231.112396240234400000
+            Position.X = 216.000000000000000000
             Position.Y = 3.000000000000000000
             Size.Width = 50.000000000000000000
             Size.Height = 44.737594604492190000
@@ -45396,16 +45398,18 @@ object FrmCliente: TFrmCliente
             end
           end
           object btnCliente: TSpeedButton
+            Tag = 1
             Align = Contents
             StyledSettings = [Family]
-            Size.Width = 284.112396240234400000
-            Size.Height = 50.737594604492190000
+            Size.Width = 269.000000000000000000
+            Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             Text = 'Incluir / Alterar'
             TextSettings.Font.Size = 20.000000000000000000
             TextSettings.Font.StyleExt = {00060000000000000004000000}
             TextSettings.FontColor = claWhite
             TextSettings.Trimming = None
+            OnClick = btnClienteClick
           end
         end
         object rectConfig: TRectangle
@@ -45432,7 +45436,7 @@ object FrmCliente: TFrmCliente
           Fill.Gradient.StopPosition.X = 1.000000000000000000
           Fill.Gradient.StopPosition.Y = 0.500000000000000000
           Position.Y = 184.000000000000000000
-          Size.Width = 284.112396240234400000
+          Size.Width = 269.000000000000000000
           Size.Height = 51.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFF948B6D
@@ -45446,7 +45450,7 @@ object FrmCliente: TFrmCliente
             Margins.Top = 3.000000000000000000
             Margins.Right = 3.000000000000000000
             Margins.Bottom = 3.000000000000000000
-            Position.X = 231.112396240234400000
+            Position.X = 216.000000000000000000
             Position.Y = 3.000000000000000000
             Size.Width = 50.000000000000000000
             Size.Height = 45.000000000000000000
@@ -45622,16 +45626,18 @@ object FrmCliente: TFrmCliente
             end
           end
           object btnConfig: TSpeedButton
+            Tag = 3
             Align = Contents
             StyledSettings = [Family]
-            Size.Width = 284.112396240234400000
-            Size.Height = 51.000000000000000000
+            Size.Width = 269.000000000000000000
+            Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             Text = 'Ranking'
             TextSettings.Font.Size = 20.000000000000000000
             TextSettings.Font.StyleExt = {00060000000000000004000000}
             TextSettings.FontColor = claWhite
             TextSettings.Trimming = None
+            OnClick = btnClienteClick
           end
         end
         object rectBioimped: TRectangle
@@ -45658,7 +45664,7 @@ object FrmCliente: TFrmCliente
           Fill.Gradient.StopPosition.X = 1.000000000000000000
           Fill.Gradient.StopPosition.Y = 0.500000000000000000
           Position.Y = 91.737594604492190000
-          Size.Width = 284.112396240234400000
+          Size.Width = 269.000000000000000000
           Size.Height = 51.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFF948B6D
@@ -45672,7 +45678,7 @@ object FrmCliente: TFrmCliente
             Margins.Top = 3.000000000000000000
             Margins.Right = 3.000000000000000000
             Margins.Bottom = 3.000000000000000000
-            Position.X = 231.112396240234400000
+            Position.X = 216.000000000000000000
             Position.Y = 3.000000000000000000
             Size.Width = 50.000000000000000000
             Size.Height = 45.000000000000000000
@@ -45944,21 +45950,23 @@ object FrmCliente: TFrmCliente
             end
           end
           object btnBioimped: TSpeedButton
+            Tag = 2
             Align = Contents
             StyledSettings = [Family]
-            Size.Width = 284.112396240234400000
-            Size.Height = 51.000000000000000000
+            Size.Width = 269.000000000000000000
+            Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             Text = 'Excluir'
             TextSettings.Font.Size = 20.000000000000000000
             TextSettings.Font.StyleExt = {00060000000000000004000000}
             TextSettings.FontColor = claWhite
             TextSettings.Trimming = None
+            OnClick = btnClienteClick
           end
         end
       end
     end
-    object tbIncCli: TTabItem
+    object tbAddCli: TTabItem
       CustomIcon = <
         item
         end>
@@ -45969,7 +45977,9 @@ object FrmCliente: TFrmCliente
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
-      Text = 'tbIncCli'
+      Text = 'tbAddCli'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
       object Layout2: TLayout
         Align = Center
         Size.Width = 273.000000000000000000
@@ -45990,7 +46000,7 @@ object FrmCliente: TFrmCliente
             Align = Client
             TabOrder = 0
             Size.Width = 273.000000000000000000
-            Size.Height = 30.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'Nome'
           end
@@ -46011,7 +46021,7 @@ object FrmCliente: TFrmCliente
             Align = Client
             TabOrder = 0
             Size.Width = 273.000000000000000000
-            Size.Height = 30.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'Endere'#231'o'
           end
@@ -46031,8 +46041,9 @@ object FrmCliente: TFrmCliente
             Touch.InteractiveGestures = [LongTap, DoubleTap]
             Align = Client
             TabOrder = 0
+            KeyboardType = NamePhonePad
             Size.Width = 273.000000000000000000
-            Size.Height = 30.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'Whatsapp'
           end
@@ -46052,54 +46063,69 @@ object FrmCliente: TFrmCliente
             Touch.InteractiveGestures = [LongTap, DoubleTap]
             Align = Client
             TabOrder = 0
+            KeyboardType = EmailAddress
             Size.Width = 273.000000000000000000
-            Size.Height = 30.000000000000000000
+            Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TextPrompt = 'E-mail'
           end
         end
-        object Rectangle5: TRectangle
-          Align = Bottom
-          Fill.Kind = Gradient
-          Fill.Gradient.Points = <
-            item
-              Color = xFF948B6C
-              Offset = 0.750617265701293900
-            end
-            item
-              Color = claWhite
-              Offset = 1.000000000000000000
-            end
-            item
-              Color = x00946C6C
-              Offset = 1.296296238899231000
-            end
-            item
-              Color = xFF946C6C
-              Offset = 1.296296238899231000
-            end>
-          Fill.Gradient.StartPosition.Y = 0.500000000000000000
-          Fill.Gradient.StopPosition.X = 1.000000000000000000
-          Fill.Gradient.StopPosition.Y = 0.500000000000000000
-          Position.Y = 331.000000000000000000
+        object Rectangle11: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Margins.Top = 20.000000000000000000
+          Position.Y = 250.000000000000000000
           Size.Width = 273.000000000000000000
-          Size.Height = 51.000000000000000000
+          Size.Height = 30.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFF948B6D
-          XRadius = 24.500000000000000000
-          YRadius = 24.500000000000000000
+          XRadius = 4.000000000000000000
+          YRadius = 4.000000000000000000
+          object Edit5: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 0
+            KeyboardType = NumberPad
+            Size.Width = 273.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'Data Nascimento'
+          end
+        end
+        object Rectangle12: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Margins.Top = 20.000000000000000000
+          Position.Y = 200.000000000000000000
+          Size.Width = 273.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = xFF948B6D
+          XRadius = 4.000000000000000000
+          YRadius = 4.000000000000000000
+          object Edit6: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 0
+            KeyboardType = NumberPad
+            Size.Width = 273.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'CPF'
+          end
+        end
+        object lytBotoes: TLayout
+          Align = Bottom
+          Position.Y = 332.000000000000000000
+          Size.Width = 273.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
           object Rectangle10: TRectangle
-            Align = Right
+            Align = Center
             Fill.Color = xFF948B6D
-            Locked = True
-            HitTest = False
-            Margins.Top = 3.000000000000000000
-            Margins.Right = 3.000000000000000000
-            Margins.Bottom = 3.000000000000000000
-            Position.X = 220.000000000000000000
-            Position.Y = 3.000000000000000000
             Size.Width = 50.000000000000000000
-            Size.Height = 45.000000000000000000
+            Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             Stroke.Color = xFF948B6D
             XRadius = 21.500000000000000000
@@ -46245,68 +46271,92 @@ object FrmCliente: TFrmCliente
               Align = Client
               Locked = True
               HitTest = False
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+          object Rectangle5: TRectangle
+            Align = Left
+            Fill.Color = xFF948B6D
+            Margins.Left = 50.000000000000000000
+            Position.X = 50.000000000000000000
+            Size.Width = 50.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = xFF948B6D
+            XRadius = 21.500000000000000000
+            YRadius = 21.500000000000000000
+            object Image7: TImage
+              MultiResBitmap.Height = 225
+              MultiResBitmap.Width = 225
+              MultiResBitmap = <
+                item
+                  Width = 225
+                  Height = 225
+                  PNG = {
+                    89504E470D0A1A0A0000000D49484452000000E1000000E108060000003EB3D2
+                    7A0000000473424954080808087C0864880000055549444154789CEDDDD972D4
+                    48100550B5F9FF3F86681E9A9AF1D29BA4DA32EB9C571CD1CA9B37657004B06D
+                    0000000000000000000000000000000000000000000000000000000000000000
+                    0000000000000000002F5D463F400BD7EBF5FAE8D72E974BCA9933596D7FA906
+                    7AB6BCEF5F7AB95C3E9A3E0CBB5DAFD7DFDBB6FD7AE76B331D639A41761CE07F
+                    322D32BA95F7976288230B2CB22C32B2D5F7177E80330B2C322C322AFBDB367F
+                    2EDAEA1481FDE47E13FA0D527B89D1DFA891D8DDFF7C27FCC49BB90F397FE508
+                    BF5190B6E4FB9323BC4351DA90EB7D8EF00185A94B9E8F39C22714A70E393EE7
+                    085F50A073E4F75AD81FEB16BD961CF947E0A3D8CD7B327C27FCD3E343BCD1F7
+                    E9985797FDB714FA0D52F43C90E86FDD1EEC639FF00314163F077BD82FC51085
+                    028C25FF63D20C5228C218723F2ED5308542F425EF73D20D5428461F723E2FE5
+                    508582B425DF3AD20E56284A1B72AD27F57085C2D425CFBAD20F58284E1D72AC
+                    6F89210B053A477E6D2C3368A148C7C8AD9DA5862D146A1F79B5B5DCC08562BD
+                    474EED2D3974A160CFC9A78F65072F14ED3EB9F4B3F4F085C27D258FBE960FA0
+                    50BC1B39F427844F562FE0EAF38F22886F562DE2AA73CF401877AC56C8D5E69D
+                    8D401E58A598ABCC3933A13C91BDA0D9E78B42302F642D6AD6B92212CE1BB215
+                    36DB3CD109E84D598A9B658E4C84B443F402477FFEAC04B553D422477DEE1508
+                    EB8068858EF6BCAB11D841518A1DE5395726B413662FF8ECCFC78DE04E9AB5E8
+                    B33E173F09AF82D90A3FDBF3F09C002B99A5F8B33C07EF136245A30F60F4E773
+                    8C202B1B75080E302E6136D0FB201C606C026DA4E761F4E200DB106A43990ED1
+                    01B623D8C6321CA2036C4BB81D443E4407D89E803B8978880EB00F217714E910
+                    1D603F82EE2CC2213AC0BE843DC0CC87E800FB13F820331EA2031C43E803CD74
+                    880E701CC10F36C3213AC0B1843F819187E800C7B380498C38440738074B9888
+                    BF0DB1268B9884EF84EBB28409F833E1DA2C60303F1D45F803CD708085431C47
+                    F083CC748085431C43E803CC78808543EC4FE09DCD7C808543EC4BD81D4538C0
+                    C221F623E84E221D60E110FB107207110FB07088ED09B8B1C8075838C4B684DB
+                    5086032C1C623B826D24D301160EB18D8FD10F9051D6BF0D91F1C532036FB6CA
+                    FCAF4CEC25CC8A461FC2E8CFE718415632CB01CCF21CBC4F8815CC56FCD99E87
+                    E70478D2AC859FF5B9F8497827CC5EF4D99F8F1BC11D14A5E0519E7365423B20
+                    5AB1A33DEF6A04B653D442477DEE15086B87E8458EFEFC5909EA4D590A9C658E
+                    4C84F4866CC5CD364F74027A216B61B3CE1591709EC85ED4ECF3452198075629
+                    E82A73CE4C2877AC56CCD5E69D8D40BE59B590ABCE3D03617CB27A11579F7F14
+                    41FCA3803772E84F089BE27D278FBE960F40E1EE934B3F4B0FAF68CFC9A78F65
+                    0757B0F7C8A9BD258756AC7DE4D5D672032BD431726B67A96115E91CF9B5B1CC
+                    A00A54871CEB5B6248C5A94B9E75A51F5061DA906B3DA9875394B6E45B47DAC1
+                    14A40F399F977228C5E84BDEE7A41B4821C690FB71A9865184B1E47F4C9A4114
+                    600EF6B05F8A212C7E2EF6B1CFC7E80738EB7ABDFEEEF5591916DE43E77F3FB5
+                    DBFE5B097F84DBB6FDEAF1210E709F8E7975D97F4BA18BD5EBB73D0EF0383B7A
+                    2DC377C2A6222F7706F27BCD113EA14075C8F13947F880E2D425CFC71CE11D0A
+                    D3865CEF7384DF284A5BF2FDC9117EA2207DC8F9ABF061D4FA11B862F4677737
+                    BE136EF1971895DC6F528470E68DAA08E3ADBEBFF00314471699618159ACBCBF
+                    34BF1DDDB9906B960566F16F1F7F767E7D0A6906F9ECD95B35D3F2B2B23F0000
+                    0000000000000000000000000000000000000000000000000000000000000000
+                    000000000000801FFE02FC6D69C64695F54B0000000049454E44AE426082}
+                  FileName = 'D:\Projetos\Delphi\BodyFit\Imagens\cancel.png'
+                end>
+              Align = Client
+              Locked = True
+              HitTest = False
               Margins.Left = 2.000000000000000000
               Margins.Top = 2.000000000000000000
               Margins.Right = 2.000000000000000000
               Margins.Bottom = 2.000000000000000000
               Size.Width = 46.000000000000000000
-              Size.Height = 41.000000000000000000
+              Size.Height = 46.000000000000000000
               Size.PlatformDefault = False
             end
-          end
-          object SpeedButton1: TSpeedButton
-            Align = Contents
-            StyledSettings = [Family]
-            Size.Width = 273.000000000000000000
-            Size.Height = 51.000000000000000000
-            Size.PlatformDefault = False
-            Text = 'Salvar'
-            TextSettings.Font.Size = 20.000000000000000000
-            TextSettings.Font.StyleExt = {00060000000000000004000000}
-            TextSettings.FontColor = claWhite
-            TextSettings.Trimming = None
-          end
-        end
-        object Rectangle11: TRectangle
-          Align = Top
-          Fill.Kind = None
-          Margins.Top = 20.000000000000000000
-          Position.Y = 250.000000000000000000
-          Size.Width = 273.000000000000000000
-          Size.Height = 30.000000000000000000
-          Size.PlatformDefault = False
-          Stroke.Color = xFF948B6D
-          XRadius = 4.000000000000000000
-          YRadius = 4.000000000000000000
-          object Edit5: TEdit
-            Touch.InteractiveGestures = [LongTap, DoubleTap]
-            Align = Client
-            TabOrder = 0
-            Size.Width = 273.000000000000000000
-            Size.Height = 30.000000000000000000
-            Size.PlatformDefault = False
-            TextPrompt = 'Data Nascimento'
-          end
-        end
-        object Rectangle12: TRectangle
-          Align = Top
-          Fill.Kind = None
-          Margins.Top = 20.000000000000000000
-          Position.Y = 200.000000000000000000
-          Size.Width = 273.000000000000000000
-          Size.Height = 30.000000000000000000
-          Size.PlatformDefault = False
-          Stroke.Color = xFF948B6D
-          XRadius = 4.000000000000000000
-          YRadius = 4.000000000000000000
-          object Edit6: TEdit
-            Touch.InteractiveGestures = [LongTap, DoubleTap]
-            Align = Client
-            TabOrder = 0
-            Size.Width = 273.000000000000000000
-            Size.Height = 30.000000000000000000
-            Size.PlatformDefault = False
-            TextPrompt = 'CPF'
           end
         end
       end
@@ -46316,39 +46366,72 @@ object FrmCliente: TFrmCliente
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
       StyleLookup = ''
       TabOrder = 0
       Text = 'tbDelCli'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
       object Layout3: TLayout
         Align = Center
         Size.Width = 280.000000000000000000
         Size.Height = 416.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
+      end
+      object Rectangle13: TRectangle
+        Align = Client
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Size.Width = 280.000000000000000000
+        Size.Height = 523.000000000000000000
+        Size.PlatformDefault = False
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
         object lvClienteDelete: TListView
           ItemAppearanceClassName = 'TDynamicAppearance'
           ItemEditAppearanceClassName = 'TDynamicAppearance'
           HeaderAppearanceClassName = 'TListHeaderObjects'
           FooterAppearanceClassName = 'TListHeaderObjects'
+          EditMode = True
           Align = Client
-          Size.Width = 280.000000000000000000
-          Size.Height = 416.000000000000000000
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 270.000000000000000000
+          Size.Height = 513.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
+          ItemAppearance.ItemHeight = 30
           ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
             item
-              AppearanceObjectName = 'Text1'
+              AppearanceObjectName = 'txtNome'
               AppearanceClassName = 'TTextObjectAppearance'
+              Appearance.TextAlign = Leading
+              Appearance.Width = 207.000000000000000000
+              Appearance.Height = 30.000000000000000000
+            end
+            item
+              AppearanceObjectName = 'txtCodigo'
+              AppearanceClassName = 'TTextObjectAppearance'
+              Appearance.TextAlign = Leading
+              Appearance.Width = 33.000000000000000000
+              Appearance.Height = 30.000000000000000000
+              Appearance.PlaceOffset.X = 215.000000000000000000
             end>
           ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
             item
               AppearanceObjectName = 'Text1'
               AppearanceClassName = 'TTextObjectAppearance'
             end>
+          DeleteButtonText = 'Deletar'
+          ShowSelection = False
         end
       end
     end

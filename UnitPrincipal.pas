@@ -26,6 +26,7 @@ type
     Image4: TImage;
     btnBioimped: TSpeedButton;
     procedure rectClienteResize(Sender: TObject);
+    procedure btnClienteClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,6 +39,15 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UnitCliente;
+
+procedure TFrmPrincipal.btnClienteClick(Sender: TObject);
+begin
+  if not Assigned(FrmCliente) then
+    Application.CreateForm(TFrmCliente, FrmCliente);
+  FrmCliente.Show;
+end;
 
 procedure TFrmPrincipal.rectClienteResize(Sender: TObject);
 begin

@@ -5,7 +5,7 @@
         <FrameworkType>FMX</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Android</Platform>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>693267</TargetedPlatforms>
         <AppType>Application</AppType>
         <MainSource>BodyFit.dpr</MainSource>
@@ -319,6 +319,10 @@
         </DCCReference>
         <DCCReference Include="UnitCliente.pas">
             <Form>FrmCliente</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UnitRanking.pas">
+            <Form>FrmRanking</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
