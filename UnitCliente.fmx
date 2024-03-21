@@ -46375,15 +46375,9 @@ object FrmCliente: TFrmCliente
       Text = 'tbDelCli'
       ExplicitSize.cx = 8.000000000000000000
       ExplicitSize.cy = 8.000000000000000000
-      object Layout3: TLayout
-        Align = Center
-        Size.Width = 280.000000000000000000
-        Size.Height = 416.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 0
-      end
       object Rectangle13: TRectangle
         Align = Client
+        Fill.Kind = None
         Margins.Left = 10.000000000000000000
         Margins.Top = 10.000000000000000000
         Margins.Right = 10.000000000000000000
@@ -46398,7 +46392,6 @@ object FrmCliente: TFrmCliente
           ItemEditAppearanceClassName = 'TDynamicAppearance'
           HeaderAppearanceClassName = 'TListHeaderObjects'
           FooterAppearanceClassName = 'TListHeaderObjects'
-          EditMode = True
           Align = Client
           Margins.Left = 5.000000000000000000
           Margins.Top = 5.000000000000000000
@@ -46414,24 +46407,24 @@ object FrmCliente: TFrmCliente
               AppearanceObjectName = 'txtNome'
               AppearanceClassName = 'TTextObjectAppearance'
               Appearance.TextAlign = Leading
-              Appearance.Width = 207.000000000000000000
-              Appearance.Height = 30.000000000000000000
+              Appearance.Width = 183.000000000000000000
+              Appearance.Height = 25.000000000000000000
             end
             item
               AppearanceObjectName = 'txtCodigo'
               AppearanceClassName = 'TTextObjectAppearance'
               Appearance.TextAlign = Leading
-              Appearance.Width = 33.000000000000000000
-              Appearance.Height = 30.000000000000000000
-              Appearance.PlaceOffset.X = 215.000000000000000000
+              Appearance.Width = 63.000000000000000000
+              Appearance.Height = 25.000000000000000000
+              Appearance.Align = Trailing
             end>
           ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
             item
               AppearanceObjectName = 'Text1'
               AppearanceClassName = 'TTextObjectAppearance'
             end>
-          DeleteButtonText = 'Deletar'
-          ShowSelection = False
+          OnDeletingItem = lvClienteDeleteDeletingItem
+          DeleteButtonText = 'Excluir'
         end
       end
     end

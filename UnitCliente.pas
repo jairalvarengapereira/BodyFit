@@ -45,18 +45,19 @@ type
     Edit5: TEdit;
     Rectangle12: TRectangle;
     Edit6: TEdit;
-    Layout3: TLayout;
-    lvClienteDelete: TListView;
     Rectangle13: TRectangle;
     Rectangle10: TRectangle;
     Image6: TImage;
     lytBotoes: TLayout;
     Rectangle5: TRectangle;
     Image7: TImage;
+    lvClienteDelete: TListView;
     procedure Image5Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnClienteClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure lvClienteDeleteDeletingItem(Sender: TObject; AIndex: Integer;
+      var ACanDelete: Boolean);
   private
     procedure ListarCliente;
     { Private declarations }
@@ -99,32 +100,59 @@ end;
 
 procedure TFrmCliente.ListarCliente;
 var
-  LvItem : TListViewItem;
-  ItemTxt: TListItemText;
+  Lvitem : TListViewItem;
+  txt : TListItemText;
 begin
-  lvClienteDelete.items.Clear;
   lvClienteDelete.BeginUpdate;
+  lvClienteDelete.Items.Clear;
+//
+//  lvClienteDelete.Items.Add.Text := 'Jair';
+//  lvClienteDelete.Items.Add.Text := 'Jair';
+//  lvClienteDelete.Items.Add.Text := 'Jair';
+
 
   LvItem := lvClienteDelete.Items.Add;
-
   TListItemText(LvItem.Objects.FindDrawable('txtNome')  ).Text := 'Adalberto Silva';
   TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text := '015';
+  Lvitem.TagString := TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text;
+
   LvItem := lvClienteDelete.Items.Add;
   TListItemText(LvItem.Objects.FindDrawable('txtNome')  ).Text := 'João Aranha';
   TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text := '021';
+  Lvitem.TagString := TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text;
+
   LvItem := lvClienteDelete.Items.Add;
   TListItemText(LvItem.Objects.FindDrawable('txtNome')  ).Text := 'José Das Couves';
   TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text := '065';
+  Lvitem.TagString := TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text;
+
   LvItem := lvClienteDelete.Items.Add;
   TListItemText(LvItem.Objects.FindDrawable('txtNome')  ).Text := 'José Maria dos Risos Fartos';
   TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text := '018';
+  Lvitem.TagString := TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text;
+
   LvItem := lvClienteDelete.Items.Add;
   TListItemText(LvItem.Objects.FindDrawable('txtNome')  ).Text := 'Martim Soares';
   TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text := '098';
+  Lvitem.TagString := TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text;
+
 
   lvClienteDelete.EndUpdate;
 end;
 
 
+
+procedure TFrmCliente.lvClienteDeleteDeletingItem(Sender: TObject;
+  AIndex: Integer; var ACanDelete: Boolean);
+var
+    txt : TListItemText;
+begin
+    txt := TListItemText(FrmCliente.lvClienteDelete.Items[AIndex].Objects.FindDrawable('txtNome'));
+
+    if txt.TagString <> '111' then
+        showmessage('Excluindo tarefa id = ' + txt.tagstring)
+    else
+        ACanDelete := false;
+end;
 
 end.
