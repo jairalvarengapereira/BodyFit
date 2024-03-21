@@ -11,8 +11,8 @@ uses
 
 type
   TFrmCliente = class(TForm)
-    Rectangle1: TRectangle;
-    Label1: TLabel;
+    rectTit: TRectangle;
+    lblTit: TLabel;
     Image1: TImage;
     TabControl: TTabControl;
     tbMenu: TTabItem;
@@ -58,8 +58,11 @@ type
     procedure FormShow(Sender: TObject);
     procedure lvClienteDeleteDeletingItem(Sender: TObject; AIndex: Integer;
       var ACanDelete: Boolean);
+    procedure FormCreate(Sender: TObject);
+    procedure btnConfigClick(Sender: TObject);
   private
     procedure ListarCliente;
+    procedure Add_Tarefa(id: integer; nome: string);
     { Private declarations }
   public
     { Public declarations }
@@ -72,17 +75,33 @@ implementation
 
 {$R *.fmx}
 
+uses UnitRanking;
+
 procedure TFrmCliente.btnClienteClick(Sender: TObject);
 begin
   TabControl.GotoVisibleTab(TSpeedButton(Sender).Tag);
+  lblTit.Text := TSpeedButton(Sender).Text;
   if TabControl.TabIndex = 2 then
     ListarCliente;
+end;
+
+procedure TFrmCliente.btnConfigClick(Sender: TObject);
+begin
+  if not Assigned(FrmRanking) then
+    Application.CreateForm(TFrmRanking, FrmRanking);
+  FrmRanking.Show;
 end;
 
 procedure TFrmCliente.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   Action := TCloseAction.caFree;
   FrmCliente := nil;
+end;
+
+procedure TFrmCliente.FormCreate(Sender: TObject);
+begin
+  // Configurar texto do botao delete..
+  lvClienteDelete.DeleteButtonText := 'Excluir';
 end;
 
 procedure TFrmCliente.FormShow(Sender: TObject);
@@ -92,6 +111,7 @@ end;
 
 procedure TFrmCliente.Image5Click(Sender: TObject);
 begin
+  lblTit.Text := 'Clientes';
   if TabControl.TabIndex > 0 then
     TabControl.GotoVisibleTab(0)
   else
@@ -103,51 +123,53 @@ var
   Lvitem : TListViewItem;
   txt : TListItemText;
 begin
-  lvClienteDelete.BeginUpdate;
   lvClienteDelete.Items.Clear;
-//
-//  lvClienteDelete.Items.Add.Text := 'Jair';
-//  lvClienteDelete.Items.Add.Text := 'Jair';
-//  lvClienteDelete.Items.Add.Text := 'Jair';
+  lvClienteDelete.BeginUpdate;
 
-
-  LvItem := lvClienteDelete.Items.Add;
-  TListItemText(LvItem.Objects.FindDrawable('txtNome')  ).Text := 'Adalberto Silva';
-  TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text := '015';
-  Lvitem.TagString := TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text;
-
-  LvItem := lvClienteDelete.Items.Add;
-  TListItemText(LvItem.Objects.FindDrawable('txtNome')  ).Text := 'João Aranha';
-  TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text := '021';
-  Lvitem.TagString := TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text;
-
-  LvItem := lvClienteDelete.Items.Add;
-  TListItemText(LvItem.Objects.FindDrawable('txtNome')  ).Text := 'José Das Couves';
-  TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text := '065';
-  Lvitem.TagString := TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text;
-
-  LvItem := lvClienteDelete.Items.Add;
-  TListItemText(LvItem.Objects.FindDrawable('txtNome')  ).Text := 'José Maria dos Risos Fartos';
-  TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text := '018';
-  Lvitem.TagString := TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text;
-
-  LvItem := lvClienteDelete.Items.Add;
-  TListItemText(LvItem.Objects.FindDrawable('txtNome')  ).Text := 'Martim Soares';
-  TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text := '098';
-  Lvitem.TagString := TListItemText(LvItem.Objects.FindDrawable('txtCodigo')).Text;
-
+  Add_Tarefa(110,'Joãozinho');
+  Add_Tarefa(111,'Zezinho');
+  Add_Tarefa(112,'Huguinho');
+  Add_Tarefa(113,'Luizinho');
+  Add_Tarefa(114,'Zé das Couves');
+  Add_Tarefa(115,'Maria Bonita');
+  Add_Tarefa(116,'Lampião');
+  Add_Tarefa(117,'Chiquinho');
+  Add_Tarefa(118,'Marcelinho');
 
   lvClienteDelete.EndUpdate;
 end;
 
+procedure TFrmCliente.Add_Tarefa(id : integer; nome : string);
+var
+  item : TListViewItem;
+  txt : TListItemText;
+begin
+  with FrmCliente do
+  begin
+    item := lvClienteDelete.Items.Add;
+    item.Objects.Clear;
+    item.TagString := id.ToString;
 
+    with item do
+    begin
+      // Adiciona ID e Nome
+      txt := TListItemText(Objects.FindDrawable('Text1'));
+      txt.Text := nome;
+      txt.Font.Size := 18;
+      txt.Height := 70;
+      txt.PlaceOffset.X := 25;
+      txt.PlaceOffset.Y := 0;
+      txt.TagString := id.ToString;
+    end;
+  end;
+end;
 
 procedure TFrmCliente.lvClienteDeleteDeletingItem(Sender: TObject;
   AIndex: Integer; var ACanDelete: Boolean);
 var
     txt : TListItemText;
 begin
-    txt := TListItemText(FrmCliente.lvClienteDelete.Items[AIndex].Objects.FindDrawable('txtNome'));
+    txt := TListItemText(FrmCliente.lvClienteDelete.Items[AIndex].Objects.FindDrawable('Text1'));
 
     if txt.TagString <> '111' then
         showmessage('Excluindo tarefa id = ' + txt.tagstring)

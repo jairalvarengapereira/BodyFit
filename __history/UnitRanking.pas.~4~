@@ -1,0 +1,59 @@
+unit UnitRanking;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts, FMX.TabControl,
+  FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
+  FMX.ListView;
+
+type
+  TFrmRanking = class(TForm)
+    Rectangle1: TRectangle;
+    lblTit: TLabel;
+    Image1: TImage;
+    Image5: TImage;
+    lytConsultar: TLayout;
+    rectConsulta: TRectangle;
+    Rectangle4: TRectangle;
+    Image3: TImage;
+    btnDetalhe: TSpeedButton;
+    TabControl: TTabControl;
+    tbMenu: TTabItem;
+    tbDetalhe: TTabItem;
+    TabItem3: TTabItem;
+    Rectangle2: TRectangle;
+    lvRanking: TListView;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Image5Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmRanking: TFrmRanking;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrmRanking.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := TCloseAction.caFree;
+  FrmRanking := nil;
+end;
+
+procedure TFrmRanking.Image5Click(Sender: TObject);
+begin
+  lblTit.Text := 'Ranking';
+  if TabControl.TabIndex > 0 then
+    TabControl.GotoVisibleTab(0)
+  else
+    Close;
+end;
+
+end.

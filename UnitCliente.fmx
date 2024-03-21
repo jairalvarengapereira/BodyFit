@@ -9,17 +9,18 @@ object FrmCliente: TFrmCliente
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   OnClose = FormClose
   OnShow = FormShow
   DesignerMasterStyle = 3
-  object Rectangle1: TRectangle
+  object rectTit: TRectangle
     Align = Top
     Fill.Kind = None
     Size.Width = 300.000000000000000000
     Size.Height = 57.000000000000000000
     Size.PlatformDefault = False
     Stroke.Color = xFF948B6D
-    object Label1: TLabel
+    object lblTit: TLabel
       Align = Contents
       StyledSettings = [Family]
       Locked = True
@@ -45091,7 +45092,7 @@ object FrmCliente: TFrmCliente
     Size.Height = 543.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 2
+    TabIndex = 0
     TabOrder = 1
     TabPosition = None
     Sizes = (
@@ -45106,7 +45107,7 @@ object FrmCliente: TFrmCliente
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -45637,7 +45638,7 @@ object FrmCliente: TFrmCliente
             TextSettings.Font.StyleExt = {00060000000000000004000000}
             TextSettings.FontColor = claWhite
             TextSettings.Trimming = None
-            OnClick = btnClienteClick
+            OnClick = btnConfigClick
           end
         end
         object rectBioimped: TRectangle
@@ -46366,7 +46367,7 @@ object FrmCliente: TFrmCliente
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -46401,22 +46402,14 @@ object FrmCliente: TFrmCliente
           Size.Height = 513.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
-          ItemAppearance.ItemHeight = 30
+          ItemAppearance.ItemHeight = 25
           ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
             item
-              AppearanceObjectName = 'txtNome'
+              AppearanceObjectName = 'Text1'
               AppearanceClassName = 'TTextObjectAppearance'
               Appearance.TextAlign = Leading
-              Appearance.Width = 183.000000000000000000
+              Appearance.Width = 249.000000000000000000
               Appearance.Height = 25.000000000000000000
-            end
-            item
-              AppearanceObjectName = 'txtCodigo'
-              AppearanceClassName = 'TTextObjectAppearance'
-              Appearance.TextAlign = Leading
-              Appearance.Width = 63.000000000000000000
-              Appearance.Height = 25.000000000000000000
-              Appearance.Align = Trailing
             end>
           ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
             item
@@ -46424,7 +46417,6 @@ object FrmCliente: TFrmCliente
               AppearanceClassName = 'TTextObjectAppearance'
             end>
           OnDeletingItem = lvClienteDeleteDeletingItem
-          DeleteButtonText = 'Excluir'
         end
       end
     end
