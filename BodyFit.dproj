@@ -325,6 +325,14 @@
             <Form>FrmRanking</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="UnitBioimped.pas">
+            <Form>FrmBioimped</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UnitBioimpedancia.pas">
+            <Form>FrmBiomimpedancia</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

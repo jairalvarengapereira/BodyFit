@@ -25,8 +25,17 @@ type
     Rectangle6: TRectangle;
     Image4: TImage;
     btnBioimped: TSpeedButton;
+    Rectangle2: TRectangle;
+    Rectangle5: TRectangle;
+    Image5: TImage;
+    SpeedButton1: TSpeedButton;
+    Rectangle7: TRectangle;
+    Rectangle8: TRectangle;
+    Image6: TImage;
+    SpeedButton2: TSpeedButton;
     procedure rectClienteResize(Sender: TObject);
     procedure btnClienteClick(Sender: TObject);
+    procedure btnBioimpedClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,6 +50,13 @@ implementation
 {$R *.fmx}
 
 uses UnitCliente;
+
+procedure TFrmPrincipal.btnBioimpedClick(Sender: TObject);
+begin
+  if not Assigned(FrmCliente) then
+    Application.CreateForm(TFrmCliente, FrmCliente);
+  FrmCliente.Show;
+end;
 
 procedure TFrmPrincipal.btnClienteClick(Sender: TObject);
 begin
