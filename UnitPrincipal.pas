@@ -49,13 +49,13 @@ implementation
 
 {$R *.fmx}
 
-uses UnitCliente;
+uses UnitCliente, UnitBioimpedancia;
 
 procedure TFrmPrincipal.btnBioimpedClick(Sender: TObject);
 begin
-  if not Assigned(FrmCliente) then
-    Application.CreateForm(TFrmCliente, FrmCliente);
-  FrmCliente.Show;
+  if not Assigned(FrmBiomimpedancia) then
+    Application.CreateForm(TFrmBiomimpedancia, FrmBiomimpedancia);
+  FrmBiomimpedancia.Show;
 end;
 
 procedure TFrmPrincipal.btnClienteClick(Sender: TObject);

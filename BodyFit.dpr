@@ -13,9 +13,7 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
-  Application.CreateForm(TFrmRanking, FrmRanking);
-  Application.CreateForm(TFrmBioimped, FrmBioimped);
   Application.CreateForm(TFrmBiomimpedancia, FrmBiomimpedancia);
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.Run;
 end.

@@ -1,0 +1,194 @@
+unit UnitBioimpedancia;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.ListBox, FMX.Layouts, FMX.Edit,
+  FMX.Ani, FMX.DateTimeCtrls, FMX.TabControl;
+
+type
+  TFrmBiomimpedancia = class(TForm)
+    rectTit: TRectangle;
+    lblTit: TLabel;
+    Image1: TImage;
+    Image5: TImage;
+    rectCliente: TRectangle;
+    ComboBox1: TComboBox;
+    Label1: TLabel;
+    Layout1: TLayout;
+    Label3: TLabel;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
+    Label2: TLabel;
+    Image2: TImage;
+    ListBox1: TListBox;
+    ListBoxItem1: TListBoxItem;
+    Rectangle3: TRectangle;
+    Rectangle4: TRectangle;
+    ListBoxItem2: TListBoxItem;
+    ListBoxItem3: TListBoxItem;
+    ListBoxItem4: TListBoxItem;
+    ListBoxItem5: TListBoxItem;
+    ListBoxItem6: TListBoxItem;
+    ListBoxItem7: TListBoxItem;
+    Rectangle9: TRectangle;
+    Rectangle10: TRectangle;
+    Rectangle11: TRectangle;
+    Rectangle12: TRectangle;
+    Rectangle13: TRectangle;
+    Rectangle14: TRectangle;
+    Rectangle15: TRectangle;
+    Rectangle16: TRectangle;
+    Label4: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Edit1: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Edit6: TEdit;
+    Edit7: TEdit;
+    Layout2: TLayout;
+    Rectangle17: TRectangle;
+    Image3: TImage;
+    Rectangle18: TRectangle;
+    lvBioimpedancia: TListBox;
+    SpeedButton1: TSpeedButton;
+    ListBoxItem8: TListBoxItem;
+    Rectangle19: TRectangle;
+    Label11: TLabel;
+    Rectangle20: TRectangle;
+    Rectangle21: TRectangle;
+    RectAnimation1: TRectAnimation;
+    Rectangle22: TRectangle;
+    Rectangle23: TRectangle;
+    Rectangle24: TRectangle;
+    Label12: TLabel;
+    ListBoxItem9: TListBoxItem;
+    Rectangle25: TRectangle;
+    Rectangle26: TRectangle;
+    Label13: TLabel;
+    Label14: TLabel;
+    Rectangle27: TRectangle;
+    Rectangle28: TRectangle;
+    Rectangle29: TRectangle;
+    Rectangle30: TRectangle;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Edit8: TEdit;
+    Edit9: TEdit;
+    Edit10: TEdit;
+    Edit11: TEdit;
+    Edit12: TEdit;
+    Edit13: TEdit;
+    ListBoxItem10: TListBoxItem;
+    Rectangle31: TRectangle;
+    Rectangle32: TRectangle;
+    Label19: TLabel;
+    Label20: TLabel;
+    Rectangle33: TRectangle;
+    Rectangle34: TRectangle;
+    Label21: TLabel;
+    Rectangle35: TRectangle;
+    Rectangle36: TRectangle;
+    Label22: TLabel;
+    ListBoxItem11: TListBoxItem;
+    Rectangle37: TRectangle;
+    Rectangle38: TRectangle;
+    Label23: TLabel;
+    Label24: TLabel;
+    Rectangle39: TRectangle;
+    Rectangle40: TRectangle;
+    Label25: TLabel;
+    Rectangle41: TRectangle;
+    Rectangle42: TRectangle;
+    Label26: TLabel;
+    ListBoxItem12: TListBoxItem;
+    Rectangle43: TRectangle;
+    Rectangle44: TRectangle;
+    IMC: TLabel;
+    Label28: TLabel;
+    Rectangle45: TRectangle;
+    Rectangle46: TRectangle;
+    RCQ: TLabel;
+    Rectangle47: TRectangle;
+    Rectangle48: TRectangle;
+    PGC: TLabel;
+    ComboBox3: TComboBox;
+    ComboBox4: TComboBox;
+    ComboBox5: TComboBox;
+    ComboBox6: TComboBox;
+    ComboBox7: TComboBox;
+    ComboBox8: TComboBox;
+    ComboBox9: TComboBox;
+    ComboBox10: TComboBox;
+    ComboBox11: TComboBox;
+    Rectangle5: TRectangle;
+    Rectangle6: TRectangle;
+    Label5: TLabel;
+    Edit2: TEdit;
+    Rectangle7: TRectangle;
+    Rectangle8: TRectangle;
+    Label6: TLabel;
+    Edit3: TEdit;
+    DateEdit1: TDateEdit;
+    Label29: TLabel;
+    Label30: TLabel;
+    ListBoxItem14: TListBoxItem;
+    Rectangle49: TRectangle;
+    Rectangle50: TRectangle;
+    Label31: TLabel;
+    Edit23: TEdit;
+    Label32: TLabel;
+    Rectangle51: TRectangle;
+    Rectangle52: TRectangle;
+    Label33: TLabel;
+    Edit24: TEdit;
+    Rectangle53: TRectangle;
+    Rectangle54: TRectangle;
+    Label34: TLabel;
+    Edit25: TEdit;
+    ListBoxItem15: TListBoxItem;
+    Label27: TLabel;
+    Rectangle55: TRectangle;
+    Edit14: TEdit;
+    TabControl: TTabControl;
+    TabItem1: TTabItem;
+    TabItem2: TTabItem;
+    procedure FormVirtualKeyboardHidden(Sender: TObject;
+      KeyboardVisible: Boolean; const Bounds: TRect);
+    procedure FormVirtualKeyboardShown(Sender: TObject;
+      KeyboardVisible: Boolean; const Bounds: TRect);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmBiomimpedancia: TFrmBiomimpedancia;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrmBiomimpedancia.FormVirtualKeyboardHidden(Sender: TObject;
+  KeyboardVisible: Boolean; const Bounds: TRect);
+begin
+  if TabControl.TabIndex = 0 then
+    TabControl.Margins.Bottom := 0;
+end;
+
+procedure TFrmBiomimpedancia.FormVirtualKeyboardShown(Sender: TObject;
+  KeyboardVisible: Boolean; const Bounds: TRect);
+begin
+  if TabControl.TabIndex = 0 then
+    TabControl.Margins.Bottom := 270;
+end;
+
+end.
