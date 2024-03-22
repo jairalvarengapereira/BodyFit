@@ -1,0 +1,118 @@
+unit UnitFotos;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Layouts, u99Permissions, FMX.MediaLibrary.Actions, System.Actions,
+  FMX.ActnList, FMX.StdActns, FMX.MediaLibrary, FMX.Controls.Presentation,
+  FMX.StdCtrls, FMX.ListBox, FMX.Ani;
+
+type
+  TFrmFotos = class(TForm)
+    lytRodape: TLayout;
+    imgCamera: TImage;
+    imgLibrary: TImage;
+    imgFoto: TImage;
+    ActionList1: TActionList;
+    OpenDialog: TOpenDialog;
+    rectTit: TRectangle;
+    lblTit: TLabel;
+    Image1: TImage;
+    Image5: TImage;
+    rectCliente: TRectangle;
+    ComboBox1: TComboBox;
+    Label1: TLabel;
+    RectAnimation1: TRectAnimation;
+    rectFoto: TRectangle;
+    ListBox1: TListBox;
+    ListBoxItem1: TListBoxItem;
+    Image2: TImage;
+    Label2: TLabel;
+    ListBoxItem2: TListBoxItem;
+    Image3: TImage;
+    Label3: TLabel;
+    ListBoxItem3: TListBoxItem;
+    Image4: TImage;
+    Label4: TLabel;
+    ListBoxItem4: TListBoxItem;
+    Image6: TImage;
+    Label5: TLabel;
+    ListBoxItem5: TListBoxItem;
+    Image7: TImage;
+    Label6: TLabel;
+    ListBoxItem6: TListBoxItem;
+    Image8: TImage;
+    Label7: TLabel;
+    Action1: TAction;
+    ActCamera: TTakePhotoFromCameraAction;
+    ActLibrary: TTakePhotoFromLibraryAction;
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure ActCameraDidFinishTaking(Image: TBitmap);
+    procedure imgCameraClick(Sender: TObject);
+    procedure imgLibraryClick(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
+  private
+    { Private declarations }
+    permissao: T99Permissions;
+    procedure ErroPermissaoFoto(Sender: TObject);
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmFotos: TFrmFotos;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrmFotos.ActCameraDidFinishTaking(Image: TBitmap);
+begin
+    imgFoto.Bitmap := Image;
+end;
+
+procedure TFrmFotos.FormCreate(Sender: TObject);
+begin
+    permissao := T99Permissions.Create;
+end;
+
+procedure TFrmFotos.FormDestroy(Sender: TObject);
+begin
+    permissao.DisposeOf;
+end;
+
+procedure TFrmFotos.Image2Click(Sender: TObject);
+begin
+  imgFoto.Bitmap := TImage(Sender).Bitmap;
+end;
+
+procedure TFrmFotos.ErroPermissaoFoto(Sender: TObject);
+begin
+    showmessage('Você não possui acesso a esse recurso no aparelho');
+end;
+
+procedure TFrmFotos.imgCameraClick(Sender: TObject);
+begin
+    {$IFDEF MSWINDOWS}
+    if OpenDialog.Execute then
+        imgFoto.Bitmap.LoadFromFile(OpenDialog.FileName);
+    {$ELSE}
+    permissao.Camera(ActCamera, ErroPermissaoFoto);
+    {$ENDIF}
+end;
+
+procedure TFrmFotos.imgLibraryClick(Sender: TObject);
+begin
+    {$IFDEF MSWINDOWS}
+    if OpenDialog.Execute then
+        imgFoto.Bitmap.LoadFromFile(OpenDialog.FileName);
+    {$ELSE}
+    permissao.PhotoLibrary(ActLibrary, ErroPermissaoFoto);
+    {$ENDIF}
+
+end;
+
+end.

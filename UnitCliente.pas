@@ -52,6 +52,9 @@ type
     Rectangle5: TRectangle;
     Image7: TImage;
     lvClienteDelete: TListView;
+    Rectangle1: TRectangle;
+    Edit7: TEdit;
+    Label1: TLabel;
     procedure Image5Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnClienteClick(Sender: TObject);

@@ -23,14 +23,23 @@
     <Transaction>2024/03/20 10:24:29.000.346,D:\Projetos\Delphi\BodyFit\UnitRanking.pas=D:\Projetos\Delphi\BodyFit\Unit1.pas</Transaction>
     <Transaction>2024/03/21 05:35:49.000.725,=D:\Projetos\Delphi\BodyFit\Unit1.pas</Transaction>
     <Transaction>2024/03/21 15:43:57.000.662,=D:\Projetos\Delphi\BodyFit\Unit1.pas</Transaction>
-    <Transaction>2024/03/21 16:01:16.000.616,D:\Projetos\Delphi\BodyFit\UnitBioimped.fmx=D:\Projetos\Delphi\BodyFit\Unit1.fmx</Transaction>
     <Transaction>2024/03/21 16:01:16.000.616,D:\Projetos\Delphi\BodyFit\UnitBioimped.pas=D:\Projetos\Delphi\BodyFit\Unit1.pas</Transaction>
+    <Transaction>2024/03/21 16:01:16.000.616,D:\Projetos\Delphi\BodyFit\UnitBioimped.fmx=D:\Projetos\Delphi\BodyFit\Unit1.fmx</Transaction>
     <Transaction>2024/03/21 17:07:11.000.137,=D:\Projetos\Delphi\BodyFit\Unit1.pas</Transaction>
     <Transaction>2024/03/21 17:07:21.000.926,=D:\Projetos\Delphi\BodyFit\Unit1.pas</Transaction>
     <Transaction>2024/03/21 17:08:20.000.608,D:\Projetos\Delphi\BodyFit\UnitBioimpedancia.fmx=D:\Projetos\Delphi\BodyFit\Unit1.fmx</Transaction>
     <Transaction>2024/03/21 17:08:20.000.608,D:\Projetos\Delphi\BodyFit\UnitBioimpedancia.pas=D:\Projetos\Delphi\BodyFit\Unit1.pas</Transaction>
+    <Transaction>2024/03/22 11:54:42.341,=D:\Projetos\Delphi\BodyFit\Unit1.pas</Transaction>
+    <Transaction>2024/03/22 11:56:01.973,D:\Projetos\Delphi\BodyFit\UnitIMC.pas=D:\Projetos\Delphi\BodyFit\Unit1.pas</Transaction>
+    <Transaction>2024/03/22 11:56:01.973,D:\Projetos\Delphi\BodyFit\UnitIMC.fmx=D:\Projetos\Delphi\BodyFit\Unit1.fmx</Transaction>
+    <Transaction>2024/03/22 13:12:06.916,=D:\Projetos\Delphi\BodyFit\Unit1.pas</Transaction>
+    <Transaction>2024/03/22 13:12:45.002,D:\Projetos\Delphi\BodyFit\UnitFoto.fmx=D:\Projetos\Delphi\BodyFit\Unit1.fmx</Transaction>
+    <Transaction>2024/03/22 13:12:45.002,D:\Projetos\Delphi\BodyFit\UnitFoto.pas=D:\Projetos\Delphi\BodyFit\Unit1.pas</Transaction>
+    <Transaction>2024/03/22 13:24:54.826,D:\Projetos\Delphi\BodyFit\UnitFoto.pas=</Transaction>
+    <Transaction>2024/03/22 13:26:26.539,=D:\Projetos\Delphi\BodyFit\UnitFotos.pas</Transaction>
+    <Transaction>2024/03/22 13:36:11.177,=D:\Projetos\Delphi\BodyFit\Units\u99Permissions.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile Android="RQCT700DW3M" Android64=""/>
+		<NoProfile Android="R9QN102607V" Android64=""/>
 	</ActiveMobileDevice>
 </BorlandProject>

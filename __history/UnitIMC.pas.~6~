@@ -1,0 +1,55 @@
+unit UnitIMC;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts;
+
+type
+  TFrmIMC = class(TForm)
+    rectTit: TRectangle;
+    FrmIMC: TLabel;
+    Image1: TImage;
+    Image5: TImage;
+    Layout1: TLayout;
+    imgIMC: TImage;
+    lblTitVal: TLabel;
+    lblPeso: TLabel;
+    imgIMC1: TImage;
+    imgIMC2: TImage;
+    imgIMC3: TImage;
+    imgIMC4: TImage;
+    imgIMC5: TImage;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
+    lblAltura: TLabel;
+    Label2: TLabel;
+    lblIMC: TLabel;
+    Line1: TLine;
+    lblResultado: TLabel;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmIMC: TFrmIMC;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrmIMC.FormCreate(Sender: TObject);
+begin
+  lblAltura.Text := 'Altura...: 1,69 m';
+  lblPeso.Text   := 'Peso.....: 85 Kg';
+  lblIMC.Text    := 'Resultado: 29,7958754';
+  lblIMC.Text     := 'Excesso de Peso';
+  imgIMC.Bitmap := imgIMC3.Bitmap
+end;
+
+end.

@@ -36,6 +36,8 @@ type
     procedure rectClienteResize(Sender: TObject);
     procedure btnClienteClick(Sender: TObject);
     procedure btnBioimpedClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure SpeedButton1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,7 +51,7 @@ implementation
 
 {$R *.fmx}
 
-uses UnitCliente, UnitBioimpedancia;
+uses UnitCliente, UnitBioimpedancia, UnitIMC, UnitBioimped, UnitRanking;
 
 procedure TFrmPrincipal.btnBioimpedClick(Sender: TObject);
 begin
@@ -65,10 +67,23 @@ begin
   FrmCliente.Show;
 end;
 
+procedure TFrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := TCloseAction.caFree;
+  FrmBiomimpedancia := nil;
+end;
+
 procedure TFrmPrincipal.rectClienteResize(Sender: TObject);
 begin
   rectBioimped.Width := rectCliente.Width;
   rectBioimped.Height := rectCliente.Height;
+end;
+
+procedure TFrmPrincipal.SpeedButton1Click(Sender: TObject);
+begin
+  if not Assigned(FrmIMC) then
+    Application.CreateForm(TFrmIMC, FrmIMC);
+  FrmIMC.Show;
 end;
 
 end.

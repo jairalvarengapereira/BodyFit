@@ -143,8 +143,8 @@ type
     Rectangle55: TRectangle;
     Edit14: TEdit;
     TabControl: TTabControl;
-    TabItem1: TTabItem;
-    TabItem2: TTabItem;
+    tbBio: TTabItem;
+    tbSegmentar: TTabItem;
     ListBoxItem13: TListBoxItem;
     ListBoxItem14: TListBoxItem;
     Rectangle49: TRectangle;
@@ -241,7 +241,15 @@ type
     Layout33: TLayout;
     Edit32: TEdit;
     Label52: TLabel;
+    Layout34: TLayout;
+    Label53: TLabel;
+    Layout35: TLayout;
+    Edit33: TEdit;
+    Ósseo: TLabel;
     procedure FormCreate(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure Image5Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -255,12 +263,31 @@ implementation
 
 {$R *.fmx}
 
+procedure TFrmBiomimpedancia.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  Action := TCloseAction.caFree;
+  FrmBiomimpedancia := nil;
+end;
+
 procedure TFrmBiomimpedancia.FormCreate(Sender: TObject);
 begin
+  TabControl.GotoVisibleTab(0);
   rectForte.Height := TabControl.Height / 2;
   rectGordo.Height := rectForte.Height - 15;
-//  lblDireita.Position.Y := TabControl.Height / 2;
-//  lblEsquerda.Position.Y := TabControl.Height / 2;
+end;
+
+procedure TFrmBiomimpedancia.Image5Click(Sender: TObject);
+begin
+  if TabControl.TabIndex = 0 then
+    close
+  else
+    TabControl.GotoVisibleTab(0);
+end;
+
+procedure TFrmBiomimpedancia.SpeedButton1Click(Sender: TObject);
+begin
+  TabControl.GotoVisibleTab(1);
 end;
 
 end.

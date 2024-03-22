@@ -45092,7 +45092,7 @@ object FrmCliente: TFrmCliente
     Size.Height = 523.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 2
+    TabIndex = 1
     TabOrder = 1
     TabPosition = None
     Sizes = (
@@ -45972,7 +45972,7 @@ object FrmCliente: TFrmCliente
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -45984,7 +45984,7 @@ object FrmCliente: TFrmCliente
       object Layout2: TLayout
         Align = Center
         Size.Width = 273.000000000000000000
-        Size.Height = 382.000000000000000000
+        Size.Height = 427.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object Rectangle2: TRectangle
@@ -46117,7 +46117,7 @@ object FrmCliente: TFrmCliente
         end
         object lytBotoes: TLayout
           Align = Bottom
-          Position.Y = 332.000000000000000000
+          Position.Y = 377.000000000000000000
           Size.Width = 273.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
@@ -46360,6 +46360,41 @@ object FrmCliente: TFrmCliente
             end
           end
         end
+        object Rectangle1: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Margins.Top = 20.000000000000000000
+          Position.Y = 300.000000000000000000
+          Size.Width = 273.000000000000000000
+          Size.Height = 30.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = xFF948B6D
+          XRadius = 4.000000000000000000
+          YRadius = 4.000000000000000000
+          object Edit7: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Left
+            TabOrder = 0
+            KeyboardType = DecimalNumberPad
+            TextSettings.HorzAlign = Center
+            Size.Width = 73.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'Altura'
+          end
+          object Label1: TLabel
+            Align = Left
+            Locked = True
+            HitTest = True
+            Position.X = 73.000000000000000000
+            Size.Width = 82.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Trimming = None
+            Text = 'm.'
+            TabOrder = 1
+          end
+        end
       end
     end
     object tbDelCli: TTabItem
@@ -46367,7 +46402,7 @@ object FrmCliente: TFrmCliente
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False

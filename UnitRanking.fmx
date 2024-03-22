@@ -45544,7 +45544,7 @@ object FrmRanking: TFrmRanking
           TabOrder = 1
         end
         object dtIniGrafico: TDateEdit
-          Date = 45372.000000000000000000
+          Date = 45373.000000000000000000
           TodayDefault = True
           Align = Left
           Position.X = 41.000000000000000000
@@ -45569,7 +45569,7 @@ object FrmRanking: TFrmRanking
           TabOrder = 0
         end
         object dtFinGrafico: TDateEdit
-          Date = 45372.000000000000000000
+          Date = 45373.000000000000000000
           TodayDefault = True
           Align = Left
           Position.X = 176.000000000000000000

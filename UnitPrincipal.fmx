@@ -9,6 +9,7 @@ object FrmPrincipal: TFrmPrincipal
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnClose = FormClose
   DesignerMasterStyle = 3
   object Rectangle1: TRectangle
     Align = Top
@@ -6696,7 +6697,7 @@ object FrmPrincipal: TFrmPrincipal
         TextSettings.Font.StyleExt = {00060000000000000004000000}
         TextSettings.FontColor = claWhite
         TextSettings.Trimming = None
-        OnClick = btnClienteClick
+        OnClick = SpeedButton1Click
       end
     end
     object Rectangle7: TRectangle
@@ -7210,7 +7211,6 @@ object FrmPrincipal: TFrmPrincipal
         TextSettings.Font.StyleExt = {00060000000000000004000000}
         TextSettings.FontColor = claWhite
         TextSettings.Trimming = None
-        OnClick = btnClienteClick
       end
     end
   end

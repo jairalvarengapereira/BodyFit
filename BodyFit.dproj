@@ -289,6 +289,7 @@
         <IncludeAndroid_NotificationAccentColor>false</IncludeAndroid_NotificationAccentColor>
         <Android_NotificationAccentColor>#000000</Android_NotificationAccentColor>
         <IncludeAndroid_VectorizedNotificationIcon>true</IncludeAndroid_VectorizedNotificationIcon>
+        <AUP_USE_BIOMETRIC>true</AUP_USE_BIOMETRIC>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
@@ -335,6 +336,15 @@
             <Form>FrmBiomimpedancia</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="UnitIMC.pas">
+            <Form>FrmIMC</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UnitFotos.pas">
+            <Form>FrmFotos</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="Units\u99Permissions.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

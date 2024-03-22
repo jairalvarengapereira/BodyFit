@@ -7,13 +7,15 @@ uses
   UnitCliente in 'UnitCliente.pas' {FrmCliente},
   UnitRanking in 'UnitRanking.pas' {FrmRanking},
   UnitBioimped in 'UnitBioimped.pas' {FrmBioimped},
-  UnitBioimpedancia in 'UnitBioimpedancia.pas' {FrmBiomimpedancia};
+  UnitBioimpedancia in 'UnitBioimpedancia.pas' {FrmBiomimpedancia},
+  UnitIMC in 'UnitIMC.pas' {FrmIMC},
+  UnitFotos in 'UnitFotos.pas' {FrmFotos},
+  u99Permissions in 'Units\u99Permissions.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TFrmBiomimpedancia, FrmBiomimpedancia);
-  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TFrmFotos, FrmFotos);
   Application.Run;
 end.
