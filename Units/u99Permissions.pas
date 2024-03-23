@@ -2,7 +2,7 @@
 {
     Unit u99Permissions
     Criação: 99 Coders (Heber Stein Mazutti - @99coders)
-    Versão: 2.0
+    Versão: 3.0
 }
 /////////////////////////////////////////////////////////////////////////////
 
@@ -79,7 +79,14 @@ constructor T99Permissions.Create();
 begin
     {$IFDEF ANDROID}
     pCamera := JStringToString(TJManifest_permission.JavaClass.CAMERA);
-    pReadStorage := JStringToString(TJManifest_permission.JavaClass.READ_EXTERNAL_STORAGE);
+    //pReadStorage := JStringToString(TJManifest_permission.JavaClass.READ_EXTERNAL_STORAGE);
+
+    if TJBuild_VERSION.JavaClass.SDK_INT > 32 then
+        pReadStorage := 'android.permission.READ_MEDIA_IMAGES'
+    else
+        pReadStorage := JStringToString(TJManifest_permission.JavaClass.READ_EXTERNAL_STORAGE);
+
+
     pWriteStorage := JStringToString(TJManifest_permission.JavaClass.WRITE_EXTERNAL_STORAGE);
     pCoarseLocation := JStringToString(TJManifest_permission.JavaClass.ACCESS_COARSE_LOCATION);
     pFineLocation := JStringToString(TJManifest_permission.JavaClass.ACCESS_FINE_LOCATION);
@@ -99,10 +106,9 @@ begin
     // CAMERA (CAMERA + READ_EXTERNAL_STORAGE + WRITE_EXTERNAL_STORAGE)
     if CurrentRequest = 'CAMERA' then
     begin
-        if (Length(AGrantResults) = 3) and
+        if (Length(AGrantResults) = 2) and
            (AGrantResults[0] = TPermissionStatus.Granted) and
-           (AGrantResults[1] = TPermissionStatus.Granted) and
-           (AGrantResults[2] = TPermissionStatus.Granted) then
+           (AGrantResults[1] = TPermissionStatus.Granted) then
         begin
             ret := true;
 
@@ -114,9 +120,8 @@ begin
     // LIBRARY (READ_EXTERNAL_STORAGE + WRITE_EXTERNAL_STORAGE)
     if CurrentRequest = 'LIBRARY' then
     begin        
-        if (Length(AGrantResults) = 2) and
-           (AGrantResults[0] = TPermissionStatus.Granted) and
-           (AGrantResults[1] = TPermissionStatus.Granted) then
+        if (Length(AGrantResults) = 1) and
+           (AGrantResults[0] = TPermissionStatus.Granted) then
         begin
             ret := true;
 
@@ -161,7 +166,25 @@ end;
 
 {$IF CompilerVersion >= 35 }
 procedure T99Permissions.DisplayRationale(Sender: TObject; const APermissions: TClassicStringDynArray; const APostRationaleProc: TProc);
+var
+    RationaleMsg: string;
+    i: integer;
 begin
+    {
+    RationaleMsg := '';
+
+    for I := 0 to High(APermissions) do
+    begin
+        if APermissions[I] = pCamera then
+            RationaleMsg := RationaleMsg + SLineBreak + 'Acesso a pCamera'
+        else if APermissions[I] = pReadStorage then
+            RationaleMsg := RationaleMsg + SLineBreak + 'Acesso a pReadStorage'
+        else if APermissions[I] = pWriteStorage then
+            RationaleMsg := RationaleMsg + SLineBreak + 'Acesso a pWriteStorage'
+    end;
+
+    raise Exception.Create(RationaleMsg);
+    }
 
 end;
 {$ENDIF}
@@ -175,8 +198,10 @@ begin
 
     {$IFDEF ANDROID}
       {$IF CompilerVersion >= 35 }
-      PermissionsService.RequestPermissions([pCamera, pReadStorage, pWriteStorage],
-                                             PermissionRequestResult, nil);
+        if TJBuild_VERSION.JavaClass.SDK_INT > 32 then
+            PermissionsService.RequestPermissions([pCamera, pReadStorage], PermissionRequestResult, DisplayRationale)
+        else
+            PermissionsService.RequestPermissions([pCamera, pWriteStorage], PermissionRequestResult, DisplayRationale);
       {$ELSE}
       PermissionsService.RequestPermissions([pCamera, pReadStorage, pWriteStorage],
                                            PermissionRequestResult);
@@ -200,8 +225,8 @@ begin
     CurrentRequest := 'LIBRARY';
 
     {$IFDEF ANDROID}
-    PermissionsService.RequestPermissions([pReadStorage, pWriteStorage],
-                                           PermissionRequestResult);
+    //PermissionsService.RequestPermissions([pReadStorage, pWriteStorage], PermissionRequestResult);
+    PermissionsService.RequestPermissions([pReadStorage], PermissionRequestResult);
     {$ENDIF}
 
     {$IFDEF IOS}

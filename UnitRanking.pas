@@ -17,10 +17,6 @@ type
     Image1: TImage;
     btnVoltar: TImage;
     lytConsultar: TLayout;
-    rectConsulta: TRectangle;
-    Rectangle4: TRectangle;
-    Image3: TImage;
-    btnDetalhe: TSpeedButton;
     TabControl: TTabControl;
     tbLista: TTabItem;
     tbDetalhe: TTabItem;
@@ -46,15 +42,13 @@ type
     Image4: TImage;
     lvDetalheInveste: TListView;
     Layout1: TLayout;
-    Rectangle8: TRectangle;
-    Rectangle9: TRectangle;
-    Image6: TImage;
-    btnGrafico: TSpeedButton;
     Rectangle11: TRectangle;
     Chart1: TChart;
     Series1: TFastLineSeries;
     Rectangle10: TRectangle;
     Memo1: TMemo;
+    Image3: TImage;
+    Image5: TImage;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnVoltarClick(Sender: TObject);
     procedure btnBuscarClick(Sender: TObject);

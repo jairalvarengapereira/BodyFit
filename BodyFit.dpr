@@ -6,7 +6,6 @@ uses
   UnitPrincipal in 'UnitPrincipal.pas' {FrmPrincipal},
   UnitCliente in 'UnitCliente.pas' {FrmCliente},
   UnitRanking in 'UnitRanking.pas' {FrmRanking},
-  UnitBioimped in 'UnitBioimped.pas' {FrmBioimped},
   UnitBioimpedancia in 'UnitBioimpedancia.pas' {FrmBiomimpedancia},
   UnitIMC in 'UnitIMC.pas' {FrmIMC},
   UnitFotos in 'UnitFotos.pas' {FrmFotos},
@@ -16,6 +15,6 @@ uses
 
 begin
   Application.Initialize;
-  Application.CreateForm(TFrmFotos, FrmFotos);
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
   Application.Run;
 end.

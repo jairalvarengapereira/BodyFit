@@ -6,12 +6,12 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts, FMXTee.Engine,
-  FMXTee.Series, FMXTee.Procs, FMXTee.Chart;
+  FMXTee.Series, FMXTee.Procs, FMXTee.Chart, FMX.ListBox;
 
 type
   TFrmIMC = class(TForm)
     rectTit: TRectangle;
-    FrmIMC: TLabel;
+    lblTit: TLabel;
     Image1: TImage;
     Image5: TImage;
     Layout1: TLayout;
@@ -34,7 +34,13 @@ type
     Label1: TLabel;
     Chart1: TChart;
     Series1: TFastLineSeries;
+    Layout2: TLayout;
+    rectCliente: TRectangle;
+    ComboBox1: TComboBox;
+    Label3: TLabel;
     procedure FormCreate(Sender: TObject);
+    procedure Image5Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -48,6 +54,12 @@ implementation
 
 {$R *.fmx}
 
+procedure TFrmIMC.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := TCloseAction.caFree;
+  FrmIMC := nil
+end;
+
 procedure TFrmIMC.FormCreate(Sender: TObject);
 begin
   lblAltura.Text    := 'Altura: 1,69 m';
@@ -60,6 +72,11 @@ begin
   chart1.Series[0].AddY(32.00,'');
   chart1.Series[0].Addy(30.123,'');
   chart1.Series[0].AddY(29.7958754,'');
+end;
+
+procedure TFrmIMC.Image5Click(Sender: TObject);
+begin
+  Close;
 end;
 
 end.

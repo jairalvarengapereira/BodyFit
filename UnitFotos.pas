@@ -55,6 +55,8 @@ type
     procedure imgCameraClick(Sender: TObject);
     procedure imgLibraryClick(Sender: TObject);
     procedure Image2Click(Sender: TObject);
+    procedure Image5Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
     permissao: T99Permissions;
@@ -75,6 +77,12 @@ begin
     imgFoto.Bitmap := Image;
 end;
 
+procedure TFrmFotos.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := TCloseAction.caFree;
+  FrmFotos:= nil;
+end;
+
 procedure TFrmFotos.FormCreate(Sender: TObject);
 begin
     permissao := T99Permissions.Create;
@@ -88,6 +96,11 @@ end;
 procedure TFrmFotos.Image2Click(Sender: TObject);
 begin
   imgFoto.Bitmap := TImage(Sender).Bitmap;
+end;
+
+procedure TFrmFotos.Image5Click(Sender: TObject);
+begin
+  Close;
 end;
 
 procedure TFrmFotos.ErroPermissaoFoto(Sender: TObject);

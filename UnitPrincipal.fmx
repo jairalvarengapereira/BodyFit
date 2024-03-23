@@ -7211,6 +7211,7 @@ object FrmPrincipal: TFrmPrincipal
         TextSettings.Font.StyleExt = {00060000000000000004000000}
         TextSettings.FontColor = claWhite
         TextSettings.Trimming = None
+        OnClick = SpeedButton2Click
       end
     end
   end

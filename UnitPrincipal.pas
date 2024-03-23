@@ -38,6 +38,7 @@ type
     procedure btnBioimpedClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,7 +52,8 @@ implementation
 
 {$R *.fmx}
 
-uses UnitCliente, UnitBioimpedancia, UnitIMC, UnitBioimped, UnitRanking;
+uses UnitCliente, UnitBioimpedancia, UnitIMC, UnitBioimped, UnitRanking,
+  UnitFotos;
 
 procedure TFrmPrincipal.btnBioimpedClick(Sender: TObject);
 begin
@@ -84,6 +86,13 @@ begin
   if not Assigned(FrmIMC) then
     Application.CreateForm(TFrmIMC, FrmIMC);
   FrmIMC.Show;
+end;
+
+procedure TFrmPrincipal.SpeedButton2Click(Sender: TObject);
+begin
+  if not Assigned(FrmFotos) then
+    Application.CreateForm(TFrmFotos, FrmFotos);
+  FrmFotos.Show;
 end;
 
 end.
