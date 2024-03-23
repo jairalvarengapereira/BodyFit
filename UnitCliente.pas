@@ -303,14 +303,6 @@ begin
         edtBairro.Text := FieldByName('bairro').AsString;
         edtCidade.Text := FieldByName('localidade').AsString;
         edtUF.Text := FieldByName('uf').AsString;
-
-//        lblEndereco.Text := 'CEP: ' + FieldByName('cep').AsString + sLineBreak +
-//                            'End: ' +  + sLineBreak +
-//                            'Compl: ' + FieldByName('complemento').AsString + sLineBreak +
-//                            'Bairro: ' + FieldByName('bairro').AsString + sLineBreak +
-//                            'Cidade: ' + FieldByName('localidade').AsString + sLineBreak +
-//                            'UF: ' + FieldByName('uf').AsString + sLineBreak +
-//                            'Cod. IBGE: ' + FieldByName('ibge').AsString;
       end;
     end;
   end
