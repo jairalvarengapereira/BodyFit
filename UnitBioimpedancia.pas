@@ -246,6 +246,7 @@ type
     Layout35: TLayout;
     Edit33: TEdit;
     Ósseo: TLabel;
+    Image7: TImage;
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);

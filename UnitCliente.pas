@@ -7,7 +7,12 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts, FMX.TabControl, FMX.Edit,
   FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
-  FMX.ListView;
+  FMX.ListView, FMX.ListBox, FMX.DateTimeCtrls,
+  RESTRequest4D,
+  DataSet.Serialize.Adapter.RESTRequest4D,
+  DataSet.Serialize, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TFrmCliente = class(TForm)
@@ -20,50 +25,78 @@ type
     tbDelCli: TTabItem;
     Image5: TImage;
     Layout2: TLayout;
-    Layout1: TLayout;
-    rectCliente: TRectangle;
+    lytCliente: TLayout;
+    rectAdd: TRectangle;
     Rectangle3: TRectangle;
     Image2: TImage;
-    btnCliente: TSpeedButton;
-    rectConfig: TRectangle;
-    Rectangle4: TRectangle;
-    Image3: TImage;
-    btnConfig: TSpeedButton;
-    rectBioimped: TRectangle;
+    btnAdd: TSpeedButton;
+    rectDel: TRectangle;
     Rectangle6: TRectangle;
     Image4: TImage;
-    btnBioimped: TSpeedButton;
+    BtnDel: TSpeedButton;
     Rectangle2: TRectangle;
     Rectangle7: TRectangle;
     Rectangle8: TRectangle;
     Rectangle9: TRectangle;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Edit4: TEdit;
+    edtEmail: TEdit;
+    edtFone: TEdit;
+    edtCEP: TEdit;
     Rectangle11: TRectangle;
-    Edit5: TEdit;
     Rectangle12: TRectangle;
-    Edit6: TEdit;
+    edtCPF: TEdit;
     Rectangle13: TRectangle;
     lytBotoes: TLayout;
     lvClienteDelete: TListView;
     Rectangle1: TRectangle;
     Label1: TLabel;
-    Edit7: TEdit;
+    edtAltura: TEdit;
     Image6: TImage;
     Image7: TImage;
+    Rectangle4: TRectangle;
+    Image3: TImage;
+    cbCliente: TComboBox;
+    Label2: TLabel;
+    dtNascimento: TDateEdit;
+    Label3: TLabel;
+    lytDtNasc: TLayout;
+    Rectangle5: TRectangle;
+    edtEndereco: TEdit;
+    lytCEP: TLayout;
+    rectBuscar: TRectangle;
+    Image8: TImage;
+    Layout1: TLayout;
+    Rectangle10: TRectangle;
+    edtNumero: TEdit;
+    Rectangle16: TRectangle;
+    edtBairro: TEdit;
+    Rectangle17: TRectangle;
+    edtComplemento: TEdit;
+    Layout3: TLayout;
+    Rectangle18: TRectangle;
+    edtCidade: TEdit;
+    Rectangle22: TRectangle;
+    edtUF: TEdit;
+    Layout4: TLayout;
+    MemTable: TFDMemTable;
     procedure Image5Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure btnClienteClick(Sender: TObject);
+    procedure btnAddClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure lvClienteDeleteDeletingItem(Sender: TObject; AIndex: Integer;
       var ACanDelete: Boolean);
     procedure FormCreate(Sender: TObject);
-    procedure btnConfigClick(Sender: TObject);
+    procedure edtCPFKeyDown(Sender: TObject; var Key: Word;
+      var KeyChar: WideChar; Shift: TShiftState);
+    procedure edtFoneKeyDown(Sender: TObject; var Key: Word;
+      var KeyChar: WideChar; Shift: TShiftState);
+    procedure edtCEPKeyDown(Sender: TObject; var Key: Word;
+      var KeyChar: WideChar; Shift: TShiftState);
+    procedure rectBuscarClick(Sender: TObject);
   private
     procedure ListarCliente;
     procedure Add_Tarefa(id: integer; nome: string);
+    procedure ConsultarCEP(cep: string);
+    procedure rectBuscaClick(Sender: TObject);
     { Private declarations }
   public
     { Public declarations }
@@ -76,9 +109,9 @@ implementation
 
 {$R *.fmx}
 
-uses UnitRanking;
+uses UnitRanking, uFormat;
 
-procedure TFrmCliente.btnClienteClick(Sender: TObject);
+procedure TFrmCliente.btnAddClick(Sender: TObject);
 begin
   TabControl.GotoVisibleTab(TSpeedButton(Sender).Tag);
   lblTit.Text := TSpeedButton(Sender).Text;
@@ -86,11 +119,67 @@ begin
     ListarCliente;
 end;
 
-procedure TFrmCliente.btnConfigClick(Sender: TObject);
+procedure TFrmCliente.edtCEPKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: WideChar; Shift: TShiftState);
 begin
-  if not Assigned(FrmRanking) then
-    Application.CreateForm(TFrmRanking, FrmRanking);
-  FrmRanking.Show;
+  if Key = vkBack then
+  exit;
+
+  if Length(edtCEP.Text) = 5 then
+  begin
+     edtCEP.Text := edtCEP.Text + '-';
+     edtCEP.Selstart := Length(edtCEP.text);
+  end;
+end;
+
+procedure TFrmCliente.edtCPFKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: WideChar; Shift: TShiftState);
+begin
+  if Key = vkBack then
+  exit;
+
+  if Length(edtCPF.Text) = 3 then
+  begin
+     edtCPF.Text := edtCPF.Text + '.';
+     edtCPF.Selstart := Length(edtCPF.text);
+  end;
+
+  if Length(edtCPF.Text) = 7 then
+  begin
+     edtCPF.Text := edtCPF.Text + '.';
+     edtCPF.Selstart := Length(edtCPF.text);
+  end;
+
+  if Length(edtCPF.Text) = 11 then
+  begin
+   edtCPF.Text := edtCPF.Text + '-';
+   edtCPF.Selstart := Length(edtCPF.text);
+  end
+end;
+
+procedure TFrmCliente.edtFoneKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: WideChar; Shift: TShiftState);
+begin
+  if Key = vkBack then
+  exit;
+
+  if Length(edtFone.Text) < 2  then
+  begin
+     edtFone.Text := edtFone.Text + '(';
+     edtFone.Selstart := Length(edtFone.text);
+  end;
+
+  if Length(edtFone.Text) = 3 then
+  begin
+     edtFone.Text := edtFone.Text + ') ';
+     edtFone.Selstart := Length(edtFone.text);
+  end;
+
+  if Length(edtFone.Text) = 10 then
+  begin
+     edtFone.Text := edtFone.Text + '-';
+     edtFone.Selstart := Length(edtFone.text);
+  end;
 end;
 
 procedure TFrmCliente.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -127,15 +216,15 @@ begin
   lvClienteDelete.Items.Clear;
   lvClienteDelete.BeginUpdate;
 
-  Add_Tarefa(110,'Joãozinho');
-  Add_Tarefa(111,'Zezinho');
-  Add_Tarefa(112,'Huguinho');
+  Add_Tarefa(110,'Chiquinho');
+  Add_Tarefa(111,'Huguinho');
+  Add_Tarefa(112,'Joãozinho');
   Add_Tarefa(113,'Luizinho');
-  Add_Tarefa(114,'Zé das Couves');
-  Add_Tarefa(115,'Maria Bonita');
-  Add_Tarefa(116,'Lampião');
-  Add_Tarefa(117,'Chiquinho');
-  Add_Tarefa(118,'Marcelinho');
+  Add_Tarefa(114,'Lampião');
+  Add_Tarefa(115,'Marcelinho');
+  Add_Tarefa(116,'Maria Bonita');
+  Add_Tarefa(117,'Zé das Couves');
+  Add_Tarefa(118,'Zezinho');
 
   lvClienteDelete.EndUpdate;
 end;
@@ -154,12 +243,10 @@ begin
     with item do
     begin
       // Adiciona ID e Nome
-      txt := TListItemText(Objects.FindDrawable('Text1'));
+      txt := TListItemText(Objects.FindDrawable('txtNome'));
       txt.Text := nome;
-      txt.Font.Size := 18;
-      txt.Height := 70;
-      txt.PlaceOffset.X := 25;
-      txt.PlaceOffset.Y := 0;
+      txt := TListItemText(Objects.FindDrawable('txtCod'));
+      txt.Text := Formatfloat('000',id);
       txt.TagString := id.ToString;
     end;
   end;
@@ -168,14 +255,67 @@ end;
 procedure TFrmCliente.lvClienteDeleteDeletingItem(Sender: TObject;
   AIndex: Integer; var ACanDelete: Boolean);
 var
-    txt : TListItemText;
+  txt : TListItemText;
 begin
-    txt := TListItemText(FrmCliente.lvClienteDelete.Items[AIndex].Objects.FindDrawable('Text1'));
+  txt := TListItemText(FrmCliente.lvClienteDelete.Items[AIndex].Objects.FindDrawable('Text1'));
+//
+//    if txt.TagString <> '111' then
+//        showmessage('Excluindo tarefa id = ' + txt.tagstring)
+//    else
+//        ACanDelete := false;
+end;
 
-    if txt.TagString <> '111' then
-        showmessage('Excluindo tarefa id = ' + txt.tagstring)
+procedure TFrmCliente.rectBuscaClick(Sender: TObject);
+begin
+    ConsultarCEP(edtCEP.Text);
+end;
+
+procedure TFrmCliente.rectBuscarClick(Sender: TObject);
+begin
+  ConsultarCEP(edtCEP.Text);
+end;
+
+procedure TFrmCliente.ConsultarCEP(cep: string);
+var
+  resp : IResponse;
+begin
+  if SomenteNumero(edtCEP.Text).Length <> 8 then
+  begin
+      ShowMessage('CEP inválido');
+      exit;
+  end;
+
+  resp := TRequest.New.BaseURL('viacep.com.br/ws')
+          .Resource(SomenteNumero(edtCEP.Text) + '/json')
+          .Accept('application/json')
+          .Adapters(TDataSetSerializeAdapter.New(MemTable))
+          .Get;
+
+  if Resp.StatusCode = 200 then
+  begin
+    if Resp.Content.IndexOf('erro') > 0 then
+      ShowMessage('CEP não encontrado')
     else
-        ACanDelete := false;
+    begin
+      with MemTable do
+      begin
+        edtEndereco.Text := FieldByName('logradouro').AsString;
+        edtBairro.Text := FieldByName('bairro').AsString;
+        edtCidade.Text := FieldByName('localidade').AsString;
+        edtUF.Text := FieldByName('uf').AsString;
+
+//        lblEndereco.Text := 'CEP: ' + FieldByName('cep').AsString + sLineBreak +
+//                            'End: ' +  + sLineBreak +
+//                            'Compl: ' + FieldByName('complemento').AsString + sLineBreak +
+//                            'Bairro: ' + FieldByName('bairro').AsString + sLineBreak +
+//                            'Cidade: ' + FieldByName('localidade').AsString + sLineBreak +
+//                            'UF: ' + FieldByName('uf').AsString + sLineBreak +
+//                            'Cod. IBGE: ' + FieldByName('ibge').AsString;
+      end;
+    end;
+  end
+  else
+    ShowMessage('Erro ao consultar CEP');
 end;
 
 end.

@@ -407,6 +407,7 @@
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="Units\u99Permissions.pas"/>
+        <DCCReference Include="Units\uFormat.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

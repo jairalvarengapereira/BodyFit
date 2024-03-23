@@ -9,7 +9,8 @@ uses
   UnitBioimpedancia in 'UnitBioimpedancia.pas' {FrmBiomimpedancia},
   UnitIMC in 'UnitIMC.pas' {FrmIMC},
   UnitFotos in 'UnitFotos.pas' {FrmFotos},
-  u99Permissions in 'Units\u99Permissions.pas';
+  u99Permissions in 'Units\u99Permissions.pas',
+  uFormat in 'Units\uFormat.pas';
 
 {$R *.res}
 

@@ -33,12 +33,17 @@ type
     Rectangle8: TRectangle;
     Image6: TImage;
     SpeedButton2: TSpeedButton;
+    rectRanking: TRectangle;
+    Rectangle9: TRectangle;
+    Image7: TImage;
+    btnRanking: TSpeedButton;
     procedure rectClienteResize(Sender: TObject);
     procedure btnClienteClick(Sender: TObject);
     procedure btnBioimpedClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure SpeedButton1Click(Sender: TObject);
     procedure SpeedButton2Click(Sender: TObject);
+    procedure btnRankingClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,7 +57,7 @@ implementation
 
 {$R *.fmx}
 
-uses UnitCliente, UnitBioimpedancia, UnitIMC, UnitBioimped, UnitRanking,
+uses UnitCliente, UnitBioimpedancia, UnitIMC, UnitRanking,
   UnitFotos;
 
 procedure TFrmPrincipal.btnBioimpedClick(Sender: TObject);
@@ -67,6 +72,13 @@ begin
   if not Assigned(FrmCliente) then
     Application.CreateForm(TFrmCliente, FrmCliente);
   FrmCliente.Show;
+end;
+
+procedure TFrmPrincipal.btnRankingClick(Sender: TObject);
+begin
+  if not Assigned(FrmRanking) then
+    Application.CreateForm(TFrmRanking, FrmRanking);
+  FrmRanking.Show;
 end;
 
 procedure TFrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);

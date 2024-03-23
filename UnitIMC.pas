@@ -38,6 +38,12 @@ type
     rectCliente: TRectangle;
     ComboBox1: TComboBox;
     Label3: TLabel;
+    Rectangle4: TRectangle;
+    Label4: TLabel;
+    lbData: TListBox;
+    ListBoxItem1: TListBoxItem;
+    ListBoxItem2: TListBoxItem;
+    ListBoxItem3: TListBoxItem;
     procedure FormCreate(Sender: TObject);
     procedure Image5Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

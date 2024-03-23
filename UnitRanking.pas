@@ -28,9 +28,6 @@ type
     dtIniGrafico: TDateEdit;
     Label9: TLabel;
     dtFinGrafico: TDateEdit;
-    Circle1: TCircle;
-    btnBuscar: TSpeedButton;
-    Image2: TImage;
     Rectangle3: TRectangle;
     lblCliente: TLabel;
     Rectangle5: TRectangle;
@@ -38,17 +35,20 @@ type
     Rectangle7: TRectangle;
     DateEdit1: TDateEdit;
     Edit1: TEdit;
-    SpeedButton1: TSpeedButton;
     Image4: TImage;
     lvDetalheInveste: TListView;
     Layout1: TLayout;
     Rectangle11: TRectangle;
-    Chart1: TChart;
-    Series1: TFastLineSeries;
     Rectangle10: TRectangle;
     Memo1: TMemo;
     Image3: TImage;
     Image5: TImage;
+    rectBuscar: TRectangle;
+    Image2: TImage;
+    Rectangle4: TRectangle;
+    Label1: TLabel;
+    Chart1: TChart;
+    Series1: TFastLineSeries;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnVoltarClick(Sender: TObject);
     procedure btnBuscarClick(Sender: TObject);
@@ -84,7 +84,15 @@ begin
 
   if TabControl.TabIndex = 1 then
   begin
-    ListarDetalheInveste;
+    if lblCliente.Text = '' then
+    begin
+      ShowMessage('Selecione cliente.');
+      TabControl.GotoVisibleTab(TabControl.TabIndex - 1);
+    end
+    else
+    begin
+      ListarDetalheInveste;
+    end;
   end
   else
   if TabControl.TabIndex = 2 then
