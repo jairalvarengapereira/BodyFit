@@ -41,14 +41,16 @@ type
     Rectangle11: TRectangle;
     Rectangle10: TRectangle;
     Memo1: TMemo;
-    Image3: TImage;
-    Image5: TImage;
     rectBuscar: TRectangle;
     Image2: TImage;
     Rectangle4: TRectangle;
     Label1: TLabel;
     Chart1: TChart;
     Series1: TFastLineSeries;
+    btnDetalhe: TCircle;
+    Image10: TImage;
+    Circle1: TCircle;
+    Image3: TImage;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnVoltarClick(Sender: TObject);
     procedure btnBuscarClick(Sender: TObject);
@@ -80,23 +82,25 @@ end;
 
 procedure TFrmRanking.btnDetalheClick(Sender: TObject);
 begin
-  TabControl.GotoVisibleTab(TabControl.TabIndex + 1);
+//  TabControl.GotoVisibleTab(TabControl.TabIndex + 1);
 
-  if TabControl.TabIndex = 1 then
+  if TabControl.TabIndex = 0 then
   begin
     if lblCliente.Text = '' then
     begin
+//      TabControl.GotoVisibleTab(0);
       ShowMessage('Selecione cliente.');
-      TabControl.GotoVisibleTab(TabControl.TabIndex - 1);
     end
     else
     begin
+      TabControl.GotoVisibleTab(1);
       ListarDetalheInveste;
     end;
   end
   else
-  if TabControl.TabIndex = 2 then
+  if TabControl.TabIndex = 1 then
   begin
+    TabControl.GotoVisibleTab(2);
     Chart1.Series[0].Clear;
     chart1.Series[0].Addy(17500,'');
     chart1.Series[0].AddY(6500,'');

@@ -15,14 +15,11 @@ type
     Image1: TImage;
     Image5: TImage;
     rectCliente: TRectangle;
-    ComboBox1: TComboBox;
-    Label1: TLabel;
+    cbCliente: TComboBox;
     Layout1: TLayout;
     Label3: TLabel;
     Rectangle1: TRectangle;
     Rectangle2: TRectangle;
-    Label2: TLabel;
-    Image2: TImage;
     ListBox1: TListBox;
     ListBoxItem1: TListBoxItem;
     Rectangle3: TRectangle;
@@ -53,7 +50,6 @@ type
     Edit7: TEdit;
     Layout2: TLayout;
     Rectangle17: TRectangle;
-    Image3: TImage;
     Rectangle18: TRectangle;
     lvBioimpedancia: TListBox;
     SpeedButton1: TSpeedButton;
@@ -205,7 +201,6 @@ type
     Label47: TLabel;
     Z: TLabel;
     lblDireita: TLabel;
-    lblesquerda: TLabel;
     Layout29: TLayout;
     Edit28: TEdit;
     Label48: TLabel;
@@ -246,7 +241,14 @@ type
     Layout35: TLayout;
     Edit33: TEdit;
     Ósseo: TLabel;
+    lblesquerda: TLabel;
+    Circle1: TCircle;
+    Image3: TImage;
+    Circle2: TCircle;
     Image7: TImage;
+    Rectangle56: TRectangle;
+    Image2: TImage;
+    Label2: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);

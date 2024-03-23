@@ -13,8 +13,6 @@ uses
 type
   TFrmFotos = class(TForm)
     lytRodape: TLayout;
-    imgCamera: TImage;
-    imgLibrary: TImage;
     imgFoto: TImage;
     ActionList1: TActionList;
     OpenDialog: TOpenDialog;
@@ -49,6 +47,10 @@ type
     Action1: TAction;
     ActCamera: TTakePhotoFromCameraAction;
     ActLibrary: TTakePhotoFromLibraryAction;
+    Circle2: TCircle;
+    Image9: TImage;
+    Circle1: TCircle;
+    Image10: TImage;
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure ActCameraDidFinishTaking(Image: TBitmap);

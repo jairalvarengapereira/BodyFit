@@ -19,21 +19,8 @@ type
     rectTit: TRectangle;
     lblTit: TLabel;
     Image1: TImage;
-    TabControl: TTabControl;
-    tbMenu: TTabItem;
-    tbAddCli: TTabItem;
-    tbDelCli: TTabItem;
-    Image5: TImage;
+    btnVoltar: TImage;
     Layout2: TLayout;
-    lytCliente: TLayout;
-    rectAdd: TRectangle;
-    Rectangle3: TRectangle;
-    Image2: TImage;
-    btnAdd: TSpeedButton;
-    rectDel: TRectangle;
-    Rectangle6: TRectangle;
-    Image4: TImage;
-    BtnDel: TSpeedButton;
     Rectangle2: TRectangle;
     Rectangle7: TRectangle;
     Rectangle8: TRectangle;
@@ -44,14 +31,10 @@ type
     Rectangle11: TRectangle;
     Rectangle12: TRectangle;
     edtCPF: TEdit;
-    Rectangle13: TRectangle;
     lytBotoes: TLayout;
-    lvClienteDelete: TListView;
     Rectangle1: TRectangle;
     Label1: TLabel;
     edtAltura: TEdit;
-    Image6: TImage;
-    Image7: TImage;
     Rectangle4: TRectangle;
     Image3: TImage;
     cbCliente: TComboBox;
@@ -78,13 +61,16 @@ type
     edtUF: TEdit;
     Layout4: TLayout;
     MemTable: TFDMemTable;
-    procedure Image5Click(Sender: TObject);
+    circConf: TCircle;
+    Image9: TImage;
+    cirCancel: TCircle;
+    Image11: TImage;
+    circDel: TCircle;
+    Image6: TImage;
+
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure btnAddClick(Sender: TObject);
-    procedure FormShow(Sender: TObject);
     procedure lvClienteDeleteDeletingItem(Sender: TObject; AIndex: Integer;
       var ACanDelete: Boolean);
-    procedure FormCreate(Sender: TObject);
     procedure edtCPFKeyDown(Sender: TObject; var Key: Word;
       var KeyChar: WideChar; Shift: TShiftState);
     procedure edtFoneKeyDown(Sender: TObject; var Key: Word;
@@ -92,6 +78,7 @@ type
     procedure edtCEPKeyDown(Sender: TObject; var Key: Word;
       var KeyChar: WideChar; Shift: TShiftState);
     procedure rectBuscarClick(Sender: TObject);
+    procedure btnVoltarClick(Sender: TObject);
   private
     procedure ListarCliente;
     procedure Add_Tarefa(id: integer; nome: string);
@@ -110,14 +97,6 @@ implementation
 {$R *.fmx}
 
 uses UnitRanking, uFormat;
-
-procedure TFrmCliente.btnAddClick(Sender: TObject);
-begin
-  TabControl.GotoVisibleTab(TSpeedButton(Sender).Tag);
-  lblTit.Text := TSpeedButton(Sender).Text;
-  if TabControl.TabIndex = 2 then
-    ListarCliente;
-end;
 
 procedure TFrmCliente.edtCEPKeyDown(Sender: TObject; var Key: Word;
   var KeyChar: WideChar; Shift: TShiftState);
@@ -188,81 +167,17 @@ begin
   FrmCliente := nil;
 end;
 
-procedure TFrmCliente.FormCreate(Sender: TObject);
-begin
-  // Configurar texto do botao delete..
-  lvClienteDelete.DeleteButtonText := 'Excluir';
-end;
-
-procedure TFrmCliente.FormShow(Sender: TObject);
-begin
-  TabControl.GotoVisibleTab(0);
-end;
-
-procedure TFrmCliente.Image5Click(Sender: TObject);
-begin
-  lblTit.Text := 'Clientes';
-  if TabControl.TabIndex > 0 then
-    TabControl.GotoVisibleTab(0)
-  else
-    Close;
-end;
-
 procedure TFrmCliente.ListarCliente;
-var
-  Lvitem : TListViewItem;
-  txt : TListItemText;
 begin
-  lvClienteDelete.Items.Clear;
-  lvClienteDelete.BeginUpdate;
-
-  Add_Tarefa(110,'Chiquinho');
-  Add_Tarefa(111,'Huguinho');
-  Add_Tarefa(112,'Joãozinho');
-  Add_Tarefa(113,'Luizinho');
-  Add_Tarefa(114,'Lampião');
-  Add_Tarefa(115,'Marcelinho');
-  Add_Tarefa(116,'Maria Bonita');
-  Add_Tarefa(117,'Zé das Couves');
-  Add_Tarefa(118,'Zezinho');
-
-  lvClienteDelete.EndUpdate;
 end;
 
 procedure TFrmCliente.Add_Tarefa(id : integer; nome : string);
-var
-  item : TListViewItem;
-  txt : TListItemText;
 begin
-  with FrmCliente do
-  begin
-    item := lvClienteDelete.Items.Add;
-    item.Objects.Clear;
-    item.TagString := id.ToString;
-
-    with item do
-    begin
-      // Adiciona ID e Nome
-      txt := TListItemText(Objects.FindDrawable('txtNome'));
-      txt.Text := nome;
-      txt := TListItemText(Objects.FindDrawable('txtCod'));
-      txt.Text := Formatfloat('000',id);
-      txt.TagString := id.ToString;
-    end;
-  end;
 end;
 
 procedure TFrmCliente.lvClienteDeleteDeletingItem(Sender: TObject;
   AIndex: Integer; var ACanDelete: Boolean);
-var
-  txt : TListItemText;
-begin
-  txt := TListItemText(FrmCliente.lvClienteDelete.Items[AIndex].Objects.FindDrawable('Text1'));
-//
-//    if txt.TagString <> '111' then
-//        showmessage('Excluindo tarefa id = ' + txt.tagstring)
-//    else
-//        ACanDelete := false;
+begin      ACanDelete := false;
 end;
 
 procedure TFrmCliente.rectBuscaClick(Sender: TObject);
@@ -273,6 +188,11 @@ end;
 procedure TFrmCliente.rectBuscarClick(Sender: TObject);
 begin
   ConsultarCEP(edtCEP.Text);
+end;
+
+procedure TFrmCliente.btnVoltarClick(Sender: TObject);
+begin
+  Close;
 end;
 
 procedure TFrmCliente.ConsultarCEP(cep: string);
