@@ -408,6 +408,10 @@
         </DCCReference>
         <DCCReference Include="Units\u99Permissions.pas"/>
         <DCCReference Include="Units\uFormat.pas"/>
+        <DCCReference Include="UnitPrin.pas">
+            <Form>FrmPrin</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

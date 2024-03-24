@@ -1,0 +1,54 @@
+unit UnitPrin;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
+  FMX.Objects, FMX.Controls.Presentation, FMX.StdCtrls;
+
+type
+  TFrmPrin = class(TForm)
+    Rectangle1: TRectangle;
+    Label1: TLabel;
+    Image1: TImage;
+    Image2: TImage;
+    Circle1: TCircle;
+    Circle2: TCircle;
+    Label2: TLabel;
+    rectMenu: TRectangle;
+    Layout1: TLayout;
+    Rectangle3: TRectangle;
+    Label3: TLabel;
+    Rectangle2: TRectangle;
+    Label4: TLabel;
+    Rectangle4: TRectangle;
+    Label5: TLabel;
+    Image3: TImage;
+    Layout3: TLayout;
+    Rectangle8: TRectangle;
+    Fotos: TLabel;
+    Image5: TImage;
+    Rectangle9: TRectangle;
+    Label10: TLabel;
+    Rectangle10: TRectangle;
+    Label11: TLabel;
+    Image4: TImage;
+    Image6: TImage;
+    Image7: TImage;
+    Image8: TImage;
+    Image9: TImage;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrin: TFrmPrin;
+
+implementation
+
+{$R *.fmx}
+
+end.
