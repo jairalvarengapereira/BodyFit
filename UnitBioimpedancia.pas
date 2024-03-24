@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.ListBox, FMX.Layouts, FMX.Edit,
-  FMX.Ani, FMX.DateTimeCtrls, FMX.TabControl;
+  FMX.Ani, FMX.DateTimeCtrls, FMX.TabControl, System.ImageList, FMX.ImgList;
 
 type
   TFrmBiomimpedancia = class(TForm)
@@ -242,17 +242,20 @@ type
     Edit33: TEdit;
     Ósseo: TLabel;
     lblesquerda: TLabel;
-    Circle1: TCircle;
-    Image3: TImage;
     Circle2: TCircle;
     Image7: TImage;
     Rectangle56: TRectangle;
-    Image2: TImage;
     Label2: TLabel;
+    ImageList: TImageList;
+    Glyph: TGlyph;
+    Circle1: TCircle;
+    Image3: TImage;
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Edit1Change(Sender: TObject);
+    procedure GlyphChanged(Sender: TObject);
   private
     { Private declarations }
   public
@@ -266,6 +269,11 @@ implementation
 
 {$R *.fmx}
 
+procedure TFrmBiomimpedancia.Edit1Change(Sender: TObject);
+begin
+  Glyph.ImageIndex := 1;
+end;
+
 procedure TFrmBiomimpedancia.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
@@ -278,6 +286,14 @@ begin
   TabControl.GotoVisibleTab(0);
   rectForte.Height := TabControl.Height / 2;
   rectGordo.Height := rectForte.Height - 15;
+end;
+
+procedure TFrmBiomimpedancia.GlyphChanged(Sender: TObject);
+begin
+  if Glyph.ImageIndex = 0 then
+    Glyph.ImageIndex := 1
+  else
+    Glyph.ImageIndex := 0;
 end;
 
 procedure TFrmBiomimpedancia.Image5Click(Sender: TObject);

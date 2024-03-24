@@ -8,7 +8,8 @@ uses
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.Layouts, FMX.TabControl,
   FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
   FMX.ListView, FMX.DateTimeCtrls, FMX.Edit, FMX.Memo.Types, FMX.ScrollBox,
-  FMX.Memo, FMXTee.Engine, FMXTee.Procs, FMXTee.Chart, FMXTee.Series;
+  FMX.Memo, FMXTee.Engine, FMXTee.Procs, FMXTee.Chart, FMXTee.Series,
+  System.ImageList, FMX.ImgList;
 
 type
   TFrmRanking = class(TForm)
@@ -32,15 +33,14 @@ type
     lblCliente: TLabel;
     Rectangle5: TRectangle;
     Rectangle6: TRectangle;
-    Rectangle7: TRectangle;
-    DateEdit1: TDateEdit;
-    Edit1: TEdit;
-    Image4: TImage;
+    rectAdd: TRectangle;
+    edtData: TDateEdit;
+    edtValor: TEdit;
     lvDetalheInveste: TListView;
     Layout1: TLayout;
     Rectangle11: TRectangle;
     Rectangle10: TRectangle;
-    Memo1: TMemo;
+    edtObs: TMemo;
     rectBuscar: TRectangle;
     Image2: TImage;
     Rectangle4: TRectangle;
@@ -51,6 +51,10 @@ type
     Image10: TImage;
     Circle1: TCircle;
     Image3: TImage;
+    ImageList: TImageList;
+    GlyphAdd: TGlyph;
+    rectCancel: TRectangle;
+    GlyphCancel: TGlyph;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure btnVoltarClick(Sender: TObject);
     procedure btnBuscarClick(Sender: TObject);
@@ -58,11 +62,15 @@ type
       const AItem: TListViewItem);
     procedure btnDetalheClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure rectAddClick(Sender: TObject);
+    procedure GlyphAddChanged(Sender: TObject);
+    procedure rectCancelClick(Sender: TObject);
   private
     procedure ListarRanking;
     procedure Add_Ranking(valor: double; id: integer; nome: string);
     procedure Add_DetalheInveste(valor:double; DetData, obs:string);
     procedure ListarDetalheInveste;
+    procedure MudaGlyoh(GlyphChamou: TGlyph);
     { Private declarations }
   public
     { Public declarations }
@@ -116,8 +124,45 @@ begin
 end;
 
 procedure TFrmRanking.FormCreate(Sender: TObject);
+
 begin
   TabControl.GotoVisibleTab(0);
+end;
+
+procedure TFrmRanking.GlyphAddChanged(Sender: TObject);
+begin
+  if (TabControl.TabIndex =  1) and (edtValor.Text <> '') then
+    MudaGlyoh(TGlyph(Sender));
+end;
+
+procedure TFrmRanking.MudaGlyoh(GlyphChamou : TGlyph);
+begin
+  if (GlyphChamou.Tag = 0) and (GlyphAdd.ImageIndex = 0) then
+  begin
+    GlyphAdd.ImageIndex := 1;
+    rectCancel.Visible := True;
+  end
+  else
+  begin
+    GlyphAdd.ImageIndex := 0;
+    rectCancel.Visible := False;
+  end;
+
+  if (GlyphChamou.Tag = 1) then
+  begin
+    GlyphAdd.ImageIndex := 0;
+    rectCancel.Visible := False;
+  end;
+end;
+
+procedure TFrmRanking.rectAddClick(Sender: TObject);
+begin
+  MudaGlyoh(TGlyph(Sender));
+end;
+
+procedure TFrmRanking.rectCancelClick(Sender: TObject);
+begin
+  MudaGlyoh(TGlyph(Sender));
 end;
 
 procedure TFrmRanking.btnVoltarClick(Sender: TObject);

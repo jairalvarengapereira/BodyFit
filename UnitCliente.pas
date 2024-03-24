@@ -12,7 +12,8 @@ uses
   DataSet.Serialize.Adapter.RESTRequest4D,
   DataSet.Serialize, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.ImageList,
+  FMX.ImgList;
 
 type
   TFrmCliente = class(TForm)
@@ -36,7 +37,6 @@ type
     Label1: TLabel;
     edtAltura: TEdit;
     Rectangle4: TRectangle;
-    Image3: TImage;
     cbCliente: TComboBox;
     Label2: TLabel;
     dtNascimento: TDateEdit;
@@ -61,12 +61,12 @@ type
     edtUF: TEdit;
     Layout4: TLayout;
     MemTable: TFDMemTable;
-    circConf: TCircle;
-    Image9: TImage;
     cirCancel: TCircle;
     Image11: TImage;
     circDel: TCircle;
     Image6: TImage;
+    ImageList: TImageList;
+    Glyph: TGlyph;
 
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure lvClienteDeleteDeletingItem(Sender: TObject; AIndex: Integer;
@@ -79,6 +79,8 @@ type
       var KeyChar: WideChar; Shift: TShiftState);
     procedure rectBuscarClick(Sender: TObject);
     procedure btnVoltarClick(Sender: TObject);
+    procedure dtNascimentoChange(Sender: TObject);
+    procedure GlyphChanged(Sender: TObject);
   private
     procedure ListarCliente;
     procedure Add_Tarefa(id: integer; nome: string);
@@ -167,6 +169,14 @@ begin
   FrmCliente := nil;
 end;
 
+procedure TFrmCliente.GlyphChanged(Sender: TObject);
+begin
+  if Glyph.ImageIndex = 0 then
+    Glyph.ImageIndex := 1
+  else
+    Glyph.ImageIndex := 0;
+end;
+
 procedure TFrmCliente.ListarCliente;
 begin
 end;
@@ -228,6 +238,11 @@ begin
   end
   else
     ShowMessage('Erro ao consultar CEP');
+end;
+
+procedure TFrmCliente.dtNascimentoChange(Sender: TObject);
+begin
+  Glyph.ImageIndex := 1;
 end;
 
 end.
