@@ -22,7 +22,7 @@ type
     Image1: TImage;
     btnVoltar: TImage;
     Layout2: TLayout;
-    Rectangle2: TRectangle;
+    rectNome: TRectangle;
     Rectangle7: TRectangle;
     Rectangle8: TRectangle;
     Rectangle9: TRectangle;
@@ -36,8 +36,8 @@ type
     Rectangle1: TRectangle;
     Label1: TLabel;
     edtAltura: TEdit;
-    Rectangle4: TRectangle;
-    cbCliente: TComboBox;
+    rectAddCliente: TRectangle;
+    cbNome: TComboBox;
     Label2: TLabel;
     dtNascimento: TDateEdit;
     Label3: TLabel;
@@ -61,16 +61,15 @@ type
     edtUF: TEdit;
     Layout4: TLayout;
     MemTable: TFDMemTable;
-    cirCancel: TCircle;
+    btnCancel: TCircle;
     Image11: TImage;
-    circDel: TCircle;
+    btnDel: TCircle;
     Image6: TImage;
     ImageList: TImageList;
     Glyph: TGlyph;
+    edtNome: TEdit;
 
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure lvClienteDeleteDeletingItem(Sender: TObject; AIndex: Integer;
-      var ACanDelete: Boolean);
     procedure edtCPFKeyDown(Sender: TObject; var Key: Word;
       var KeyChar: WideChar; Shift: TShiftState);
     procedure edtFoneKeyDown(Sender: TObject; var Key: Word;
@@ -80,12 +79,17 @@ type
     procedure rectBuscarClick(Sender: TObject);
     procedure btnVoltarClick(Sender: TObject);
     procedure dtNascimentoChange(Sender: TObject);
-    procedure Rectangle4Click(Sender: TObject);
+    procedure rectAddClienteClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure edtAlturaKeyDown(Sender: TObject; var Key: Word;
+      var KeyChar: WideChar; Shift: TShiftState);
   private
-    procedure ListarCliente;
-    procedure Add_Tarefa(id: integer; nome: string);
     procedure ConsultarCEP(cep: string);
     procedure rectBuscaClick(Sender: TObject);
+    procedure DelCliente;
+    procedure ListarClientes;
+    procedure AddCliente;
+    procedure AlterCliente;
     { Private declarations }
   public
     { Public declarations }
@@ -98,11 +102,21 @@ implementation
 
 {$R *.fmx}
 
-uses UnitRanking, uFormat;
+uses UnitRanking, uFormat, uDM;
+
+procedure TFrmCliente.edtAlturaKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: WideChar; Shift: TShiftState);
+begin
+  if (not(KeyChar in ['0'..'9', '.', ','])) and (Ord(keychar)<>8) and (keychar <> #0) then
+    keychar := #0;
+end;
 
 procedure TFrmCliente.edtCEPKeyDown(Sender: TObject; var Key: Word;
   var KeyChar: WideChar; Shift: TShiftState);
 begin
+  if (not(KeyChar in ['0'..'9', '.', ','])) and (Ord(keychar)<>8) and (keychar <> #0) then
+    keychar := #0;
+
   if Key = vkBack then
   exit;
 
@@ -116,6 +130,9 @@ end;
 procedure TFrmCliente.edtCPFKeyDown(Sender: TObject; var Key: Word;
   var KeyChar: WideChar; Shift: TShiftState);
 begin
+  if (not(KeyChar in ['0'..'9', '.', ','])) and (Ord(keychar)<>8) and (keychar <> #0) then
+    keychar := #0;
+
   if Key = vkBack then
   exit;
 
@@ -141,7 +158,10 @@ end;
 procedure TFrmCliente.edtFoneKeyDown(Sender: TObject; var Key: Word;
   var KeyChar: WideChar; Shift: TShiftState);
 begin
-  if Key = vkBack then
+  if (not(KeyChar in ['0'..'9', '.', ','])) and (Ord(keychar)<>8) and (keychar <> #0) then
+    keychar := #0;
+
+  if (Key = vkBack) then
   exit;
 
   if Length(edtFone.Text) < 2  then
@@ -169,25 +189,90 @@ begin
   FrmCliente := nil;
 end;
 
-procedure TFrmCliente.ListarCliente;
+procedure TFrmCliente.FormShow(Sender: TObject);
 begin
+  edtNome.Visible := False;
+  ListarClientes;
 end;
 
-procedure TFrmCliente.Add_Tarefa(id : integer; nome : string);
+procedure TFrmCliente.ListarClientes;
 begin
+  DM.ListarCliente;
+  with DM.qryCliente do
+  begin
+    if DM.qryCliente.RecordCount > 0 then
+    begin
+      while not eof do
+      begin
+        cbNome.Items.Add(DM.qryCliente.FieldByName('Cliente_Nome').AsString);
+        Next;
+      end;
+    end
+    else
+      ShowMessage('Nenhum cliente cadastrado');
+  end;
 end;
 
-procedure TFrmCliente.lvClienteDeleteDeletingItem(Sender: TObject;
-  AIndex: Integer; var ACanDelete: Boolean);
-begin      ACanDelete := false;
-end;
-
-procedure TFrmCliente.Rectangle4Click(Sender: TObject);
+procedure TFrmCliente.rectAddClienteClick(Sender: TObject);
 begin
   if Glyph.ImageIndex = 0 then
-    Glyph.ImageIndex := 1
+  begin
+    edtNome.Visible := True;
+    cbNome.Visible := False;
+    Glyph.ImageIndex := 1;
+  end
   else
+  begin
+    if TCircle(Sender).Name = 'btnDel' then
+      ShowMessage('vai deletar cliente')
+      else
+    if TCircle(Sender).Name = 'btnCancel' then
+      ListarClientes
+    else
+    if edtNome.Visible then
+      AddCliente
+    else
+      AlterCliente;
+
+
     Glyph.ImageIndex := 0;
+    edtNome.Visible := False;
+    cbNome.Visible := True;
+  end;
+end;
+
+procedure TFrmCliente.AddCliente;
+begin
+  with DM do
+  begin
+    qryCliente.append;
+    qryClienteCliente_Nome.Value        := edtNome.Text;
+    qryClienteCliente_Nascimento.Value  := dtNascimento.Date;
+    qryClienteCliiiente_Altura.Value    := StrToFloat(edtAltura.Text);
+    qryClienteClienteEmail.Value        := edtEmail.Text;
+    qryClienteCliente_CPF.Value         := edtCPF.Text;
+    qryClienteCliente_Fone.Value        := edtFone.Text;
+    qryClienteCliente_CEP.Value         := edtCEP.Text;
+    qryClienteCliente_Logradouro.Value  := edtEndereco.Text;
+    qryClienteCliente_Num.Text          := edtNumero.Text;
+    qryClienteCliente_Complemento.Value := edtComplemento.Text;
+    qryClienteCliente_Bairro.Value      := edtBairro.Text;
+    qryClienteCliente_Cidade.Value      := edtCidade.Text;
+    qryClienteCliente_UF.Value          := edtUF.Text;
+    qryCliente.Post;
+    qryCliente.ApplyUpdates(0);
+  end;
+end;
+
+procedure TFrmCliente.AlterCliente;
+begin
+//
+end;
+
+
+procedure TFrmCliente.DelCliente;
+begin
+//
 end;
 
 procedure TFrmCliente.rectBuscaClick(Sender: TObject);

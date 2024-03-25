@@ -10,13 +10,15 @@ uses
   UnitIMC in 'UnitIMC.pas' {FrmIMC},
   UnitFotos in 'UnitFotos.pas' {FrmFotos},
   u99Permissions in 'Units\u99Permissions.pas',
-  uFormat in 'Units\uFormat.pas',
-  UnitPrin in 'UnitPrin.pas' {FrmPrin};
+  UnitPrin in 'UnitPrin.pas' {FrmPrin},
+  uDM in 'Units\uDM.pas' {DM: TDataModule},
+  uFormat in 'Units\uFormat.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.CreateForm(TFrmPrin, FrmPrin);
+  Application.CreateForm(TDM, DM);
   Application.Run;
 end.
