@@ -45120,6 +45120,7 @@ object FrmCliente: TFrmCliente
         Stroke.Color = xFF948B6D
         XRadius = 4.000000000000000000
         YRadius = 4.000000000000000000
+        OnClick = Rectangle4Click
         object Glyph: TGlyph
           Align = Client
           Size.Width = 35.000000000000000000
@@ -45127,7 +45128,6 @@ object FrmCliente: TFrmCliente
           Size.PlatformDefault = False
           ImageIndex = 0
           Images = ImageList
-          OnChanged = GlyphChanged
         end
       end
       object cbCliente: TComboBox
@@ -48573,7 +48573,7 @@ object FrmCliente: TFrmCliente
         XRadius = 4.000000000000000000
         YRadius = 4.000000000000000000
         object dtNascimento: TDateEdit
-          Date = 45375.000000000000000000
+          Date = 45376.000000000000000000
           TodayDefault = True
           OnChange = dtNascimentoChange
           Align = Left
@@ -48946,8 +48946,6 @@ object FrmCliente: TFrmCliente
               FileName = 'D:\Projetos\Delphi\BodyFit\Imagens\search3.png'
             end>
           Align = Client
-          Locked = True
-          HitTest = False
           Margins.Left = 3.000000000000000000
           Margins.Top = 3.000000000000000000
           Margins.Right = 3.000000000000000000
@@ -49494,7 +49492,7 @@ object FrmCliente: TFrmCliente
             SourceRect.Bottom = 203.000000000000000000
           end>
       end>
-    Left = 296
-    Top = 64
+    Left = 264
+    Top = 72
   end
 end

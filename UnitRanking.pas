@@ -63,14 +63,14 @@ type
     procedure btnDetalheClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure rectAddClick(Sender: TObject);
-    procedure GlyphAddChanged(Sender: TObject);
     procedure rectCancelClick(Sender: TObject);
+    procedure lvDetalheInvesteItemClick(const Sender: TObject;
+      const AItem: TListViewItem);
   private
     procedure ListarRanking;
     procedure Add_Ranking(valor: double; id: integer; nome: string);
     procedure Add_DetalheInveste(valor:double; DetData, obs:string);
     procedure ListarDetalheInveste;
-    procedure MudaGlyoh(GlyphChamou: TGlyph);
     { Private declarations }
   public
     { Public declarations }
@@ -129,15 +129,9 @@ begin
   TabControl.GotoVisibleTab(0);
 end;
 
-procedure TFrmRanking.GlyphAddChanged(Sender: TObject);
+procedure TFrmRanking.rectAddClick(Sender: TObject);
 begin
-  if (TabControl.TabIndex =  1) and (edtValor.Text <> '') then
-    MudaGlyoh(TGlyph(Sender));
-end;
-
-procedure TFrmRanking.MudaGlyoh(GlyphChamou : TGlyph);
-begin
-  if (GlyphChamou.Tag = 0) and (GlyphAdd.ImageIndex = 0) then
+  if (GlyphAdd.ImageIndex = 0) then
   begin
     GlyphAdd.ImageIndex := 1;
     rectCancel.Visible := True;
@@ -147,22 +141,12 @@ begin
     GlyphAdd.ImageIndex := 0;
     rectCancel.Visible := False;
   end;
-
-  if (GlyphChamou.Tag = 1) then
-  begin
-    GlyphAdd.ImageIndex := 0;
-    rectCancel.Visible := False;
-  end;
-end;
-
-procedure TFrmRanking.rectAddClick(Sender: TObject);
-begin
-  MudaGlyoh(TGlyph(Sender));
 end;
 
 procedure TFrmRanking.rectCancelClick(Sender: TObject);
 begin
-  MudaGlyoh(TGlyph(Sender));
+  GlyphAdd.ImageIndex := 0;
+  rectCancel.Visible := False;
 end;
 
 procedure TFrmRanking.btnVoltarClick(Sender: TObject);
@@ -253,6 +237,20 @@ begin
   Add_DetalheInveste(27800,'18/08/2023', 'Compra de uma icicleta ergométrica');
 
   lvDetalheInveste.EndUpdate;
+end;
+
+procedure TFrmRanking.lvDetalheInvesteItemClick(const Sender: TObject;
+  const AItem: TListViewItem);
+var
+  item : TListViewItem;
+begin
+  GlyphAdd.ImageIndex := 1;
+  rectCancel.Visible := True;
+  GlyphCancel.ImageIndex := 3;
+  item := lvDetalheInveste.Items[lvDetalheInveste.Selected.Index];
+  edtValor.Text := TListItemText(item.Objects.FindDrawable('txtValor')).Text;
+  edtData.Text := TListItemText(item.Objects.FindDrawable('txtData')).Text;
+  edtObs.Lines.Text := TListItemText(item.Objects.FindDrawable('txtObs')).Text;
 end;
 
 procedure TFrmRanking.lvRankingItemClick(const Sender: TObject;

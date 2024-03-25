@@ -80,7 +80,7 @@ type
     procedure rectBuscarClick(Sender: TObject);
     procedure btnVoltarClick(Sender: TObject);
     procedure dtNascimentoChange(Sender: TObject);
-    procedure GlyphChanged(Sender: TObject);
+    procedure Rectangle4Click(Sender: TObject);
   private
     procedure ListarCliente;
     procedure Add_Tarefa(id: integer; nome: string);
@@ -169,14 +169,6 @@ begin
   FrmCliente := nil;
 end;
 
-procedure TFrmCliente.GlyphChanged(Sender: TObject);
-begin
-  if Glyph.ImageIndex = 0 then
-    Glyph.ImageIndex := 1
-  else
-    Glyph.ImageIndex := 0;
-end;
-
 procedure TFrmCliente.ListarCliente;
 begin
 end;
@@ -190,9 +182,17 @@ procedure TFrmCliente.lvClienteDeleteDeletingItem(Sender: TObject;
 begin      ACanDelete := false;
 end;
 
+procedure TFrmCliente.Rectangle4Click(Sender: TObject);
+begin
+  if Glyph.ImageIndex = 0 then
+    Glyph.ImageIndex := 1
+  else
+    Glyph.ImageIndex := 0;
+end;
+
 procedure TFrmCliente.rectBuscaClick(Sender: TObject);
 begin
-    ConsultarCEP(edtCEP.Text);
+  ConsultarCEP(edtCEP.Text);
 end;
 
 procedure TFrmCliente.rectBuscarClick(Sender: TObject);
