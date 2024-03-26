@@ -90,7 +90,7 @@ type
   private
     procedure ConsultarCEP(cep: string);
     procedure rectBuscaClick(Sender: TObject);
-//    procedure DelCliente;
+    procedure DelCliente;
     procedure ListarClientes;
     procedure AddCliente;
     procedure AlterCliente;
@@ -214,7 +214,9 @@ begin
       end;
     end
     else
+    begin
       ShowMessage('Nenhum cliente cadastrado');
+    end;
   end;
 end;
 
@@ -231,8 +233,8 @@ begin
   else
   begin
     if TCircle(Sender).Name = 'btnDel' then
-      ShowMessage('vai deletar cliente')
-      else
+      DelCliente
+    else
     if TCircle(Sender).Name = 'btnCancel' then
       ListarClientes
     else
@@ -244,6 +246,7 @@ begin
     for i := 0 to (ComponentCount-1) do
       if Components[i] is TEdit then
         TEdit(Components[i]).Text := '';
+    dtNascimento.Date := Now;
 
     Glyph.ImageIndex := 0;
     edtNome.Visible := False;
@@ -363,6 +366,7 @@ procedure TFrmCliente.cbNomeExit(Sender: TObject);
 begin
   with DM do
   begin
+    ListarCliente;
     qryCliente.First;
     while not qryCliente.Eof do
     begin
@@ -422,6 +426,19 @@ begin
   end
   else
     ShowMessage('Erro ao consultar CEP');
+end;
+
+procedure TFrmCliente.DelCliente;
+begin
+  with DM.qryCliente do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Text:= 'Delete From Cliente where Cliente_ID = ' + lblCodigo.Text;
+    ExecSQL;
+  end;
+  ListarClientes;
+  lblCodigo.Text := '';
 end;
 
 procedure TFrmCliente.dtNascimentoChange(Sender: TObject);

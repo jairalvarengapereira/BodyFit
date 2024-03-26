@@ -45090,7 +45090,7 @@ object FrmRanking: TFrmRanking
     Size.Height = 543.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 1
     TabPosition = None
     Sizes = (
@@ -45105,7 +45105,7 @@ object FrmRanking: TFrmRanking
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -45120,15 +45120,15 @@ object FrmRanking: TFrmRanking
         Margins.Right = 10.000000000000000000
         Margins.Bottom = 10.000000000000000000
         Position.X = 10.000000000000000000
-        Position.Y = 481.000000000000000000
+        Position.Y = 493.000000000000000000
         Size.Width = 356.000000000000000000
-        Size.Height = 52.000000000000000000
+        Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
         object btnDetalhe: TCircle
           Align = Center
           Fill.Color = xFF948B6D
-          Size.Width = 50.000000000000000000
+          Size.Width = 37.000000000000000000
           Size.Height = 56.000000000000000000
           Size.PlatformDefault = False
           Stroke.Kind = None
@@ -45513,7 +45513,7 @@ object FrmRanking: TFrmRanking
             Margins.Top = 9.000000000000000000
             Margins.Right = 9.000000000000000000
             Margins.Bottom = 9.000000000000000000
-            Size.Width = 32.000000000000000000
+            Size.Width = 19.000000000000000000
             Size.Height = 38.000000000000000000
             Size.PlatformDefault = False
           end
@@ -45527,7 +45527,7 @@ object FrmRanking: TFrmRanking
         Margins.Right = 10.000000000000000000
         Margins.Bottom = 10.000000000000000000
         Size.Width = 356.000000000000000000
-        Size.Height = 403.000000000000000000
+        Size.Height = 415.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = xFF948B6C
         XRadius = 4.000000000000000000
@@ -45543,7 +45543,7 @@ object FrmRanking: TFrmRanking
           Margins.Right = 5.000000000000000000
           Margins.Bottom = 5.000000000000000000
           Size.Width = 346.000000000000000000
-          Size.Height = 393.000000000000000000
+          Size.Height = 405.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
           ItemAppearance.ItemHeight = 25
@@ -45608,7 +45608,7 @@ object FrmRanking: TFrmRanking
           TabOrder = 1
         end
         object dtIniGrafico: TDateEdit
-          Date = 45376.000000000000000000
+          Date = 45377.000000000000000000
           TodayDefault = True
           Align = Left
           Position.X = 41.000000000000000000
@@ -45634,7 +45634,7 @@ object FrmRanking: TFrmRanking
           TabOrder = 0
         end
         object dtFinGrafico: TDateEdit
-          Date = 45376.000000000000000000
+          Date = 45377.000000000000000000
           TodayDefault = True
           Align = Left
           Position.X = 161.000000000000000000
@@ -45906,7 +45906,7 @@ object FrmRanking: TFrmRanking
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -46049,7 +46049,7 @@ object FrmRanking: TFrmRanking
           end
         end
         object edtData: TDateEdit
-          Date = 45376.000000000000000000
+          Date = 45377.000000000000000000
           TodayDefault = True
           Align = Left
           Margins.Left = 5.000000000000000000
@@ -46155,8 +46155,8 @@ object FrmRanking: TFrmRanking
         object Circle1: TCircle
           Align = Center
           Fill.Color = xFF948B6D
-          Size.Width = 50.000000000000000000
-          Size.Height = 56.000000000000000000
+          Size.Width = 37.000000000000000000
+          Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           Stroke.Kind = None
           OnClick = btnDetalheClick
@@ -46354,8 +46354,8 @@ object FrmRanking: TFrmRanking
             Margins.Top = 9.000000000000000000
             Margins.Right = 9.000000000000000000
             Margins.Bottom = 9.000000000000000000
-            Size.Width = 32.000000000000000000
-            Size.Height = 38.000000000000000000
+            Size.Width = 19.000000000000000000
+            Size.Height = 22.000000000000000000
             Size.PlatformDefault = False
           end
         end

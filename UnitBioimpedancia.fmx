@@ -46831,7 +46831,7 @@
               TextSettings.HorzAlign = Center
               TextSettings.Trimming = None
               Text = 'Massa Magra Segmentar'
-              TabOrder = 5
+              TabOrder = 6
             end
             object Label30: TLabel
               Align = Top
@@ -46847,7 +46847,7 @@
               TextSettings.HorzAlign = Center
               TextSettings.Trimming = None
               Text = 'Gordura Segmentar'
-              TabOrder = 6
+              TabOrder = 7
             end
           end
         end
@@ -46856,7 +46856,7 @@
           Fill.Color = xFF948B6D
           Margins.Left = 10.000000000000000000
           Position.X = 10.000000000000000000
-          Size.Width = 50.000000000000000000
+          Size.Width = 37.000000000000000000
           Size.Height = 56.000000000000000000
           Size.PlatformDefault = False
           Stroke.Kind = None
@@ -46956,7 +46956,7 @@
             Margins.Top = 7.000000000000000000
             Margins.Right = 7.000000000000000000
             Margins.Bottom = 7.000000000000000000
-            Size.Width = 36.000000000000000000
+            Size.Width = 23.000000000000000000
             Size.Height = 42.000000000000000000
             Size.PlatformDefault = False
           end
@@ -46964,9 +46964,9 @@
         object Circle1: TCircle
           Align = Left
           Fill.Color = xFF948B6D
-          Margins.Left = 10.000000000000000000
-          Position.X = 70.000000000000000000
-          Size.Width = 50.000000000000000000
+          Margins.Left = 20.000000000000000000
+          Position.X = 67.000000000000000000
+          Size.Width = 37.000000000000000000
           Size.Height = 56.000000000000000000
           Size.PlatformDefault = False
           Stroke.Kind = None
@@ -47205,7 +47205,7 @@
             Align = Client
             Locked = True
             HitTest = False
-            Size.Width = 50.000000000000000000
+            Size.Width = 37.000000000000000000
             Size.Height = 56.000000000000000000
             Size.PlatformDefault = False
           end
@@ -49497,7 +49497,7 @@
       object lblesquerda: TLabel
         Align = Scale
         StyledSettings = [Family]
-        Position.X = -8.879317283630371000
+        Position.X = -8.879316329956055000
         Position.Y = 254.262039184570300000
         RotationAngle = 270.000000000000000000
         Size.Width = 75.474258422851560000

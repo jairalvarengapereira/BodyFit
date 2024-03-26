@@ -45127,16 +45127,16 @@ object FrmCliente: TFrmCliente
     end
     object lytBotoes: TLayout
       Align = Bottom
-      Position.Y = 433.000000000000000000
+      Position.Y = 443.000000000000000000
       Size.Width = 376.000000000000000000
-      Size.Height = 50.000000000000000000
+      Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 0
       object btnCancel: TCircle
         Align = Center
         Fill.Color = xFF948B6D
         Margins.Left = -100.000000000000000000
-        Size.Width = 50.000000000000000000
+        Size.Width = 37.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         Stroke.Kind = None
@@ -48136,13 +48136,16 @@ object FrmCliente: TFrmCliente
           Align = Center
           Locked = True
           HitTest = False
+          Size.Width = 45.000000000000000000
+          Size.Height = 27.000000000000000000
+          Size.PlatformDefault = False
         end
       end
       object btnDel: TCircle
         Align = Center
         Fill.Color = xFF948B6D
         Margins.Right = -100.000000000000000000
-        Size.Width = 50.000000000000000000
+        Size.Width = 37.000000000000000000
         Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         Stroke.Kind = None
@@ -48501,6 +48504,9 @@ object FrmCliente: TFrmCliente
           Align = Client
           Locked = True
           HitTest = False
+          Size.Width = 37.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
         end
       end
     end
