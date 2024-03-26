@@ -19,23 +19,9 @@ uses
 type
   TDM = class(TDataModule)
     FDConn: TFDConnection;
-    FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
     FDGUIxWaitCursor1: TFDGUIxWaitCursor;
     qryCliente: TFDQuery;
-    qryClienteCliente_ID: TFDAutoIncField;
-    qryClienteCliente_Nome: TWideMemoField;
-    qryClienteCliiiente_Altura: TFloatField;
-    qryClienteCliente_CPF: TWideMemoField;
-    qryClienteCliente_Nascimento: TDateTimeField;
-    qryClienteClienteEmail: TWideMemoField;
-    qryClienteCliente_Fone: TWideMemoField;
-    qryClienteCliente_CEP: TWideMemoField;
-    qryClienteCliente_Logradouro: TWideMemoField;
-    qryClienteCliente_Num: TWideMemoField;
-    qryClienteCliente_Complemento: TWideMemoField;
-    qryClienteCliente_Bairro: TWideMemoField;
-    qryClienteCliente_Cidade: TWideMemoField;
-    qryClienteCliente_UF: TWideMemoField;
+    FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink;
     procedure FDConnBeforeConnect(Sender: TObject);
     procedure DataModuleCreate(Sender: TObject);
     procedure FDConnAfterConnect(Sender: TObject);
@@ -74,8 +60,8 @@ begin
 
   // Cliente
   FDConn.ExecSQL('CREATE TABLE IF NOT EXISTS Cliente (Cliente_ID INTEGER PRIMARY KEY AUTOINCREMENT, '+
-                 'Cliente_Nome TEXT, Cliiiente_Altura REAL, Cliente_CPF TEXT, '+
-                 'Cliente_Nascimento Datetime, "Cliente-Email" TEXT, Cliente_Fone TEXT, '+
+                 'Cliente_Nome TEXT, Cliente_Altura REAL, Cliente_CPF TEXT, '+
+                 'Cliente_Nascimento Datetime, Cliente_Email TEXT, Cliente_Fone TEXT, '+
                  'Cliente_CEP TEXT, Cliente_Logradouro TEXT, Cliente_Num TEXT, '+
                  'Cliente_Complemento TEXT, Cliente_Bairro TEXT, Cliente_Cidade TEXT, '+
                  'Cliente_UF TEXT);');
@@ -114,7 +100,7 @@ begin
   FDConn.DriverName := 'SQLite';
 
   {$IFDEF MSWINDOWS}
-  FDConn.Params.Values['DataBase'] := System.SysUtils.GetCurrentDir + '\BodyFit_BD';
+  FDConn.Params.Values['DataBase'] := System.SysUtils.GetCurrentDir + '\BodyFit_BD.db';
   {$ELSE}
   Conn.Params.Values['DataBase'] := TPath.Combine(TPath.GetDocumentsPath, 'BodyFit_BD');
   {$ENDIF}
@@ -126,7 +112,7 @@ begin
   begin
     Close;
     SQL.Clear;
-    SQL.Text := 'Select * from cliente order by Cliente_Nome';
+    SQL.Text := 'Select * from cliente Order By Cliente_Nome';
     Open;
   end;
 end;

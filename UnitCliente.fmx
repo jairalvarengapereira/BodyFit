@@ -9,6 +9,7 @@ object FrmCliente: TFrmCliente
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnClose = FormClose
   OnShow = FormShow
   DesignerMasterStyle = 3
   object rectTit: TRectangle
@@ -45095,62 +45096,11 @@ object FrmCliente: TFrmCliente
     Size.Height = 483.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
-    object rectNome: TRectangle
-      Align = Top
-      Fill.Kind = None
-      Position.Y = 17.000000000000000000
-      Size.Width = 376.000000000000000000
-      Size.Height = 35.000000000000000000
-      Size.PlatformDefault = False
-      Stroke.Color = xFF948B6D
-      XRadius = 4.000000000000000000
-      YRadius = 4.000000000000000000
-      object rectAddCliente: TRectangle
-        Align = Right
-        Fill.Kind = None
-        Margins.Left = 2.000000000000000000
-        Margins.Top = 2.000000000000000000
-        Margins.Right = 2.000000000000000000
-        Margins.Bottom = 2.000000000000000000
-        Position.X = 339.000000000000000000
-        Position.Y = 2.000000000000000000
-        Size.Width = 35.000000000000000000
-        Size.Height = 31.000000000000000000
-        Size.PlatformDefault = False
-        Stroke.Color = xFF948B6D
-        XRadius = 4.000000000000000000
-        YRadius = 4.000000000000000000
-        OnClick = rectAddClienteClick
-        object Glyph: TGlyph
-          Align = Client
-          Size.Width = 35.000000000000000000
-          Size.Height = 31.000000000000000000
-          Size.PlatformDefault = False
-          ImageIndex = 0
-          Images = ImageList
-        end
-      end
-      object cbNome: TComboBox
-        Align = Client
-        Size.Width = 337.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 1
-      end
-      object edtNome: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Align = Client
-        TabOrder = 2
-        Size.Width = 337.000000000000000000
-        Size.Height = 32.000000000000000000
-        Size.PlatformDefault = False
-      end
-    end
     object Rectangle9: TRectangle
       Align = Top
       Fill.Kind = None
       Margins.Top = 10.000000000000000000
-      Position.Y = 107.000000000000000000
+      Position.Y = 105.000000000000000000
       Size.Width = 376.000000000000000000
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
@@ -48554,25 +48504,14 @@ object FrmCliente: TFrmCliente
         end
       end
     end
-    object Label2: TLabel
-      Align = MostTop
-      StyledSettings = [Family, Style]
-      Size.Width = 376.000000000000000000
-      Size.Height = 17.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.FontColor = xFF948B6D
-      TextSettings.Trimming = None
-      Text = 'Selecione ou inclua um cliente'
-      TabOrder = 1
-    end
     object lytDtNasc: TLayout
       Align = Top
       Margins.Top = 10.000000000000000000
-      Position.Y = 62.000000000000000000
+      Position.Y = 60.000000000000000000
       Size.Width = 376.000000000000000000
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 2
+      TabOrder = 1
       object Rectangle11: TRectangle
         Align = Left
         Fill.Kind = None
@@ -48660,7 +48599,7 @@ object FrmCliente: TFrmCliente
       Align = Top
       Fill.Kind = None
       Margins.Top = 10.000000000000000000
-      Position.Y = 242.000000000000000000
+      Position.Y = 240.000000000000000000
       Size.Width = 376.000000000000000000
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
@@ -48687,11 +48626,11 @@ object FrmCliente: TFrmCliente
     object lytCEP: TLayout
       Align = Top
       Margins.Top = 10.000000000000000000
-      Position.Y = 197.000000000000000000
+      Position.Y = 195.000000000000000000
       Size.Width = 376.000000000000000000
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 5
+      TabOrder = 4
       object Rectangle7: TRectangle
         Align = Left
         Fill.Kind = None
@@ -48974,11 +48913,11 @@ object FrmCliente: TFrmCliente
     object Layout1: TLayout
       Align = Top
       Margins.Top = 10.000000000000000000
-      Position.Y = 287.000000000000000000
+      Position.Y = 285.000000000000000000
       Size.Width = 376.000000000000000000
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 4
+      TabOrder = 3
       object Rectangle10: TRectangle
         Align = Left
         Fill.Kind = None
@@ -49065,11 +49004,11 @@ object FrmCliente: TFrmCliente
     object Layout3: TLayout
       Align = Top
       Margins.Top = 10.000000000000000000
-      Position.Y = 332.000000000000000000
+      Position.Y = 330.000000000000000000
       Size.Width = 376.000000000000000000
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 3
+      TabOrder = 2
       object Rectangle18: TRectangle
         Align = Client
         Fill.Kind = None
@@ -49128,11 +49067,11 @@ object FrmCliente: TFrmCliente
     object Layout4: TLayout
       Align = Top
       Margins.Top = 10.000000000000000000
-      Position.Y = 152.000000000000000000
+      Position.Y = 150.000000000000000000
       Size.Width = 376.000000000000000000
       Size.Height = 35.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 6
+      TabOrder = 5
       object Rectangle12: TRectangle
         Align = Left
         Fill.Kind = None
@@ -49190,6 +49129,108 @@ object FrmCliente: TFrmCliente
           StyledSettings = [Family, Style]
           OnChange = dtNascimentoChange
           OnKeyDown = edtFoneKeyDown
+        end
+      end
+    end
+    object lytNome: TLayout
+      Align = Top
+      Size.Width = 376.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      object Label2: TLabel
+        Align = MostTop
+        StyledSettings = [Family, Style]
+        Size.Width = 376.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = xFF948B6D
+        TextSettings.Trimming = None
+        Text = 'Selecione ou inclua um cliente'
+        TabOrder = 1
+      end
+      object rectNome: TRectangle
+        Align = Client
+        Fill.Kind = None
+        Margins.Right = 10.000000000000000000
+        Size.Width = 280.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF948B6D
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
+        object cbNome: TComboBox
+          Align = Client
+          Size.Width = 280.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          OnExit = cbNomeExit
+        end
+        object edtNome: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          TabOrder = 2
+          Size.Width = 280.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object rectAddCliente: TRectangle
+        Align = Right
+        Fill.Kind = None
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 339.000000000000000000
+        Position.Y = 19.000000000000000000
+        Size.Width = 35.000000000000000000
+        Size.Height = 29.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF948B6D
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
+        OnClick = rectAddClienteClick
+        object Glyph: TGlyph
+          Align = Right
+          Size.Width = 35.000000000000000000
+          Size.Height = 29.000000000000000000
+          Size.PlatformDefault = False
+          ImageIndex = 0
+          Images = ImageList
+        end
+      end
+      object rectCodigo: TRectangle
+        Align = Right
+        Fill.Kind = None
+        Locked = True
+        HitTest = False
+        Margins.Left = 2.000000000000000000
+        Margins.Top = 2.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        Position.X = 292.000000000000000000
+        Position.Y = 19.000000000000000000
+        Size.Width = 35.000000000000000000
+        Size.Height = 29.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF948B6D
+        XRadius = 4.000000000000000000
+        YRadius = 4.000000000000000000
+        OnClick = rectAddClienteClick
+        object lblCodigo: TLabel
+          Align = Client
+          StyledSettings = [Family, Style]
+          Locked = True
+          Size.Width = 35.000000000000000000
+          Size.Height = 29.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 11.000000000000000000
+          TextSettings.FontColor = xFF948B6D
+          TextSettings.HorzAlign = Center
+          TextSettings.Trimming = None
+          TabOrder = 0
         end
       end
     end

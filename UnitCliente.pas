@@ -68,6 +68,9 @@ type
     ImageList: TImageList;
     Glyph: TGlyph;
     edtNome: TEdit;
+    lytNome: TLayout;
+    rectCodigo: TRectangle;
+    lblCodigo: TLabel;
 
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure edtCPFKeyDown(Sender: TObject; var Key: Word;
@@ -83,10 +86,11 @@ type
     procedure FormShow(Sender: TObject);
     procedure edtAlturaKeyDown(Sender: TObject; var Key: Word;
       var KeyChar: WideChar; Shift: TShiftState);
+    procedure cbNomeExit(Sender: TObject);
   private
     procedure ConsultarCEP(cep: string);
     procedure rectBuscaClick(Sender: TObject);
-    procedure DelCliente;
+//    procedure DelCliente;
     procedure ListarClientes;
     procedure AddCliente;
     procedure AlterCliente;
@@ -202,6 +206,7 @@ begin
   begin
     if DM.qryCliente.RecordCount > 0 then
     begin
+      cbNome.Items.Clear;
       while not eof do
       begin
         cbNome.Items.Add(DM.qryCliente.FieldByName('Cliente_Nome').AsString);
@@ -214,6 +219,8 @@ begin
 end;
 
 procedure TFrmCliente.rectAddClienteClick(Sender: TObject);
+var
+  i : integer;
 begin
   if Glyph.ImageIndex = 0 then
   begin
@@ -234,6 +241,9 @@ begin
     else
       AlterCliente;
 
+    for i := 0 to (ComponentCount-1) do
+      if Components[i] is TEdit then
+        TEdit(Components[i]).Text := '';
 
     Glyph.ImageIndex := 0;
     edtNome.Visible := False;
@@ -243,36 +253,55 @@ end;
 
 procedure TFrmCliente.AddCliente;
 begin
-  with DM do
+  with DM.qryCliente do
   begin
-    qryCliente.append;
-    qryClienteCliente_Nome.Value        := edtNome.Text;
-    qryClienteCliente_Nascimento.Value  := dtNascimento.Date;
-    qryClienteCliiiente_Altura.Value    := StrToFloat(edtAltura.Text);
-    qryClienteClienteEmail.Value        := edtEmail.Text;
-    qryClienteCliente_CPF.Value         := edtCPF.Text;
-    qryClienteCliente_Fone.Value        := edtFone.Text;
-    qryClienteCliente_CEP.Value         := edtCEP.Text;
-    qryClienteCliente_Logradouro.Value  := edtEndereco.Text;
-    qryClienteCliente_Num.Text          := edtNumero.Text;
-    qryClienteCliente_Complemento.Value := edtComplemento.Text;
-    qryClienteCliente_Bairro.Value      := edtBairro.Text;
-    qryClienteCliente_Cidade.Value      := edtCidade.Text;
-    qryClienteCliente_UF.Value          := edtUF.Text;
-    qryCliente.Post;
-    qryCliente.ApplyUpdates(0);
+    Close;
+    SQL.Clear;
+    SQL.Text :=' insert into Cliente(          '+
+               '        Cliente_Nome,          '+
+               '        Cliente_Email,         '+
+               '        Cliente_Fone,          '+
+               '        Cliente_Nascimento,    '+
+               '        Cliente_Altura,        '+
+               '        Cliente_Email,         '+
+               '        Cliente_CPF,           '+
+               '        Cliente_CEP,           '+
+               '        Cliente_Logradouro,    '+
+               '        Cliente_Num,           '+
+               '        Cliente_Complemento,   '+
+               '        Cliente_Bairro,        '+
+               '        Cliente_Cidade,        '+
+               '        Cliente_UF)            '+
+               '  Values(:Cliente_Nome,        '+
+               '         :Cliente_Email,       '+
+               '         :Cliente_Fone,        '+
+               '         :Cliente_Nascimento,  '+
+               '         :Cliente_Altura,      '+
+               '         :Cliente_Email,       '+
+               '         :Cliente_CPF,         '+
+               '         :Cliente_CEP,         '+
+               '         :Cliente_Logradouro,  '+
+               '         :Cliente_Num,         '+
+               '         :Cliente_Complemento, '+
+               '         :Cliente_Bairro,      '+
+               '         :Cliente_Cidade,      '+
+               '         :Cliente_UF          )';
+    ParamByName('Cliente_Nome'       ).Value := edtNome.Text;
+    ParamByName('Cliente_Email'      ).Value := edtEmail.Text;
+    ParamByName('Cliente_Fone'       ).Value := edtFone.Text;
+    ParamByName('Cliente_Nascimento' ).AssTring := FormatDateTime('yyyy-mm-dd', dtNascimento.Date);
+    ParamByName('Cliente_Altura'     ).Value := StrToFloat(edtAltura.Text);
+    ParamByName('Cliente_CPF'        ).Value := edtCPF.Text;
+    ParamByName('Cliente_CEP'        ).Value := edtCEP.Text;
+    ParamByName('Cliente_Logradouro' ).Value := edtEndereco.Text;
+    ParamByName('Cliente_Num'        ).Value := edtNumero.Text;
+    ParamByName('Cliente_Complemento').Value := edtComplemento.Text;
+    ParamByName('Cliente_Bairro'     ).Value := edtBairro.Text;
+    ParamByName('Cliente_Cidade'     ).Value := edtCidade.Text;
+    ParamByName('Cliente_UF'         ).Value := edtUF.Text;
+    ExecSQL;
+    ListarClientes;
   end;
-end;
-
-procedure TFrmCliente.AlterCliente;
-begin
-//
-end;
-
-
-procedure TFrmCliente.DelCliente;
-begin
-//
 end;
 
 procedure TFrmCliente.rectBuscaClick(Sender: TObject);
@@ -285,9 +314,79 @@ begin
   ConsultarCEP(edtCEP.Text);
 end;
 
+procedure TFrmCliente.AlterCliente;
+begin
+  with DM.qryCliente do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Text :=' Update Cliente set                                '+
+               '        Cliente_Email      = :Cliente_Email,       '+
+               '        Cliente_Fone       = :Cliente_Fone,        '+
+               '        Cliente_Nascimento = :Cliente_Nascimento,  '+
+               '        Cliente_Altura     = :Cliente_Altura,      '+
+               '        Cliente_Email      = :Cliente_Email,       '+
+               '        Cliente_CPF        = :Cliente_CPF,         '+
+               '        Cliente_CEP        = :Cliente_CEP,         '+
+               '        Cliente_Logradouro = :Cliente_Logradouro,  '+
+               '        Cliente_Num        = :Cliente_Num,         '+
+               '        Cliente_Complemento= :Cliente_Complemento, '+
+               '        Cliente_Bairro     = :Cliente_Bairro,      '+
+               '        Cliente_Cidade     = :Cliente_Cidade,      '+
+               '        Cliente_UF         = :Cliente_UF           '+
+               '  Where Cliente_ID         = :Cliente_ID           ';
+    ParamByName('Cliente_ID'         ).Value := lblCodigo.Text;
+    ParamByName('Cliente_Email'      ).Value := edtEmail.Text;
+    ParamByName('Cliente_Fone'       ).Value := edtFone.Text;
+    ParamByName('Cliente_Nascimento' ).AssTring := FormatDateTime('yyyy-mm-dd', dtNascimento.Date);
+    ParamByName('Cliente_Altura'     ).Value := StrToFloat(edtAltura.Text);
+    ParamByName('Cliente_CPF'        ).Value := edtCPF.Text;
+    ParamByName('Cliente_CEP'        ).Value := edtCEP.Text;
+    ParamByName('Cliente_Logradouro' ).Value := edtEndereco.Text;
+    ParamByName('Cliente_Num'        ).Value := edtNumero.Text;
+    ParamByName('Cliente_Complemento').Value := edtComplemento.Text;
+    ParamByName('Cliente_Bairro'     ).Value := edtBairro.Text;
+    ParamByName('Cliente_Cidade'     ).Value := edtCidade.Text;
+    ParamByName('Cliente_UF'         ).Value := edtUF.Text;
+    ExecSQL;
+//    ApplyUpdates(0);
+//    ListarClientes;
+  end;
+end;
+
 procedure TFrmCliente.btnVoltarClick(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TFrmCliente.cbNomeExit(Sender: TObject);
+begin
+  with DM do
+  begin
+    qryCliente.First;
+    while not qryCliente.Eof do
+    begin
+      if qryCliente.Locate('Cliente_nome', cbNome.Text,[]) then
+      begin
+        lblCodigo.Text      := FormatFloat('000', qryCliente.FieldByName('Cliente_ID').AsInteger);
+        edtEmail.Text       := qryCliente.FieldByName('Cliente_Email'      ).AsString;
+        edtFone.Text        := qryCliente.FieldByName('Cliente_Fone'       ).AsString;
+        dtNascimento.Date   := qryCliente.FieldByName('Cliente_Nascimento' ).AsDateTime;
+        edtAltura.Text      := qryCliente.FieldByName('Cliente_Altura'     ).AsString;
+        edtEmail.Text       := qryCliente.FieldByName('Cliente_Email'      ).AsString;
+        edtCPF.Text         := qryCliente.FieldByName('Cliente_CPF'        ).AsString;
+        edtCEP.Text         := qryCliente.FieldByName('Cliente_CEP'        ).AsString;
+        edtEndereco.Text    := qryCliente.FieldByName('Cliente_Logradouro' ).AsString;
+        edtNumero.Text      := qryCliente.FieldByName('Cliente_Num'        ).AsString;
+        edtComplemento.Text := qryCliente.FieldByName('Cliente_Complemento').AsString;
+        edtBairro.Text      := qryCliente.FieldByName('Cliente_Bairro'     ).AsString;
+        edtCidade.Text      := qryCliente.FieldByName('Cliente_Cidade'     ).AsString;
+        edtUF.Text          := qryCliente.FieldByName('Cliente_UF'         ).AsString;
+        Exit;
+      end;
+      qryCliente.Next;
+    end;
+  end;
 end;
 
 procedure TFrmCliente.ConsultarCEP(cep: string);
