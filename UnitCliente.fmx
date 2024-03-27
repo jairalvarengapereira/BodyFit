@@ -48540,6 +48540,7 @@ object FrmCliente: TFrmCliente
           StyledSettings = [Family, Style]
           TabOrder = 0
           TextSettings.FontColor = xFF948B6D
+          TextSettings.HorzAlign = Center
         end
         object Label3: TLabel
           Align = Left

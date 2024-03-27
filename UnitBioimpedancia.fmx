@@ -3,7 +3,7 @@
   Top = 0
   Caption = 'Form1'
   ClientHeight = 584
-  ClientWidth = 412
+  ClientWidth = 636
   Fill.Kind = Solid
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -14,7 +14,7 @@
   object rectTit: TRectangle
     Align = Top
     Fill.Kind = None
-    Size.Width = 412.000000000000000000
+    Size.Width = 636.000000000000000000
     Size.Height = 57.000000000000000000
     Size.PlatformDefault = False
     Stroke.Color = xFF948B6D
@@ -22,7 +22,7 @@
       Align = Contents
       StyledSettings = [Family]
       Locked = True
-      Size.Width = 412.000000000000000000
+      Size.Width = 636.000000000000000000
       Size.Height = 57.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Size = 18.000000000000000000
@@ -45077,7 +45077,7 @@
         end>
       Align = Right
       Margins.Right = 10.000000000000000000
-      Position.X = 352.000000000000000000
+      Position.X = 576.000000000000000000
       Size.Width = 50.000000000000000000
       Size.Height = 57.000000000000000000
       Size.PlatformDefault = False
@@ -45086,7 +45086,7 @@
   end
   object TabControl: TTabControl
     Align = Client
-    Size.Width = 412.000000000000000000
+    Size.Width = 636.000000000000000000
     Size.Height = 527.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
@@ -45094,9 +45094,9 @@
     TabOrder = 1
     TabPosition = None
     Sizes = (
-      412s
+      636s
       527s
-      412s
+      636s
       527s)
     object tbBio: TTabItem
       CustomIcon = <
@@ -45118,14 +45118,15 @@
         Margins.Top = 10.000000000000000000
         Position.X = 10.000000000000000000
         Position.Y = 10.000000000000000000
-        Size.Width = 402.000000000000000000
+        Size.Width = 626.000000000000000000
         Size.Height = 52.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object rectCliente: TRectangle
           Align = Client
           Fill.Kind = None
-          Size.Width = 251.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 425.000000000000000000
           Size.Height = 35.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFF948B6D
@@ -45133,7 +45134,7 @@
           YRadius = 4.000000000000000000
           object cbCliente: TComboBox
             Align = Client
-            Size.Width = 251.000000000000000000
+            Size.Width = 425.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -45142,9 +45143,8 @@
         object Rectangle2: TRectangle
           Align = Right
           Fill.Kind = None
-          Margins.Left = 5.000000000000000000
           Margins.Right = 10.000000000000000000
-          Position.X = 256.000000000000000000
+          Position.X = 480.000000000000000000
           Position.Y = 17.000000000000000000
           Size.Width = 91.000000000000000000
           Size.Height = 35.000000000000000000
@@ -45155,19 +45155,56 @@
           object DateEdit1: TDateEdit
             Date = 45372.000000000000000000
             Align = Client
-            Margins.Left = 5.000000000000000000
-            Size.Width = 86.000000000000000000
+            Size.Width = 91.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             StyledSettings = [Family, Style, FontColor]
             TabOrder = 0
+            TextSettings.HorzAlign = Center
           end
         end
         object Rectangle56: TRectangle
           Align = Right
           Fill.Kind = None
           Margins.Right = 10.000000000000000000
-          Position.X = 357.000000000000000000
+          Position.X = 435.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 35.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = xFF948B6D
+          XRadius = 4.000000000000000000
+          YRadius = 4.000000000000000000
+          object lblCodigo: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Locked = True
+            Size.Width = 35.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 11.000000000000000000
+            TextSettings.FontColor = xFF948B6D
+            TextSettings.HorzAlign = Center
+            TextSettings.Trimming = None
+            TabOrder = 0
+          end
+        end
+        object Label2: TLabel
+          Align = MostTop
+          StyledSettings = [Family, Style]
+          Size.Width = 626.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.FontColor = xFF948B6D
+          TextSettings.Trimming = None
+          Text = 'Selecione ou inclua um cliente'
+          TabOrder = 1
+        end
+        object rectAddBio: TRectangle
+          Align = Right
+          Fill.Kind = None
+          Margins.Right = 10.000000000000000000
+          Position.X = 581.000000000000000000
           Position.Y = 17.000000000000000000
           Size.Width = 35.000000000000000000
           Size.Height = 35.000000000000000000
@@ -45185,17 +45222,6 @@
             OnChanged = GlyphChanged
           end
         end
-        object Label2: TLabel
-          Align = MostTop
-          StyledSettings = [Family, Style]
-          Size.Width = 402.000000000000000000
-          Size.Height = 17.000000000000000000
-          Size.PlatformDefault = False
-          TextSettings.FontColor = xFF948B6D
-          TextSettings.Trimming = None
-          Text = 'Selecione ou inclua um cliente'
-          TabOrder = 1
-        end
       end
       object Layout2: TLayout
         Align = Client
@@ -45203,7 +45229,7 @@
         Margins.Top = 5.000000000000000000
         Margins.Right = 10.000000000000000000
         Margins.Bottom = 5.000000000000000000
-        Size.Width = 392.000000000000000000
+        Size.Width = 616.000000000000000000
         Size.Height = 283.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
@@ -45213,7 +45239,7 @@
           Margins.Top = 2.000000000000000000
           Margins.Right = 2.000000000000000000
           Margins.Bottom = 2.000000000000000000
-          Size.Width = 388.000000000000000000
+          Size.Width = 612.000000000000000000
           Size.Height = 279.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -45222,69 +45248,21 @@
           DefaultItemStyles.ItemStyle = ''
           DefaultItemStyles.GroupHeaderStyle = ''
           DefaultItemStyles.GroupFooterStyle = ''
-          Viewport.Width = 383.000000000000000000
+          Viewport.Width = 607.000000000000000000
           Viewport.Height = 279.000000000000000000
           object ListBoxItem8: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 10.000000000000000000
-            Size.Width = 383.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 80.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 4
-            object Rectangle19: TRectangle
-              Align = Left
-              Fill.Kind = None
-              Margins.Right = 10.000000000000000000
-              Position.Y = 17.000000000000000000
-              Size.Width = 120.000000000000000000
-              Size.Height = 63.000000000000000000
-              Size.PlatformDefault = False
-              Stroke.Color = xFF948B6D
-              XRadius = 2.000000000000000000
-              YRadius = 2.000000000000000000
-              object Rectangle22: TRectangle
-                Align = Top
-                Fill.Kind = None
-                Size.Width = 120.000000000000000000
-                Size.Height = 17.000000000000000000
-                Size.PlatformDefault = False
-                Stroke.Color = xFF948B6D
-                XRadius = 2.000000000000000000
-                YRadius = 2.000000000000000000
-                object Label12: TLabel
-                  Align = Client
-                  StyledSettings = [Family, Style]
-                  Size.Width = 120.000000000000000000
-                  Size.Height = 17.000000000000000000
-                  Size.PlatformDefault = False
-                  TextSettings.FontColor = xFF948B6D
-                  TextSettings.HorzAlign = Center
-                  TextSettings.Trimming = None
-                  Text = 'Peso'
-                  TabOrder = 0
-                end
-              end
-              object Edit8: TEdit
-                Touch.InteractiveGestures = [LongTap, DoubleTap]
-                Align = Client
-                TabOrder = 1
-                KeyboardType = DecimalNumberPad
-                Margins.Left = 10.000000000000000000
-                Margins.Top = 10.000000000000000000
-                Margins.Right = 10.000000000000000000
-                Margins.Bottom = 10.000000000000000000
-                Size.Width = 100.000000000000000000
-                Size.Height = 32.000000000000000000
-                Size.PlatformDefault = False
-                OnChange = Edit1Change
-              end
-            end
             object Label11: TLabel
               Align = Top
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 378.000000000000000000
+              Size.Width = 602.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
@@ -45296,7 +45274,7 @@
               Align = Left
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
-              Position.X = 260.000000000000000000
+              Position.X = 130.000000000000000000
               Position.Y = 17.000000000000000000
               Size.Width = 120.000000000000000000
               Size.Height = 63.000000000000000000
@@ -45326,7 +45304,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit10: TEdit
+              object edtAmgMGC: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -45338,14 +45316,13 @@
                 Size.Width = 100.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Rectangle21: TRectangle
               Align = Left
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
-              Position.X = 130.000000000000000000
               Position.Y = 17.000000000000000000
               Size.Width = 120.000000000000000000
               Size.Height = 63.000000000000000000
@@ -45375,7 +45352,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit9: TEdit
+              object edtAmgMME: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -45387,13 +45364,13 @@
                 Size.Width = 100.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem13: TListBoxItem
             Position.Y = 90.000000000000000000
-            Size.Width = 383.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 89.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 6
@@ -45434,7 +45411,7 @@
                     TextSettings.FontColor = xFF948B6D
                     TextSettings.HorzAlign = Center
                     TextSettings.Trimming = None
-                    Text = 'Peso'
+                    Text = 'Controle de Peso'
                     TabOrder = 0
                   end
                 end
@@ -45450,7 +45427,7 @@
                   Size.Width = 100.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
               end
               object Label32: TLabel
@@ -45463,7 +45440,7 @@
                 Size.PlatformDefault = False
                 TextSettings.FontColor = xFF948B6D
                 TextSettings.Trimming = None
-                Text = 'Controle do Peso'
+                Text = 'Controle de Peso'
                 TabOrder = 0
               end
               object Rectangle51: TRectangle
@@ -45496,7 +45473,7 @@
                     TextSettings.FontColor = xFF948B6D
                     TextSettings.HorzAlign = Center
                     TextSettings.Trimming = None
-                    Text = 'Muscular'
+                    Text = 'Controle Muscular'
                     TabOrder = 0
                   end
                 end
@@ -45512,7 +45489,7 @@
                   Size.Width = 100.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
               end
               object Rectangle53: TRectangle
@@ -45545,7 +45522,7 @@
                     TextSettings.FontColor = xFF948B6D
                     TextSettings.HorzAlign = Center
                     TextSettings.Trimming = None
-                    Text = 'Gordura'
+                    Text = 'Controle de Gordura'
                     TabOrder = 0
                   end
                 end
@@ -45561,7 +45538,7 @@
                   Size.Width = 100.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
               end
             end
@@ -45569,7 +45546,7 @@
           object ListBoxItem9: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 189.000000000000000000
-            Size.Width = 383.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 80.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 3
@@ -45606,7 +45583,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit11: TEdit
+              object edtDoIMC: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -45618,7 +45595,7 @@
                 Size.Width = 100.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Label14: TLabel
@@ -45626,12 +45603,12 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 378.000000000000000000
+              Size.Width = 602.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
               TextSettings.Trimming = None
-              Text = 'Diagn'#243'stico de Obesidade'
+              Text = 'Diagn'#243'stico de Obesidade (1)'
               TabOrder = 1
             end
             object Rectangle27: TRectangle
@@ -45668,7 +45645,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit13: TEdit
+              object edtDoRCQ: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -45680,7 +45657,7 @@
                 Size.Width = 100.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Rectangle29: TRectangle
@@ -45717,7 +45694,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit12: TEdit
+              object edtDoPGC: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -45729,14 +45706,14 @@
                 Size.Width = 100.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem15: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 279.000000000000000000
-            Size.Width = 383.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 58.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 5
@@ -45755,6 +45732,7 @@
                 Align = Client
                 TabOrder = 1
                 KeyboardType = DecimalNumberPad
+                TextSettings.HorzAlign = Center
                 Margins.Left = 5.000000000000000000
                 Margins.Top = 5.000000000000000000
                 Margins.Right = 5.000000000000000000
@@ -45762,7 +45740,7 @@
                 Size.Width = 238.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
               object Label27: TLabel
                 Align = Top
@@ -45774,7 +45752,7 @@
                 Size.PlatformDefault = False
                 TextSettings.FontColor = xFF948B6D
                 TextSettings.Trimming = None
-                Text = 'Taxa de metabolismo Basal:'
+                Text = 'Taxa de Metabolismo Basal:'
                 TabOrder = 0
               end
             end
@@ -45782,7 +45760,7 @@
           object ListBoxItem10: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 347.000000000000000000
-            Size.Width = 383.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 70.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
@@ -45833,7 +45811,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Label20: TLabel
@@ -45841,7 +45819,7 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 378.000000000000000000
+              Size.Width = 602.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
@@ -45889,7 +45867,7 @@
                   'Normal'
                   'Deficiente'
                   'Excessivo')
-                ItemIndex = 0
+                ItemIndex = 2
                 Margins.Left = 2.000000000000000000
                 Margins.Right = 2.000000000000000000
                 Position.X = 2.000000000000000000
@@ -45898,7 +45876,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Rectangle35: TRectangle
@@ -45940,7 +45918,7 @@
                 Items.Strings = (
                   'Normal'
                   'Deficiente')
-                ItemIndex = 0
+                ItemIndex = 1
                 Margins.Left = 2.000000000000000000
                 Margins.Right = 2.000000000000000000
                 Position.X = 2.000000000000000000
@@ -45949,14 +45927,14 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem11: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 427.000000000000000000
-            Size.Width = 383.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 70.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
@@ -46008,7 +45986,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Label24: TLabel
@@ -46016,7 +45994,7 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 378.000000000000000000
+              Size.Width = 602.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
@@ -46073,7 +46051,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Rectangle41: TRectangle
@@ -46125,14 +46103,14 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem12: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 507.000000000000000000
-            Size.Width = 383.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 70.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -46185,7 +46163,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Label28: TLabel
@@ -46193,12 +46171,12 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 378.000000000000000000
+              Size.Width = 602.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
               TextSettings.Trimming = None
-              Text = 'Diagn'#243'stico da Obesidade'
+              Text = 'Diagn'#243'stico da Obesidade (2)'
               TabOrder = 1
             end
             object Rectangle45: TRectangle
@@ -46250,7 +46228,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Rectangle47: TRectangle
@@ -46302,7 +46280,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
@@ -46316,7 +46294,7 @@
         Margins.Right = 10.000000000000000000
         Position.X = 10.000000000000000000
         Position.Y = 72.000000000000000000
-        Size.Width = 392.000000000000000000
+        Size.Width = 616.000000000000000000
         Size.Height = 96.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = xFF948B6D
@@ -46327,7 +46305,7 @@
           StyledSettings = [Family]
           Margins.Left = 5.000000000000000000
           Position.X = 5.000000000000000000
-          Size.Width = 387.000000000000000000
+          Size.Width = 611.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.FontColor = xFF948B6D
@@ -46340,7 +46318,7 @@
           Margins.Left = 3.000000000000000000
           Margins.Right = 3.000000000000000000
           Margins.Bottom = 3.000000000000000000
-          Size.Width = 386.000000000000000000
+          Size.Width = 610.000000000000000000
           Size.Height = 76.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -46349,11 +46327,11 @@
           DefaultItemStyles.GroupHeaderStyle = ''
           DefaultItemStyles.GroupFooterStyle = ''
           ListStyle = Horizontal
-          Viewport.Width = 386.000000000000000000
-          Viewport.Height = 71.000000000000000000
+          Viewport.Width = 610.000000000000000000
+          Viewport.Height = 76.000000000000000000
           object ListBoxItem1: TListBoxItem
             Size.Width = 77.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             object Rectangle3: TRectangle
@@ -46361,7 +46339,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46388,7 +46366,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit1: TEdit
+              object edtAccTBW: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46400,14 +46378,14 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem2: TListBoxItem
             Position.X = 77.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
             object Rectangle5: TRectangle
@@ -46415,7 +46393,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46442,7 +46420,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit2: TEdit
+              object edtaccProteina: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46454,14 +46432,14 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem3: TListBoxItem
             Position.X = 154.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
             object Rectangle7: TRectangle
@@ -46469,7 +46447,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46496,7 +46474,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit3: TEdit
+              object edtAccMinerais: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46508,14 +46486,14 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem4: TListBoxItem
             Position.X = 231.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 3
             object Rectangle9: TRectangle
@@ -46523,7 +46501,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46550,7 +46528,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit4: TEdit
+              object edtAccMGC: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46562,7 +46540,7 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
@@ -46572,14 +46550,14 @@
             Margins.Right = 10.000000000000000000
             Position.X = 308.000000000000000000
             Size.Width = 133.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 4
             object Rectangle11: TRectangle
               Align = Client
               Fill.Kind = None
               Size.Width = 133.000000000000000000
-              Size.Height = 54.000000000000000000
+              Size.Height = 59.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46587,10 +46565,10 @@
               object Layout34: TLayout
                 Align = Left
                 Size.Width = 65.000000000000000000
-                Size.Height = 54.000000000000000000
+                Size.Height = 59.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
-                object Edit5: TEdit
+                object edtAccMassaMagraO: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Client
                   TabOrder = 1
@@ -46601,7 +46579,7 @@
                   Size.Width = 45.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label53: TLabel
                   Align = Top
@@ -46621,10 +46599,10 @@
                 Align = Left
                 Position.X = 65.000000000000000000
                 Size.Width = 65.000000000000000000
-                Size.Height = 54.000000000000000000
+                Size.Height = 59.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                object Edit33: TEdit
+                object edtAccMassaMagraNO: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Client
                   TabOrder = 1
@@ -46635,7 +46613,7 @@
                   Size.Width = 45.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Ósseo: TLabel
                   Align = Top
@@ -46678,7 +46656,7 @@
           object ListBoxItem6: TListBoxItem
             Position.X = 451.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 5
             object Rectangle13: TRectangle
@@ -46686,7 +46664,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46713,7 +46691,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit6: TEdit
+              object edtAccMLG: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46725,21 +46703,21 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem7: TListBoxItem
             Position.X = 528.000000000000000000
             Size.Width = 67.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 6
             object Rectangle15: TRectangle
               Align = Client
               Fill.Kind = None
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46766,7 +46744,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit7: TEdit
+              object edtAccPeso: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46778,7 +46756,7 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
@@ -46790,7 +46768,7 @@
         Margins.Bottom = 10.000000000000000000
         Position.Y = 461.000000000000000000
         Sides = [Top]
-        Size.Width = 412.000000000000000000
+        Size.Width = 636.000000000000000000
         Size.Height = 56.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = xFF948B6D
@@ -46799,7 +46777,7 @@
           Fill.Color = xFF948B6D
           Margins.Top = 5.000000000000000000
           Margins.Right = 10.000000000000000000
-          Position.X = 183.000000000000000000
+          Position.X = 407.000000000000000000
           Position.Y = 5.000000000000000000
           Size.Width = 219.000000000000000000
           Size.Height = 51.000000000000000000
@@ -47233,7 +47211,7 @@
         Margins.Right = 50.000000000000000000
         Position.X = 50.000000000000000000
         Position.Y = 5.000000000000000000
-        Size.Width = 312.000000000000000000
+        Size.Width = 536.000000000000000000
         Size.Height = 252.000000000000000000
         Size.PlatformDefault = False
         XRadius = 5.000000000000000000
@@ -47378,14 +47356,14 @@
           Margins.Top = 5.000000000000000000
           Margins.Right = 5.000000000000000000
           Margins.Bottom = 5.000000000000000000
-          Size.Width = 302.000000000000000000
+          Size.Width = 526.000000000000000000
           Size.Height = 242.000000000000000000
           Size.PlatformDefault = False
           object Layout3: TLayout
             Align = Top
             Margins.Top = 40.000000000000000000
             Position.Y = 40.000000000000000000
-            Size.Width = 302.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 55.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
@@ -47411,7 +47389,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label37: TLabel
                   Align = Client
@@ -47438,13 +47416,13 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Layout9: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 213.000000000000000000
+              Position.X = 437.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 55.000000000000000000
               Size.PlatformDefault = False
@@ -47463,7 +47441,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label39: TLabel
                   Align = Client
@@ -47490,7 +47468,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
@@ -47498,7 +47476,7 @@
             Align = Top
             Margins.Top = 10.000000000000000000
             Position.Y = 105.000000000000000000
-            Size.Width = 302.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 80.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -47523,7 +47501,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label38: TLabel
                   Align = Client
@@ -47550,12 +47528,12 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Label47: TLabel
               Align = Top
-              Size.Width = 302.000000000000000000
+              Size.Width = 526.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.HorzAlign = Center
@@ -47568,7 +47546,7 @@
             Align = Top
             Margins.Top = 10.000000000000000000
             Position.Y = 195.000000000000000000
-            Size.Width = 302.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 55.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
@@ -47594,7 +47572,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label40: TLabel
                   Align = Client
@@ -47621,13 +47599,13 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
             object Layout14: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 213.000000000000000000
+              Position.X = 437.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 55.000000000000000000
               Size.PlatformDefault = False
@@ -47646,7 +47624,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label41: TLabel
                   Align = Client
@@ -47673,7 +47651,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
             end
           end
@@ -47683,7 +47661,7 @@
           StyledSettings = [Family]
           Margins.Left = 10.000000000000000000
           Position.X = 10.000000000000000000
-          Size.Width = 302.000000000000000000
+          Size.Width = 526.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -47701,7 +47679,7 @@
         Margins.Bottom = 5.000000000000000000
         Position.X = 50.000000000000000000
         Position.Y = 262.000000000000000000
-        Size.Width = 312.000000000000000000
+        Size.Width = 536.000000000000000000
         Size.Height = 265.000000000000000000
         Size.PlatformDefault = False
         XRadius = 5.000000000000000000
@@ -49013,14 +48991,14 @@
           Margins.Top = 5.000000000000000000
           Margins.Right = 5.000000000000000000
           Margins.Bottom = 5.000000000000000000
-          Size.Width = 302.000000000000000000
+          Size.Width = 526.000000000000000000
           Size.Height = 255.000000000000000000
           Size.PlatformDefault = False
           object Layout16: TLayout
             Align = Top
             Margins.Top = 5.000000000000000000
             Position.Y = 238.000000000000000000
-            Size.Width = 302.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 81.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
@@ -49072,7 +49050,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
               object Layout23: TLayout
                 Align = Top
@@ -49089,7 +49067,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label50: TLabel
                   Align = Client
@@ -49108,7 +49086,7 @@
             object Layout31: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 213.000000000000000000
+              Position.X = 437.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 81.000000000000000000
               Size.PlatformDefault = False
@@ -49127,7 +49105,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label51: TLabel
                   Align = Client
@@ -49154,7 +49132,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
               object Layout33: TLayout
                 Align = Top
@@ -49171,7 +49149,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label52: TLabel
                   Align = Client
@@ -49192,13 +49170,13 @@
             Align = Top
             Margins.Top = 5.000000000000000000
             Position.Y = 126.000000000000000000
-            Size.Width = 302.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 107.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             object Z: TLabel
               Align = Top
-              Size.Width = 302.000000000000000000
+              Size.Width = 526.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.HorzAlign = Center
@@ -49227,7 +49205,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label42: TLabel
                   Align = Client
@@ -49254,7 +49232,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
               object Layout19: TLayout
                 Align = Top
@@ -49271,7 +49249,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label43: TLabel
                   Align = Client
@@ -49292,7 +49270,7 @@
             Align = Top
             Margins.Top = 40.000000000000000000
             Position.Y = 40.000000000000000000
-            Size.Width = 302.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 81.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
@@ -49318,7 +49296,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label45: TLabel
                   Align = Client
@@ -49345,7 +49323,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
               object Layout29: TLayout
                 Align = Top
@@ -49362,7 +49340,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label48: TLabel
                   Align = Client
@@ -49381,7 +49359,7 @@
             object Layout27: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 213.000000000000000000
+              Position.X = 437.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 81.000000000000000000
               Size.PlatformDefault = False
@@ -49400,7 +49378,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label46: TLabel
                   Align = Client
@@ -49427,7 +49405,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
-                OnChange = Edit1Change
+                OnChange = edtAccTBWChange
               end
               object Layout30: TLayout
                 Align = Top
@@ -49444,7 +49422,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
-                  OnChange = Edit1Change
+                  OnChange = edtAccTBWChange
                 end
                 object Label49: TLabel
                   Align = Client
@@ -49467,7 +49445,7 @@
           StyledSettings = [Family]
           Margins.Left = 10.000000000000000000
           Position.X = 10.000000000000000000
-          Size.Width = 302.000000000000000000
+          Size.Width = 526.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -49480,10 +49458,10 @@
       object lblDireita: TLabel
         Align = Scale
         StyledSettings = [Family]
-        Position.X = 348.069152832031300000
+        Position.X = 537.310546875000000000
         Position.Y = 253.382308959960900000
         RotationAngle = 90.000000000000000000
-        Size.Width = 64.819396972656250000
+        Size.Width = 100.060729980468800000
         Size.Height = 16.716445922851560000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 16.000000000000000000
@@ -49497,10 +49475,10 @@
       object lblesquerda: TLabel
         Align = Scale
         StyledSettings = [Family]
-        Position.X = -8.879316329956055000
+        Position.X = -13.706903457641600000
         Position.Y = 254.262039184570300000
         RotationAngle = 270.000000000000000000
-        Size.Width = 75.474258422851560000
+        Size.Width = 116.508811950683600000
         Size.Height = 20.235458374023440000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 16.000000000000000000
@@ -49784,7 +49762,7 @@
             SourceRect.Bottom = 203.000000000000000000
           end>
       end>
-    Left = 288
-    Top = 112
+    Left = 152
+    Top = 528
   end
 end

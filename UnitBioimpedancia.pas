@@ -43,25 +43,22 @@ type
     Label8: TLabel;
     Label9: TLabel;
     Label10: TLabel;
-    Edit1: TEdit;
-    Edit4: TEdit;
-    Edit5: TEdit;
-    Edit6: TEdit;
-    Edit7: TEdit;
+    edtAccTBW: TEdit;
+    edtAccMGC: TEdit;
+    edtAccMassaMagraO: TEdit;
+    edtAccMLG: TEdit;
+    edtAccPeso: TEdit;
     Layout2: TLayout;
     Rectangle17: TRectangle;
     Rectangle18: TRectangle;
     lvBioimpedancia: TListBox;
     SpeedButton1: TSpeedButton;
     ListBoxItem8: TListBoxItem;
-    Rectangle19: TRectangle;
     Label11: TLabel;
     Rectangle20: TRectangle;
     Rectangle21: TRectangle;
-    Rectangle22: TRectangle;
     Rectangle23: TRectangle;
     Rectangle24: TRectangle;
-    Label12: TLabel;
     ListBoxItem9: TListBoxItem;
     Rectangle25: TRectangle;
     Rectangle26: TRectangle;
@@ -75,12 +72,11 @@ type
     Label16: TLabel;
     Label17: TLabel;
     Label18: TLabel;
-    Edit8: TEdit;
-    Edit9: TEdit;
-    Edit10: TEdit;
-    Edit11: TEdit;
-    Edit12: TEdit;
-    Edit13: TEdit;
+    edtAmgMME: TEdit;
+    edtAmgMGC: TEdit;
+    edtDoIMC: TEdit;
+    edtDoPGC: TEdit;
+    edtDoRCQ: TEdit;
     ListBoxItem10: TListBoxItem;
     Rectangle31: TRectangle;
     Rectangle32: TRectangle;
@@ -126,11 +122,11 @@ type
     Rectangle5: TRectangle;
     Rectangle6: TRectangle;
     Label5: TLabel;
-    Edit2: TEdit;
+    edtaccProteina: TEdit;
     Rectangle7: TRectangle;
     Rectangle8: TRectangle;
     Label6: TLabel;
-    Edit3: TEdit;
+    edtAccMinerais: TEdit;
     DateEdit1: TDateEdit;
     Label29: TLabel;
     Label30: TLabel;
@@ -239,7 +235,7 @@ type
     Layout34: TLayout;
     Label53: TLabel;
     Layout35: TLayout;
-    Edit33: TEdit;
+    edtAccMassaMagraNO: TEdit;
     Ósseo: TLabel;
     lblesquerda: TLabel;
     Circle2: TCircle;
@@ -247,14 +243,16 @@ type
     Rectangle56: TRectangle;
     Label2: TLabel;
     ImageList: TImageList;
-    Glyph: TGlyph;
     Circle1: TCircle;
     Image3: TImage;
+    rectAddBio: TRectangle;
+    Glyph: TGlyph;
+    lblCodigo: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure Edit1Change(Sender: TObject);
+    procedure edtAccTBWChange(Sender: TObject);
     procedure GlyphChanged(Sender: TObject);
   private
     { Private declarations }
@@ -269,7 +267,7 @@ implementation
 
 {$R *.fmx}
 
-procedure TFrmBiomimpedancia.Edit1Change(Sender: TObject);
+procedure TFrmBiomimpedancia.edtAccTBWChange(Sender: TObject);
 begin
   Glyph.ImageIndex := 1;
 end;

@@ -2,8 +2,8 @@
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 656
-  ClientWidth = 416
+  ClientHeight = 584
+  ClientWidth = 636
   Fill.Kind = Solid
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -14,7 +14,7 @@
   object rectTit: TRectangle
     Align = Top
     Fill.Kind = None
-    Size.Width = 416.000000000000000000
+    Size.Width = 636.000000000000000000
     Size.Height = 57.000000000000000000
     Size.PlatformDefault = False
     Stroke.Color = xFF948B6D
@@ -22,7 +22,7 @@
       Align = Contents
       StyledSettings = [Family]
       Locked = True
-      Size.Width = 416.000000000000000000
+      Size.Width = 636.000000000000000000
       Size.Height = 57.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Size = 18.000000000000000000
@@ -45077,7 +45077,7 @@
         end>
       Align = Right
       Margins.Right = 10.000000000000000000
-      Position.X = 356.000000000000000000
+      Position.X = 576.000000000000000000
       Size.Width = 50.000000000000000000
       Size.Height = 57.000000000000000000
       Size.PlatformDefault = False
@@ -45086,18 +45086,18 @@
   end
   object TabControl: TTabControl
     Align = Client
-    Size.Width = 416.000000000000000000
-    Size.Height = 599.000000000000000000
+    Size.Width = 636.000000000000000000
+    Size.Height = 527.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
     TabIndex = 0
     TabOrder = 1
     TabPosition = None
     Sizes = (
-      416s
-      599s
-      416s
-      599s)
+      636s
+      527s
+      636s
+      527s)
     object tbBio: TTabItem
       CustomIcon = <
         item
@@ -45118,14 +45118,15 @@
         Margins.Top = 10.000000000000000000
         Position.X = 10.000000000000000000
         Position.Y = 10.000000000000000000
-        Size.Width = 406.000000000000000000
+        Size.Width = 626.000000000000000000
         Size.Height = 52.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
         object rectCliente: TRectangle
           Align = Client
           Fill.Kind = None
-          Size.Width = 255.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Size.Width = 425.000000000000000000
           Size.Height = 35.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFF948B6D
@@ -45133,7 +45134,7 @@
           YRadius = 4.000000000000000000
           object cbCliente: TComboBox
             Align = Client
-            Size.Width = 255.000000000000000000
+            Size.Width = 425.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -45142,9 +45143,8 @@
         object Rectangle2: TRectangle
           Align = Right
           Fill.Kind = None
-          Margins.Left = 5.000000000000000000
           Margins.Right = 10.000000000000000000
-          Position.X = 260.000000000000000000
+          Position.X = 480.000000000000000000
           Position.Y = 17.000000000000000000
           Size.Width = 91.000000000000000000
           Size.Height = 35.000000000000000000
@@ -45155,19 +45155,19 @@
           object DateEdit1: TDateEdit
             Date = 45372.000000000000000000
             Align = Client
-            Margins.Left = 5.000000000000000000
-            Size.Width = 86.000000000000000000
+            Size.Width = 91.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             StyledSettings = [Family, Style, FontColor]
             TabOrder = 0
+            TextSettings.HorzAlign = Center
           end
         end
         object Rectangle56: TRectangle
           Align = Right
           Fill.Kind = None
           Margins.Right = 10.000000000000000000
-          Position.X = 361.000000000000000000
+          Position.X = 435.000000000000000000
           Position.Y = 17.000000000000000000
           Size.Width = 35.000000000000000000
           Size.Height = 35.000000000000000000
@@ -45175,88 +45175,52 @@
           Stroke.Color = xFF948B6D
           XRadius = 4.000000000000000000
           YRadius = 4.000000000000000000
-          object Image2: TImage
-            MultiResBitmap.Height = 200
-            MultiResBitmap.Width = 200
-            MultiResBitmap = <
-              item
-                Width = 200
-                Height = 200
-                PNG = {
-                  89504E470D0A1A0A0000000D49484452000000C8000000C80806000000AD58AE
-                  9E0000000473424954080808087C0864880000063349444154789CEDDDCD4F54
-                  5718C7F1DFB97734318482ABC6B0D1B860451AD205712331E9B68D2E249AB828
-                  6D0A959704F0AD7F42010B248076302D5D98D4E0C245576D57B869ECC6346CCA
-                  C2A06D884B358692E2DC7BBA00536AF1018699397399EF2771616638F761E4CB
-                  BD67184609000000000000000000000000000000000000000000000000000000
-                  0000000000000000000000000000000000000076C7851EA096E5BFEC6AE8FE62
-                  E6C5DCDCD97865B9A97EF36D754DCB2F3B3AEE26A166C33A0209287FBDEF994B
-                  D353691C353BAF3B9B6FF34EE7A2245DF4B928E91E9A5A083563AD239000F2A3
-                  BD6D72EE88A4DB92EAB6B9FB8AA40BF2FE69F795E907E59F0E9B45A107A849CE
-                  7D21E99EB68F431BF7B927E76ECD8CF4B7977730BC89334805CD8CF4B7FB58A7
-                  E5FD87928E17B1C44397BAC1AEAB93F3A59E0D5BE30C5241DEA5ADF27E40C5C5
-                  2149AD3EF293F9D1DEB652CE85B723900AC97FD5734ACE5D2EC1522D1BFB1754
-                  00975815901FEB6B51AA5FB4B33DC74EAC28D2099EDD2A3FCE2065E6BD5C5270
-                  8D2A5D1C925497145CA3F77C832B371EE0329B1D1F685C4B0ACFCAB1F6C13877
-                  B87370E27939D6C63ACE20808140000381000602010C04021808043010086020
-                  10C04020808140000381000602010C0402180804301008602010C04020808140
-                  000381000602010C0402180804301008602010C0402080814000038100060201
-                  0C0402180804301008602010C04020808140000381000602010C04021808A48C
-                  F2D7FB1E57E030B90A1CA366ED8BFF067A6EEE6CBCB2DC541F7A8E37AD2585C7
-                  B1FC7B89DCE372AC1FCB1F8DE3032FCAB1F65ED5352DBFECE8B89B849E63AF32
-                  1D487EACAFC515D2388DA366E77527F43CF897773A1725E9A2CF4549F7D0D442
-                  E8798A95C940F2A3BD6D72EE88A4DB92EA42CF03D38AA40BF2FE69F795E907A1
-                  87D9ADCC053233D2DFEE233F29A925F42CD8950597BAFEAEAB93F3A107D98DCC
-                  6DD27DACD3228E2C6AF1911F9F19E96F0F3DC86E64E20C726BB4EF58EA34B6F1
-                  D71649C743CE833D5990F79F65E572ABEACF20DF0C7F529F3A4DA4D27D49A745
-                  1C59D7B2B17FCC84AA3F83782F776BACE784F7D14F6243BE5FAC28D2892C3CBB
-                  55F5679099E1AE7794E82F11C77E5297145C63FE7ADFF3D0836CA7EA0351EEC0
-                  9F691C35871E03A51547FEBEA486D0736CA7FA0391ABE787800825038100E110
-                  08602010C0402080A1EA0389E58F869E01B5ABEA03F9F4D2F41F49EA4E869E03
-                  A5E5D2B455D293D0736CA7EA03F96E62A0218EFC8F929642CF8292592A78BFDA
-                  7D79EA68E841B653F581C485DC2B495FCBFBF392AAFEA509D891A19E6B371743
-                  0FB11355FF5AACCD367E17645C526BE8595024A77939F567E175585206CE209B
-                  755D9D9C977399FA851B6CE2349FCA0D66250E29638148929CFF56D219B127C9
-                  92254967E4D47FF1D2E4C3D0C3EC46A62EB136BB317CB139E7DC211F45997AC0
-                  6B8D4BD3D682F7AB59D973BC29B381BC363B3ED0187A064B92BC6AA8C5B7FD79
-                  AD7370A2EA5FD26EC97C206F1149F21B7F76CAEDF2FEAFC592B67AFF2727E9E0
-                  ECF8C0A1B5A4F0AC8875B77530CE1DEE1C9C58D1FADC05FDFF738824A5452C1D
-                  6F7C5C318FC7BE92BD3DC8CE14F38F5BEC17C3DBDE1CAD525F5C91D6E3D8EA98
-                  C5C421AD7F4E351F87B47F03A9167F57E0186B153846CD2290ECE33B7D191108
-                  602010C04020808140000381000602010C0402180804301008602010C0402080
-                  8140000381000602010C0402180804301008602010C040208081400003810006
-                  02010C0402180804301008602010C04020808140000381000602010C04021808
-                  04301008602010C04020808140CAECE381891749EA4E869E03C5219032734E3E
-                  A7E465C9D74DD3D6CEC189E7A55E17FF45201550F07E55D25209975CDA581365
-                  462015D073EDE6A2BC3F2F69A1444B0EF55CBBB958A2B56020900AE9BE32FDC0
-                  A5AE5FD2C33D2DE434AF488F4A3315B613871EA096FCF0F3AF4F3EFAA0ED7739
-                  BD2FE9DD5D2FE0349FCA0D7E7E69EAB7D24F87ADB8D003D4A2FC686F9B9CFB5E
-                  D2B11D7EC892A421457AD43D3455AACB34EC0081047263F86273CEB9433E8ACC
-                  4B2E97A6AD05EF57D97384412081CD8E0F345AB7F3542E000000000000000000
-                  0000000000000000000000000000000000000000000000000000000000000000
-                  000000000064CB3FB490647626DACB3B0000000049454E44AE426082}
-                FileName = 
-                  'D:\Projetos\Delphi\BodyFit\Imagens\add_preto-removebg-preview ma' +
-                  'rrom.png'
-              end>
+          object lblCodigo: TLabel
             Align = Client
+            StyledSettings = [Family, Style]
             Locked = True
-            HitTest = False
             Size.Width = 35.000000000000000000
             Size.Height = 35.000000000000000000
             Size.PlatformDefault = False
+            TextSettings.Font.Size = 11.000000000000000000
+            TextSettings.FontColor = xFF948B6D
+            TextSettings.HorzAlign = Center
+            TextSettings.Trimming = None
+            TabOrder = 0
           end
         end
         object Label2: TLabel
           Align = MostTop
           StyledSettings = [Family, Style]
-          Size.Width = 406.000000000000000000
+          Size.Width = 626.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.FontColor = xFF948B6D
           TextSettings.Trimming = None
           Text = 'Selecione ou inclua um cliente'
           TabOrder = 1
+        end
+        object rectAddBio: TRectangle
+          Align = Right
+          Fill.Kind = None
+          Margins.Right = 10.000000000000000000
+          Position.X = 581.000000000000000000
+          Position.Y = 17.000000000000000000
+          Size.Width = 35.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = xFF948B6D
+          XRadius = 4.000000000000000000
+          YRadius = 4.000000000000000000
+          object Glyph: TGlyph
+            Align = Client
+            Size.Width = 35.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            ImageIndex = 0
+            Images = ImageList
+            OnChanged = GlyphChanged
+          end
         end
       end
       object Layout2: TLayout
@@ -45265,8 +45229,8 @@
         Margins.Top = 5.000000000000000000
         Margins.Right = 10.000000000000000000
         Margins.Bottom = 5.000000000000000000
-        Size.Width = 396.000000000000000000
-        Size.Height = 355.000000000000000000
+        Size.Width = 616.000000000000000000
+        Size.Height = 283.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         object lvBioimpedancia: TListBox
@@ -45275,8 +45239,8 @@
           Margins.Top = 2.000000000000000000
           Margins.Right = 2.000000000000000000
           Margins.Bottom = 2.000000000000000000
-          Size.Width = 392.000000000000000000
-          Size.Height = 351.000000000000000000
+          Size.Width = 612.000000000000000000
+          Size.Height = 279.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
           CanFocus = False
@@ -45284,68 +45248,21 @@
           DefaultItemStyles.ItemStyle = ''
           DefaultItemStyles.GroupHeaderStyle = ''
           DefaultItemStyles.GroupFooterStyle = ''
-          Viewport.Width = 387.000000000000000000
-          Viewport.Height = 351.000000000000000000
+          Viewport.Width = 607.000000000000000000
+          Viewport.Height = 279.000000000000000000
           object ListBoxItem8: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 10.000000000000000000
-            Size.Width = 387.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 80.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 4
-            object Rectangle19: TRectangle
-              Align = Left
-              Fill.Kind = None
-              Margins.Right = 10.000000000000000000
-              Position.Y = 17.000000000000000000
-              Size.Width = 120.000000000000000000
-              Size.Height = 63.000000000000000000
-              Size.PlatformDefault = False
-              Stroke.Color = xFF948B6D
-              XRadius = 2.000000000000000000
-              YRadius = 2.000000000000000000
-              object Rectangle22: TRectangle
-                Align = Top
-                Fill.Kind = None
-                Size.Width = 120.000000000000000000
-                Size.Height = 17.000000000000000000
-                Size.PlatformDefault = False
-                Stroke.Color = xFF948B6D
-                XRadius = 2.000000000000000000
-                YRadius = 2.000000000000000000
-                object Label12: TLabel
-                  Align = Client
-                  StyledSettings = [Family, Style]
-                  Size.Width = 120.000000000000000000
-                  Size.Height = 17.000000000000000000
-                  Size.PlatformDefault = False
-                  TextSettings.FontColor = xFF948B6D
-                  TextSettings.HorzAlign = Center
-                  TextSettings.Trimming = None
-                  Text = 'Peso'
-                  TabOrder = 0
-                end
-              end
-              object Edit8: TEdit
-                Touch.InteractiveGestures = [LongTap, DoubleTap]
-                Align = Client
-                TabOrder = 1
-                KeyboardType = DecimalNumberPad
-                Margins.Left = 10.000000000000000000
-                Margins.Top = 10.000000000000000000
-                Margins.Right = 10.000000000000000000
-                Margins.Bottom = 10.000000000000000000
-                Size.Width = 100.000000000000000000
-                Size.Height = 32.000000000000000000
-                Size.PlatformDefault = False
-              end
-            end
             object Label11: TLabel
               Align = Top
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 382.000000000000000000
+              Size.Width = 602.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
@@ -45357,7 +45274,7 @@
               Align = Left
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
-              Position.X = 260.000000000000000000
+              Position.X = 130.000000000000000000
               Position.Y = 17.000000000000000000
               Size.Width = 120.000000000000000000
               Size.Height = 63.000000000000000000
@@ -45387,7 +45304,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit10: TEdit
+              object edtAmgMGC: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -45399,13 +45316,13 @@
                 Size.Width = 100.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
             object Rectangle21: TRectangle
               Align = Left
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
-              Position.X = 130.000000000000000000
               Position.Y = 17.000000000000000000
               Size.Width = 120.000000000000000000
               Size.Height = 63.000000000000000000
@@ -45435,7 +45352,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit9: TEdit
+              object edtAmgMME: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -45447,18 +45364,20 @@
                 Size.Width = 100.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem13: TListBoxItem
             Position.Y = 90.000000000000000000
-            Size.Width = 387.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 89.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 6
             object ListBoxItem14: TListBoxItem
               Margins.Top = 10.000000000000000000
-              Position.Y = 8.000000000000000000
+              Position.X = 4.000000000000000000
+              Position.Y = 9.000000000000000000
               Size.Width = 392.000000000000000000
               Size.Height = 80.000000000000000000
               Size.PlatformDefault = False
@@ -45492,7 +45411,7 @@
                     TextSettings.FontColor = xFF948B6D
                     TextSettings.HorzAlign = Center
                     TextSettings.Trimming = None
-                    Text = 'Peso'
+                    Text = 'Controle de Peso'
                     TabOrder = 0
                   end
                 end
@@ -45508,6 +45427,7 @@
                   Size.Width = 100.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
               end
               object Label32: TLabel
@@ -45520,7 +45440,7 @@
                 Size.PlatformDefault = False
                 TextSettings.FontColor = xFF948B6D
                 TextSettings.Trimming = None
-                Text = 'Controle do Peso'
+                Text = 'Controle de Peso'
                 TabOrder = 0
               end
               object Rectangle51: TRectangle
@@ -45553,7 +45473,7 @@
                     TextSettings.FontColor = xFF948B6D
                     TextSettings.HorzAlign = Center
                     TextSettings.Trimming = None
-                    Text = 'Muscular'
+                    Text = 'Controle Muscular'
                     TabOrder = 0
                   end
                 end
@@ -45569,6 +45489,7 @@
                   Size.Width = 100.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
               end
               object Rectangle53: TRectangle
@@ -45601,7 +45522,7 @@
                     TextSettings.FontColor = xFF948B6D
                     TextSettings.HorzAlign = Center
                     TextSettings.Trimming = None
-                    Text = 'Gordura'
+                    Text = 'Controle de Gordura'
                     TabOrder = 0
                   end
                 end
@@ -45617,6 +45538,7 @@
                   Size.Width = 100.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
               end
             end
@@ -45624,7 +45546,7 @@
           object ListBoxItem9: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 189.000000000000000000
-            Size.Width = 387.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 80.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 3
@@ -45661,7 +45583,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit11: TEdit
+              object edtDoIMC: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -45673,6 +45595,7 @@
                 Size.Width = 100.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
             object Label14: TLabel
@@ -45680,12 +45603,12 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 382.000000000000000000
+              Size.Width = 602.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
               TextSettings.Trimming = None
-              Text = 'Diagn'#243'stico de Obesidade'
+              Text = 'Diagn'#243'stico de Obesidade (1)'
               TabOrder = 1
             end
             object Rectangle27: TRectangle
@@ -45722,7 +45645,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit13: TEdit
+              object edtDoRCQ: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -45734,6 +45657,7 @@
                 Size.Width = 100.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
             object Rectangle29: TRectangle
@@ -45770,7 +45694,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit12: TEdit
+              object edtDoPGC: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -45782,13 +45706,14 @@
                 Size.Width = 100.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem15: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 279.000000000000000000
-            Size.Width = 387.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 58.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 5
@@ -45807,6 +45732,7 @@
                 Align = Client
                 TabOrder = 1
                 KeyboardType = DecimalNumberPad
+                TextSettings.HorzAlign = Center
                 Margins.Left = 5.000000000000000000
                 Margins.Top = 5.000000000000000000
                 Margins.Right = 5.000000000000000000
@@ -45814,6 +45740,7 @@
                 Size.Width = 238.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
               object Label27: TLabel
                 Align = Top
@@ -45825,7 +45752,7 @@
                 Size.PlatformDefault = False
                 TextSettings.FontColor = xFF948B6D
                 TextSettings.Trimming = None
-                Text = 'Taxa de metabolismo Basal:'
+                Text = 'Taxa de Metabolismo Basal:'
                 TabOrder = 0
               end
             end
@@ -45833,7 +45760,7 @@
           object ListBoxItem10: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 347.000000000000000000
-            Size.Width = 387.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 70.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
@@ -45884,6 +45811,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
             object Label20: TLabel
@@ -45891,7 +45819,7 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 382.000000000000000000
+              Size.Width = 602.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
@@ -45939,7 +45867,7 @@
                   'Normal'
                   'Deficiente'
                   'Excessivo')
-                ItemIndex = 0
+                ItemIndex = 2
                 Margins.Left = 2.000000000000000000
                 Margins.Right = 2.000000000000000000
                 Position.X = 2.000000000000000000
@@ -45948,6 +45876,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
             object Rectangle35: TRectangle
@@ -45989,7 +45918,7 @@
                 Items.Strings = (
                   'Normal'
                   'Deficiente')
-                ItemIndex = 0
+                ItemIndex = 1
                 Margins.Left = 2.000000000000000000
                 Margins.Right = 2.000000000000000000
                 Position.X = 2.000000000000000000
@@ -45998,13 +45927,14 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem11: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 427.000000000000000000
-            Size.Width = 387.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 70.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
@@ -46047,7 +45977,7 @@
                   'Normal'
                   'Abaixo'
                   'Acima')
-                ItemIndex = 2
+                ItemIndex = 0
                 Margins.Left = 2.000000000000000000
                 Margins.Right = 2.000000000000000000
                 Position.X = 2.000000000000000000
@@ -46056,6 +45986,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
             object Label24: TLabel
@@ -46063,7 +45994,7 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 382.000000000000000000
+              Size.Width = 602.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
@@ -46120,6 +46051,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
             object Rectangle41: TRectangle
@@ -46162,7 +46094,7 @@
                   'Normal'
                   'Forte'
                   'Abaixo')
-                ItemIndex = 2
+                ItemIndex = 0
                 Margins.Left = 2.000000000000000000
                 Margins.Right = 2.000000000000000000
                 Position.X = 2.000000000000000000
@@ -46171,13 +46103,14 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem12: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 507.000000000000000000
-            Size.Width = 387.000000000000000000
+            Size.Width = 607.000000000000000000
             Size.Height = 70.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -46230,6 +46163,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
             object Label28: TLabel
@@ -46237,12 +46171,12 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 382.000000000000000000
+              Size.Width = 602.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
               TextSettings.Trimming = None
-              Text = 'Diagn'#243'stico da Obesidade'
+              Text = 'Diagn'#243'stico da Obesidade (2)'
               TabOrder = 1
             end
             object Rectangle45: TRectangle
@@ -46294,6 +46228,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
             object Rectangle47: TRectangle
@@ -46345,6 +46280,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
           end
@@ -46358,7 +46294,7 @@
         Margins.Right = 10.000000000000000000
         Position.X = 10.000000000000000000
         Position.Y = 72.000000000000000000
-        Size.Width = 396.000000000000000000
+        Size.Width = 616.000000000000000000
         Size.Height = 96.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = xFF948B6D
@@ -46369,7 +46305,7 @@
           StyledSettings = [Family]
           Margins.Left = 5.000000000000000000
           Position.X = 5.000000000000000000
-          Size.Width = 391.000000000000000000
+          Size.Width = 611.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.FontColor = xFF948B6D
@@ -46382,7 +46318,7 @@
           Margins.Left = 3.000000000000000000
           Margins.Right = 3.000000000000000000
           Margins.Bottom = 3.000000000000000000
-          Size.Width = 390.000000000000000000
+          Size.Width = 610.000000000000000000
           Size.Height = 76.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -46391,11 +46327,11 @@
           DefaultItemStyles.GroupHeaderStyle = ''
           DefaultItemStyles.GroupFooterStyle = ''
           ListStyle = Horizontal
-          Viewport.Width = 390.000000000000000000
-          Viewport.Height = 71.000000000000000000
+          Viewport.Width = 610.000000000000000000
+          Viewport.Height = 76.000000000000000000
           object ListBoxItem1: TListBoxItem
             Size.Width = 77.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             object Rectangle3: TRectangle
@@ -46403,7 +46339,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46430,7 +46366,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit1: TEdit
+              object edtAccTBW: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46442,13 +46378,14 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem2: TListBoxItem
             Position.X = 77.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
             object Rectangle5: TRectangle
@@ -46456,7 +46393,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46483,7 +46420,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit2: TEdit
+              object edtaccProteina: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46495,13 +46432,14 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem3: TListBoxItem
             Position.X = 154.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
             object Rectangle7: TRectangle
@@ -46509,7 +46447,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46536,7 +46474,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit3: TEdit
+              object edtAccMinerais: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46548,13 +46486,14 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem4: TListBoxItem
             Position.X = 231.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 3
             object Rectangle9: TRectangle
@@ -46562,7 +46501,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46589,7 +46528,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit4: TEdit
+              object edtAccMGC: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46601,6 +46540,7 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
           end
@@ -46610,14 +46550,14 @@
             Margins.Right = 10.000000000000000000
             Position.X = 308.000000000000000000
             Size.Width = 133.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 4
             object Rectangle11: TRectangle
               Align = Client
               Fill.Kind = None
               Size.Width = 133.000000000000000000
-              Size.Height = 54.000000000000000000
+              Size.Height = 59.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46625,10 +46565,10 @@
               object Layout34: TLayout
                 Align = Left
                 Size.Width = 65.000000000000000000
-                Size.Height = 54.000000000000000000
+                Size.Height = 59.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
-                object Edit5: TEdit
+                object edtAccMassaMagraO: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Client
                   TabOrder = 1
@@ -46639,6 +46579,7 @@
                   Size.Width = 45.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label53: TLabel
                   Align = Top
@@ -46658,10 +46599,10 @@
                 Align = Left
                 Position.X = 65.000000000000000000
                 Size.Width = 65.000000000000000000
-                Size.Height = 54.000000000000000000
+                Size.Height = 59.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
-                object Edit33: TEdit
+                object edtAccMassaMagraNO: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Client
                   TabOrder = 1
@@ -46672,6 +46613,7 @@
                   Size.Width = 45.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Ósseo: TLabel
                   Align = Top
@@ -46714,7 +46656,7 @@
           object ListBoxItem6: TListBoxItem
             Position.X = 451.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 5
             object Rectangle13: TRectangle
@@ -46722,7 +46664,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46749,7 +46691,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit6: TEdit
+              object edtAccMLG: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46761,20 +46703,21 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem7: TListBoxItem
             Position.X = 528.000000000000000000
             Size.Width = 67.000000000000000000
-            Size.Height = 71.000000000000000000
+            Size.Height = 76.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 6
             object Rectangle15: TRectangle
               Align = Client
               Fill.Kind = None
               Size.Width = 67.000000000000000000
-              Size.Height = 71.000000000000000000
+              Size.Height = 76.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46801,7 +46744,7 @@
                   TabOrder = 0
                 end
               end
-              object Edit7: TEdit
+              object edtAccPeso: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
@@ -46813,6 +46756,7 @@
                 Size.Width = 47.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
           end
@@ -46822,9 +46766,9 @@
         Align = Bottom
         Fill.Kind = None
         Margins.Bottom = 10.000000000000000000
-        Position.Y = 533.000000000000000000
+        Position.Y = 461.000000000000000000
         Sides = [Top]
-        Size.Width = 416.000000000000000000
+        Size.Width = 636.000000000000000000
         Size.Height = 56.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = xFF948B6D
@@ -46833,7 +46777,7 @@
           Fill.Color = xFF948B6D
           Margins.Top = 5.000000000000000000
           Margins.Right = 10.000000000000000000
-          Position.X = 187.000000000000000000
+          Position.X = 407.000000000000000000
           Position.Y = 5.000000000000000000
           Size.Width = 219.000000000000000000
           Size.Height = 51.000000000000000000
@@ -46885,12 +46829,122 @@
             end
           end
         end
-        object Circle1: TCircle
+        object Circle2: TCircle
           Align = Left
           Fill.Color = xFF948B6D
           Margins.Left = 10.000000000000000000
           Position.X = 10.000000000000000000
-          Size.Width = 50.000000000000000000
+          Size.Width = 37.000000000000000000
+          Size.Height = 56.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          object Image7: TImage
+            MultiResBitmap.Height = 256
+            MultiResBitmap.Width = 256
+            MultiResBitmap = <
+              item
+                Width = 256
+                Height = 256
+                PNG = {
+                  89504E470D0A1A0A0000000D49484452000001000000010008060000005C72A8
+                  660000000473424954080808087C0864880000097F49444154789CEDDD51969B
+                  3A160550A957CF2BD4C85235329391A93F8CB32AFDF2CA509640D2DDFB27F9A0
+                  8C8CD0E122C0A40400000000000000CC225FB1D252CA92525A524A3FB67FB9CE
+                  9A52FA95525A73CEEBB54DE16CA7064029E53D19F4BDFBC839BF5FDD08CE714A
+                  006C47FCDB19EBA29A3715C1FC9A074029E5961CF147B5E69CDFAE6E04ED340B
+                  0047FDA9A80626D524000CFE29098109550F00837F6A4260322D02A0D4FE4CFA
+                  9173BEE4D2316DFCB7E6876D137E47ADE97E1D3AA594D2AB97A09E0550EF3B70
+                  EBF66F97621F0E5F922DA5DC4C0CF20FA594A51C73DB4E176AB7E34BB5D757DB
+                  D9EDDFFAED76B0EF96DAED6070BDEC40670FA0DAAE6A7F3918E0ADDAC1B9FE53
+                  E343CA9F65E557D66422A94B5B9FBCA57B1F3D75A0CF99DD8103C772755B5AAF
+                  FF5557B7BF1CA8045AB785F65EAE000E0C6A47FE017CAA049E3A23D069ABC629
+                  C0B263194F9A0D64EBAB75C7A24BD386D05C8D00F8B163998F0AEBE15C7BFA6C
+                  4FDFD3B197AF89EF39173CF3DAFBECE7A6BD6DCBDEEFABE06B55AE023CE1E83F
+                  2E7D37B9330200E8D48C0130F3516BE6EFC6059ACF015C718E38EB3C408FDBD2
+                  1CC0D866AC0052DA791D7B30337E272E3665001CB99965106EA2A289290320A5
+                  7B086CE5E9C8E7CD1FF96EBDBA21CC69CA3900EAD1BF739BB602009E13001098
+                  0080C004000426002030010081090008ACEA7B0118C3F6535E4BAAF0AAF6599F
+                  BB38D19AEEEFC5B8E457B3DC081448B9FF92EFCB839EA63E5E7D39CE11022080
+                  E27D8D233AE5F90F7300932BF7D7B519FCE3B995EFBD6AEF100130A9C7EFFB27
+                  E5FEC81EEF68585AAD40004C48C93F9D5BAB1010009331F8A7D524044C024EC6
+                  65B9B9D51E4FEE0398C837278DD674BF0E9D524AE9D54B50A31F105AB7BFFCF9
+                  52D5C397644B29B79C733FBF76E505927D38F252CF4D939272F4FDE1ECF66FFD
+                  763BD8774BADF53B0598C4C19DB3D935E6D1F787ABDA5F0ECEDDD46A8749C009
+                  943FCBCAAFACC90F8C76E9D30FD9AE7B963FD0E75FAFF7D50F183DF16770E0E8
+                  DF7CF08FBE3F5CDDFE2395408DB6A8000677E07CD0917F00477ED2BEC65C8000
+                  18DFB263994B9E34E37BB6BE5A772CBABCBA2E0130BE1F3B9619F9DD0851EDE9
+                  B33D7DFF25730083DB73FE7F661F8C70A9EF15BD6DCB57DBA302989FA3FFB89A
+                  F79D0080C00400B5CD5C714CF7DDCC010CAEC7ED3FEB3C408FDBD21C003DEAE7
+                  61957A66FC4E0280FA8EDCCC3288696FA212003491735EB7F274E4F3E68F7CB7
+                  5EDD9056CC010CCEF69F9B3900A0190100810900084C00406002000213001098
+                  0080C0040004260020300100810900082CDCBB015FBDB7FAEABF879A54001098
+                  0080C0040004260020300100810900084C004060E1EE0378F53AFBD57F0F35A9
+                  0020300100810900084C004060020002130010980080C0C2DD07F02ACFF33313
+                  150004260020300100810900084C004060020002130010980080C00400042600
+                  20300100810900084C004060020002130010980080C004000426002030010081
+                  0900084C004060020002130010980080C004009728A5DC4A29B7ABDB119D00E0
+                  74DBC05F524A8B10B89600E0549F06FF8310B89000E0347F19FC0F42E0220280
+                  537C31F81F84C0050400CDED18FC0F42E0640280DE0881130980CA4A29EF57B7
+                  A13739E7B794D27AE04F84C0490400A710027D12009C4608F427BFFA01A594F2
+                  E50A727E791D3D79F67D533AF73B8FB8FD0F4C0A3EAC5B7884D3BA7F5500C7AD
+                  CF1628A52CED9B312E95403F04C071BF762CF3B3792B06270426519EB8BA7DB5
+                  95529667DF79B39CD49EA1B7FFF650D011A142A0FBFEEDBE810D1CD85997ABDB
+                  D27AFD351421F0AFBAEFDFEE1BD84029E57DEF8E5A1A87C02CDBBF0881BFEABE
+                  7FBB6F60230777D6E5AA76B45A6F0B4508FC43F7FDDB7D031B29FBE7027EEFAC
+                  A54110CCB6FD8B10F843EBFE751FC00BCAF1EBD90F1F8FFFE49CDF5F6CC374DB
+                  FF1BDB75DAFB045AF7AF0078D18847D9494D1902ADC797FB005E37DD4E37A8A5
+                  7810EB30154005DBB9FDD4E7A2A3986D7F53010C20E7BC26950003120095E49C
+                  D72D8DD7ABDB027B0980CAB68928D5004310000D7CAA063E9E2E4C4DB6F74126
+                  014FB04D122E29A51FE97BF70DF09CCB8057687DA7125F9B71FB177703FED6BA
+                  7F9D02D095E22EC0530900BA61F09F4F00D00583FF1A0280CB19FCD711005CCA
+                  E0BF9600E03206FFF504009730F8FB2000389DC1DF0F01C0A90CFEBE08004E63
+                  F0F74700700A83BF4F0280E60CFE7E09007A63F08F64C6A7D14632CAF62FFB9E
+                  F09BF6A9BEEFEABE7FBB6FE0E446DAFE4F42C0E0FF8BEEFBB7FB064E6EB4EDFF
+                  2F2160F0FF8BEEFBB7FB064E6EC4EDFF7F2160F07FA175FFFA49B0C18DBAFD1F
+                  03DF84DFD75AF7AF00189CED3FB7D6FDEB322004260020300100810900084C00
+                  4060020002130010980080C0040004260020300100810900084C004060020002
+                  130010980080C0040004260020300100810900084C0040600200021300109800
+                  80C0040004260020300100810900084C004060020002130010980080C09A0740
+                  29E5BDF53A80EF51014060020002CBAF7E4029A53C5D49CE2FAF87BF7BB6FD6D
+                  FBB1B5EEDF1A15C0FA6C8152CA52613D40653502E0D78E657E56580F50D92915
+                  404A695105407FAA9C1FEE9907D8BCE59CD71AEBE4CE1CC0DC4698034829A58F
+                  9DCBFD5409403FAA1D1D0E540129A904AA5101CC6D940A20A594DE0E2C7B2BA5
+                  DC540370ADAA478752CA2DA5B47CE34F7F9F42E49CDF6BB5270215C0DC5AF76F
+                  F59DE3E0A9008D0980B18D740AF070E45400B850F500D826F784000CA0C9C340
+                  4200C6D0EC69C09CF3BA9D9FACADD601BCA6F9E3C039E7B7A41A802E9DF27B00
+                  9FAA818FA422806E5C728968BB01684929FD48DFBB6F809D5C061CDB70F70170
+                  2E3702CD6DC4FB0080410800084C004060020002130010980080C00400042600
+                  20300100810900084C004060026072A594F7ABDBC0F79CD17702000213001098
+                  474507B7E767D83D123CA633FA560530BEF5D902DEC0349E9D7DB6BEBA1E0130
+                  BE5F3B96F9D9BC15D4B6A7CFF6F43D332BA52C659FE5EAB6B28F3EE5909D3B8B
+                  1D66000706BF57F071574A79DFB9CFDC8440BF8E0CFEE2FE0E3E3BB0E31421D0
+                  9F8383DFD19F3F1DDD818A6AA00B5BBFDD0EF6DD526BFDAE0F4FA494724BDF7B
+                  CFC2C7E33F39E7F75AEDE19FCA9FA5FB77AECEACDBDBB6AA100093511ECEADF6
+                  4D5DEE03988FF730CEAB7ADFAA0026B49D23DEAE6E0755BDE59CD7DA1F2A0026
+                  2504A6D264F0A72400A6F7C2C420D7AB3AE1F737022000D5C0909A1DF53F3309
+                  1840CE79DD668F3F528527C868EA23DFAD67AC4C0510D056112C29A51FC9E9C1
+                  D5D6747FAA6F3D6BD0030000000000000073FA1FE288E46EECCA976C00000000
+                  49454E44AE426082}
+                FileName = 'D:\Projetos\Delphi\BodyFit\Imagens\clonar branco.png'
+              end>
+            Align = Client
+            Locked = True
+            HitTest = False
+            Margins.Left = 7.000000000000000000
+            Margins.Top = 7.000000000000000000
+            Margins.Right = 7.000000000000000000
+            Margins.Bottom = 7.000000000000000000
+            Size.Width = 23.000000000000000000
+            Size.Height = 42.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object Circle1: TCircle
+          Align = Left
+          Fill.Color = xFF948B6D
+          Margins.Left = 20.000000000000000000
+          Position.X = 67.000000000000000000
+          Size.Width = 37.000000000000000000
           Size.Height = 56.000000000000000000
           Size.PlatformDefault = False
           Stroke.Kind = None
@@ -47129,118 +47183,8 @@
             Align = Client
             Locked = True
             HitTest = False
-            Size.Width = 50.000000000000000000
+            Size.Width = 37.000000000000000000
             Size.Height = 56.000000000000000000
-            Size.PlatformDefault = False
-          end
-        end
-        object Circle2: TCircle
-          Align = Left
-          Fill.Color = xFF948B6D
-          Margins.Left = 10.000000000000000000
-          Position.X = 70.000000000000000000
-          Size.Width = 50.000000000000000000
-          Size.Height = 56.000000000000000000
-          Size.PlatformDefault = False
-          Stroke.Kind = None
-          object Image7: TImage
-            MultiResBitmap.Height = 256
-            MultiResBitmap.Width = 256
-            MultiResBitmap = <
-              item
-                Width = 256
-                Height = 256
-                PNG = {
-                  89504E470D0A1A0A0000000D49484452000001000000010008060000005C72A8
-                  660000000473424954080808087C0864880000097F49444154789CEDDD51969B
-                  3A160550A957CF2BD4C85235329391A93F8CB32AFDF2CA509640D2DDFB27F9A0
-                  8C8CD0E122C0A40400000000000000CC225FB1D252CA92525A524A3FB67FB9CE
-                  9A52FA95525A73CEEBB54DE16CA7064029E53D19F4BDFBC839BF5FDD08CE714A
-                  006C47FCDB19EBA29A3715C1FC9A074029E5961CF147B5E69CDFAE6E04ED340B
-                  0047FDA9A80626D524000CFE29098109550F00837F6A4260322D02A0D4FE4CFA
-                  9173BEE4D2316DFCB7E6876D137E47ADE97E1D3AA594D2AB97A09E0550EF3B70
-                  EBF66F97621F0E5F922DA5DC4C0CF20FA594A51C73DB4E176AB7E34BB5D757DB
-                  D9EDDFFAED76B0EF96DAED6070BDEC40670FA0DAAE6A7F3918E0ADDAC1B9FE53
-                  E343CA9F65E557D66422A94B5B9FBCA57B1F3D75A0CF99DD8103C772755B5AAF
-                  FF5557B7BF1CA8045AB785F65EAE000E0C6A47FE017CAA049E3A23D069ABC629
-                  C0B263194F9A0D64EBAB75C7A24BD386D05C8D00F8B163998F0AEBE15C7BFA6C
-                  4FDFD3B197AF89EF39173CF3DAFBECE7A6BD6DCBDEEFABE06B55AE023CE1E83F
-                  2E7D37B9330200E8D48C0130F3516BE6EFC6059ACF015C718E38EB3C408FDBD2
-                  1CC0D866AC0052DA791D7B30337E272E3665001CB99965106EA2A289290320A5
-                  7B086CE5E9C8E7CD1FF96EBDBA21CC69CA3900EAD1BF739BB602009E13001098
-                  0080C004000426002030010081090008ACEA7B0118C3F6535E4BAAF0AAF6599F
-                  BB38D19AEEEFC5B8E457B3DC081448B9FF92EFCB839EA63E5E7D39CE11022080
-                  E27D8D233AE5F90F7300932BF7D7B519FCE3B995EFBD6AEF100130A9C7EFFB27
-                  E5FEC81EEF68585AAD40004C48C93F9D5BAB1010009331F8A7D524044C024EC6
-                  65B9B9D51E4FEE0398C837278DD674BF0E9D524AE9D54B50A31F105AB7BFFCF9
-                  52D5C397644B29B79C733FBF76E505927D38F252CF4D939272F4FDE1ECF66FFD
-                  763BD8774BADF53B0598C4C19DB3D935E6D1F787ABDA5F0ECEDDD46A8749C009
-                  943FCBCAAFACC90F8C76E9D30FD9AE7B963FD0E75FAFF7D50F183DF16770E0E8
-                  DF7CF08FBE3F5CDDFE2395408DB6A8000677E07CD0917F00477ED2BEC65C8000
-                  18DFB263994B9E34E37BB6BE5A772CBABCBA2E0130BE1F3B9619F9DD0851EDE9
-                  B33D7DFF25730083DB73FE7F661F8C70A9EF15BD6DCB57DBA302989FA3FFB89A
-                  F79D0080C00400B5CD5C714CF7DDCC010CAEC7ED3FEB3C408FDBD21C003DEAE7
-                  61957A66FC4E0280FA8EDCCC3288696FA212003491735EB7F274E4F3E68F7CB7
-                  5EDD9056CC010CCEF69F9B3900A0190100810900084C00406002000213001098
-                  0080C0040004260020300100810900082CDCBB015FBDB7FAEABF879A54001098
-                  0080C0040004260020300100810900084C004060E1EE0378F53AFBD57F0F35A9
-                  0020300100810900084C004060020002130010980080C0C2DD07F02ACFF33313
-                  150004260020300100810900084C004060020002130010980080C00400042600
-                  20300100810900084C004060020002130010980080C004000426002030010081
-                  0900084C004060020002130010980080C004009728A5DC4A29B7ABDB119D00E0
-                  74DBC05F524A8B10B89600E0549F06FF8310B89000E0347F19FC0F42E0220280
-                  537C31F81F84C0050400CDED18FC0F42E0640280DE0881130980CA4A29EF57B7
-                  A13739E7B794D27AE04F84C0490400A710027D12009C4608F427BFFA01A594F2
-                  E50A727E791D3D79F67D533AF73B8FB8FD0F4C0A3EAC5B7884D3BA7F5500C7AD
-                  CF1628A52CED9B312E95403F04C071BF762CF3B3792B06270426519EB8BA7DB5
-                  95529667DF79B39CD49EA1B7FFF650D011A142A0FBFEEDBE810D1CD85997ABDB
-                  D27AFD351421F0AFBAEFDFEE1BD84029E57DEF8E5A1A87C02CDBBF0881BFEABE
-                  7FBB6F60230777D6E5AA76B45A6F0B4508FC43F7FDDB7D031B29FBE7027EEFAC
-                  A54110CCB6FD8B10F843EBFE751FC00BCAF1EBD90F1F8FFFE49CDF5F6CC374DB
-                  FF1BDB75DAFB045AF7AF0078D18847D9494D1902ADC797FB005E37DD4E37A8A5
-                  7810EB30154005DBB9FDD4E7A2A3986D7F53010C20E7BC26950003120095E49C
-                  D72D8DD7ABDB027B0980CAB68928D5004310000D7CAA063E9E2E4C4DB6F74126
-                  014FB04D122E29A51FE97BF70DF09CCB8057687DA7125F9B71FB177703FED6BA
-                  7F9D02D095E22EC0530900BA61F09F4F00D00583FF1A0280CB19FCD711005CCA
-                  E0BF9600E03206FFF504009730F8FB2000389DC1DF0F01C0A90CFEBE08004E63
-                  F0F74700700A83BF4F0280E60CFE7E09007A63F08F64C6A7D14632CAF62FFB9E
-                  F09BF6A9BEEFEABE7FBB6FE0E446DAFE4F42C0E0FF8BEEFBB7FB064E6EB4EDFF
-                  2F2160F0FF8BEEFBB7FB064E6EC4EDFF7F2160F07FA175FFFA49B0C18DBAFD1F
-                  03DF84DFD75AF7AF00189CED3FB7D6FDEB322004260020300100810900084C00
-                  4060020002130010980080C0040004260020300100810900084C004060020002
-                  130010980080C0040004260020300100810900084C0040600200021300109800
-                  80C0040004260020300100810900084C004060020002130010980080C09A0740
-                  29E5BDF53A80EF51014060020002CBAF7E4029A53C5D49CE2FAF87BF7BB6FD6D
-                  FBB1B5EEDF1A15C0FA6C8152CA52613D40653502E0D78E657E56580F50D92915
-                  404A695105407FAA9C1FEE9907D8BCE59CD71AEBE4CE1CC0DC4698034829A58F
-                  9DCBFD5409403FAA1D1D0E540129A904AA5101CC6D940A20A594DE0E2C7B2BA5
-                  DC540370ADAA478752CA2DA5B47CE34F7F9F42E49CDF6BB5270215C0DC5AF76F
-                  F59DE3E0A9008D0980B18D740AF070E45400B850F500D826F784000CA0C9C340
-                  4200C6D0EC69C09CF3BA9D9FACADD601BCA6F9E3C039E7B7A41A802E9DF27B00
-                  9FAA818FA422806E5C728968BB01684929FD48DFBB6F809D5C061CDB70F70170
-                  2E3702CD6DC4FB0080410800084C004060020002130010980080C00400042600
-                  20300100810900084C004060026072A594F7ABDBC0F79CD17702000213001098
-                  474507B7E767D83D123CA633FA560530BEF5D902DEC0349E9D7DB6BEBA1E0130
-                  BE5F3B96F9D9BC15D4B6A7CFF6F43D332BA52C659FE5EAB6B28F3EE5909D3B8B
-                  1D66000706BF57F071574A79DFB9CFDC8440BF8E0CFEE2FE0E3E3BB0E31421D0
-                  9F8383DFD19F3F1DDD818A6AA00B5BBFDD0EF6DD526BFDAE0F4FA494724BDF7B
-                  CFC2C7E33F39E7F75AEDE19FCA9FA5FB77AECEACDBDBB6AA100093511ECEADF6
-                  4D5DEE03988FF730CEAB7ADFAA0026B49D23DEAE6E0755BDE59CD7DA1F2A0026
-                  2504A6D264F0A72400A6F7C2C420D7AB3AE1F737022000D5C0909A1DF53F3309
-                  1840CE79DD668F3F528527C868EA23DFAD67AC4C0510D056112C29A51FC9E9C1
-                  D5D6747FAA6F3D6BD0030000000000000073FA1FE288E46EECCA976C00000000
-                  49454E44AE426082}
-                FileName = 'D:\Projetos\Delphi\BodyFit\Imagens\clonar branco.png'
-              end>
-            Align = Client
-            Locked = True
-            HitTest = False
-            Margins.Left = 7.000000000000000000
-            Margins.Top = 7.000000000000000000
-            Margins.Right = 7.000000000000000000
-            Margins.Bottom = 7.000000000000000000
-            Size.Width = 36.000000000000000000
-            Size.Height = 42.000000000000000000
             Size.PlatformDefault = False
           end
         end
@@ -47267,7 +47211,7 @@
         Margins.Right = 50.000000000000000000
         Position.X = 50.000000000000000000
         Position.Y = 5.000000000000000000
-        Size.Width = 316.000000000000000000
+        Size.Width = 536.000000000000000000
         Size.Height = 252.000000000000000000
         Size.PlatformDefault = False
         XRadius = 5.000000000000000000
@@ -47412,14 +47356,14 @@
           Margins.Top = 5.000000000000000000
           Margins.Right = 5.000000000000000000
           Margins.Bottom = 5.000000000000000000
-          Size.Width = 306.000000000000000000
+          Size.Width = 526.000000000000000000
           Size.Height = 242.000000000000000000
           Size.PlatformDefault = False
           object Layout3: TLayout
             Align = Top
             Margins.Top = 40.000000000000000000
             Position.Y = 40.000000000000000000
-            Size.Width = 306.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 55.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
@@ -47445,6 +47389,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label37: TLabel
                   Align = Client
@@ -47471,12 +47416,13 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
             object Layout9: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 217.000000000000000000
+              Position.X = 437.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 55.000000000000000000
               Size.PlatformDefault = False
@@ -47495,6 +47441,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label39: TLabel
                   Align = Client
@@ -47521,6 +47468,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
           end
@@ -47528,7 +47476,7 @@
             Align = Top
             Margins.Top = 10.000000000000000000
             Position.Y = 105.000000000000000000
-            Size.Width = 306.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 80.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -47553,6 +47501,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label38: TLabel
                   Align = Client
@@ -47579,11 +47528,12 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
             object Label47: TLabel
               Align = Top
-              Size.Width = 306.000000000000000000
+              Size.Width = 526.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.HorzAlign = Center
@@ -47596,7 +47546,7 @@
             Align = Top
             Margins.Top = 10.000000000000000000
             Position.Y = 195.000000000000000000
-            Size.Width = 306.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 55.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
@@ -47622,6 +47572,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label40: TLabel
                   Align = Client
@@ -47648,12 +47599,13 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
             object Layout14: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 217.000000000000000000
+              Position.X = 437.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 55.000000000000000000
               Size.PlatformDefault = False
@@ -47672,6 +47624,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label41: TLabel
                   Align = Client
@@ -47698,6 +47651,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                OnChange = edtAccTBWChange
               end
             end
           end
@@ -47707,7 +47661,7 @@
           StyledSettings = [Family]
           Margins.Left = 10.000000000000000000
           Position.X = 10.000000000000000000
-          Size.Width = 306.000000000000000000
+          Size.Width = 526.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -47725,7 +47679,7 @@
         Margins.Bottom = 5.000000000000000000
         Position.X = 50.000000000000000000
         Position.Y = 262.000000000000000000
-        Size.Width = 316.000000000000000000
+        Size.Width = 536.000000000000000000
         Size.Height = 265.000000000000000000
         Size.PlatformDefault = False
         XRadius = 5.000000000000000000
@@ -49037,14 +48991,14 @@
           Margins.Top = 5.000000000000000000
           Margins.Right = 5.000000000000000000
           Margins.Bottom = 5.000000000000000000
-          Size.Width = 306.000000000000000000
+          Size.Width = 526.000000000000000000
           Size.Height = 255.000000000000000000
           Size.PlatformDefault = False
           object Layout16: TLayout
             Align = Top
             Margins.Top = 5.000000000000000000
             Position.Y = 238.000000000000000000
-            Size.Width = 306.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 81.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
@@ -49096,6 +49050,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
+                OnChange = edtAccTBWChange
               end
               object Layout23: TLayout
                 Align = Top
@@ -49112,6 +49067,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label50: TLabel
                   Align = Client
@@ -49130,7 +49086,7 @@
             object Layout31: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 217.000000000000000000
+              Position.X = 437.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 81.000000000000000000
               Size.PlatformDefault = False
@@ -49149,6 +49105,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label51: TLabel
                   Align = Client
@@ -49175,6 +49132,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
+                OnChange = edtAccTBWChange
               end
               object Layout33: TLayout
                 Align = Top
@@ -49191,6 +49149,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label52: TLabel
                   Align = Client
@@ -49211,13 +49170,13 @@
             Align = Top
             Margins.Top = 5.000000000000000000
             Position.Y = 126.000000000000000000
-            Size.Width = 306.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 107.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             object Z: TLabel
               Align = Top
-              Size.Width = 306.000000000000000000
+              Size.Width = 526.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.HorzAlign = Center
@@ -49246,6 +49205,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label42: TLabel
                   Align = Client
@@ -49272,6 +49232,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
+                OnChange = edtAccTBWChange
               end
               object Layout19: TLayout
                 Align = Top
@@ -49288,6 +49249,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label43: TLabel
                   Align = Client
@@ -49308,7 +49270,7 @@
             Align = Top
             Margins.Top = 40.000000000000000000
             Position.Y = 40.000000000000000000
-            Size.Width = 306.000000000000000000
+            Size.Width = 526.000000000000000000
             Size.Height = 81.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
@@ -49334,6 +49296,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label45: TLabel
                   Align = Client
@@ -49360,6 +49323,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
+                OnChange = edtAccTBWChange
               end
               object Layout29: TLayout
                 Align = Top
@@ -49376,6 +49340,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label48: TLabel
                   Align = Client
@@ -49394,7 +49359,7 @@
             object Layout27: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 217.000000000000000000
+              Position.X = 437.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 81.000000000000000000
               Size.PlatformDefault = False
@@ -49413,6 +49378,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label46: TLabel
                   Align = Client
@@ -49439,6 +49405,7 @@
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
+                OnChange = edtAccTBWChange
               end
               object Layout30: TLayout
                 Align = Top
@@ -49455,6 +49422,7 @@
                   Size.Width = 49.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
+                  OnChange = edtAccTBWChange
                 end
                 object Label49: TLabel
                   Align = Client
@@ -49477,7 +49445,7 @@
           StyledSettings = [Family]
           Margins.Left = 10.000000000000000000
           Position.X = 10.000000000000000000
-          Size.Width = 306.000000000000000000
+          Size.Width = 526.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -49490,11 +49458,11 @@
       object lblDireita: TLabel
         Align = Scale
         StyledSettings = [Family]
-        Position.X = 351.448394775390600000
-        Position.Y = 287.999938964843800000
+        Position.X = 537.310546875000000000
+        Position.Y = 253.382308959960900000
         RotationAngle = 90.000000000000000000
-        Size.Width = 65.448638916015630000
-        Size.Height = 19.000000000000000000
+        Size.Width = 100.060729980468800000
+        Size.Height = 16.716445922851560000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 16.000000000000000000
         TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -49507,11 +49475,11 @@
       object lblesquerda: TLabel
         Align = Scale
         StyledSettings = [Family]
-        Position.X = -8.965519905090332000
-        Position.Y = 289.000000000000000000
+        Position.X = -13.706903457641600000
+        Position.Y = 254.262039184570300000
         RotationAngle = 270.000000000000000000
-        Size.Width = 76.206985473632810000
-        Size.Height = 23.000000000000000000
+        Size.Width = 116.508811950683600000
+        Size.Height = 20.235458374023440000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 16.000000000000000000
         TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -49522,5 +49490,279 @@
         TabOrder = 2
       end
     end
+  end
+  object ImageList: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 225
+        MultiResBitmap.Width = 225
+        MultiResBitmap = <
+          item
+            Width = 225
+            Height = 225
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000E1000000E108060000003EB3D2
+              7A0000000473424954080808087C0864880000035349444154789CEDDDC16EDA
+              401486D1A14DD547CD86651E8365363C692BA52D5DB496286A221283FFB933E7
+              489122A1609BF1E7EBC082D60000000000000000000000000000000000000000
+              00000000000000000000000000000000000000002AD8A57780EB1D0FFBD3E3D3
+              F36EF9FDF2F1E5316AB16885FC2FBCD708B20E0B55C07BE2BB24C6FE7D4AEF00
+              F7B52660B6E12AD9B15B066422F6CB249C8489D82F11764A34F3708BD2A17B06
+              E8B6B43F262184B92A76668BDB50D3B02F2621848910C2440861228430114298
+              08214C84102642081321848910C244086122843011429808214C841026420813
+              21848910C244086122843011429808214C84102642081321848910C244086122
+              843011429808214C84102642081321848910C244086122843011429808214C84
+              102642081321848910C244D889E3617FDA78930F1B6F8F5788705E3FD23BC01F
+              BBF40EDC5B60C270638F4FCF439FA7431E9CF0C6356290431D90F8E631528CC3
+              1C8800E7334A88DE98A1AC512EBCA5AF24A32C02EB549F886527E1F1B03F557F
+              F1A13593904154BE20979D8470A9EA45B96484555F6CEEA7F2395132C2D66ABF
+              E870AE6C84300A11429808214C84102642082B1961E50F66E152C9085B1322FF
+              AA7C3E94DD719F1372AE72846527616BB55F786EA7FA79507AE717A6E2DC44D8
+              0921CEA97A80AD15BF1D656E2304D8DA40937061228E6F94F816431DCC39318E
+              67B4F816431E54655B5C3C463D99AB9AF17FC2CF1FFCBBB527EE5BDBDDB5D6BE
+              AE7CFEF7FAF2F767D9FEA5B5E786EFBAB8D28C11FEFCE0DFAD9D506F6DF7D4B6
+              5F8B87D6DACBD9F62FFD5AF9FCBEEBE24A3346D8AB6F1B6FEFFBC6DBE315229C
+              9737AE3A2142081321848910C244086122843011429808214C84102642081321
+              848910C244086122843011429808214C84102642081321848910C24408612284
+              3011429808214C84102642081321848910C244086122843011429808214C8410
+              2642081321848910C244086122843011429808214C841026C2CE3C3E3DEFD2FB
+              C0B644381991F7478410E6AAD8A9E3617FBAF5739A827D32093B25987958E8CE
+              DD6A228ABA5F16A680B5210AB06F16A7888F8428BE1A2C5231D7C4283E000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              00000000006EEF37EB5A94F4CBE309E60000000049454E44AE426082}
+            FileName = 
+              'D:\Projetos\Delphi\BodyFit\Imagens\add_preto-removebg-preview ma' +
+              'rrom.png'
+          end>
+        Name = 'Item 0'
+      end
+      item
+        MultiResBitmap.Height = 203
+        MultiResBitmap.Width = 206
+        MultiResBitmap = <
+          item
+            Width = 206
+            Height = 203
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000CE000000CB080600000026D2AC
+              770000000473424954080808087C0864880000180349444154789CEDDD797013
+              579A00F0EF754B2DC91736E0031F842B90359BC9CE90DADDDAA99A2299D99AD9
+              9D643281D80402E60804C2E58410CE247812CCED04CC1508E130374E4832CC91
+              CC6E36D4EE1C35336133B333649270C41CC636B6011FB2A496BADFFE61CBC8B2
+              8E96F4596E49DFAFCA65BBA5FEF42CF7A7F7FAF57BAF0108212163FD5D80FEC2
+              3967D0F9F7BBDF831EEFC5B973E798C56261369B8D7B6EF7B52D9871E3C6F173
+              E7CE31CFDFB516D3EB77E6B5CDFBF740FB26020E00C0184BC4BFBD5F792792F7
+              CFDE5F9E04F093845EDBBC1F8BF70FAF78FFFB08218410A249384D026A4690B0
+              D081139F04B8DB39E0796EE5DEEE7D8E66F4D8E6DE4FED7ABE7B5FC52BB6D0F5
+              1CA56B7FE8DAEEDEDFBD9D773D4FEDFA5D0100D1E339EE3862D777F76B1B3CCA
+              E7F4288BABEBBBD8F565F0F85BDCAFED596EB56BBBFB35DDF1213D3D9DEFDDBB
+              B7A3B8B858861051E29068F03EB03DB7FBEB01733F16E839020098BABEBBBF3C
+              5FCB000012DC4D42D6F5B33BA19D00E09A3F7FFEED9D3B775AFBAC37AEACAC4C
+              08FE2C428827AA9D08218410127D7A6C81E8B14C84C41D069DBD6D1200A40040
+              3A006401C03D070E1C3007DB919044E0D93BE7EE9A37C0DDEE70EEF5A54298E3
+              FDDCD9D81F3D6994D044D7022585BB0F3D270AE5F01E3C49A35B494C13E0EE55
+              61428846D4642284104208D107CE398D45234403EF44A1DE2C4208219D0BB314
+              16164A409D5D8468C73917F7ECD993049438841042F4460AF604EA452389C808
+              818FFDA8260EB51F492C70AF5310A807D9AE250816EACA26B1C0DFC2219E5C01
+              1E03006AAA91C414343182A1C4218928E2D65177E274ADDE4F8944E29DAF05F3
+              43D69D284D4D4D29E9E9E9DF004A1E12DF503AB1BA93C46EB7BB00200D0032A0
+              E772A184C413F77A029E224E261190AA324274CABD2C6E44BC6B16EA5226F1CE
+              5D3178D73A21A1F3199288F03A0708491061AF97E689128724224A1C42C24089
+              434888DC0B6D468412872422AA71080943C4C73D250E49349E6B94878D128724
+              1ACF5B7984CD10FC29BDD0DD04885FEF1FD970BF414A1EDED2D2FA4D95AB1693
+              516A168DE2D74C757C31A164F55FFBBB7C8074578C70AB2B4A1ED2C33B075F1D
+              EB54C4490DF5D7175A4C6286F7E376192EE5158CD8DA76ABE6A399A59517FAA3
+              8C5D18005800C006514E1C4A1AD2C3816D8BEFED7018AB0C82E39F833D971952
+              DEB348EACA69F3377D198DB2F92A0200240180359220E19CE350D2906E87762C
+              19DD66E3EF69491A0000EE6A7FDCE114CA4FBCF5D2DFF575D9FC1501221CE009
+              409D0324029C73D1A526BD6632F0B1A1ECA738DB271A9333BED357E58A064A1C
+              1216CEB9F19DC39B27381DB78BC3D9BFF6CAD72F6097492306004A90C783A299
+              9E242CC306DE1ED9D87CEB84D120A486B3BF418441D39FFCF1B9EA0F3EFE0ABB
+              6C41B86F0A1D287982A21A8784453566BC6A9184DC4862C80AFF2656794240E7
+              3824FA38E786EAAA4D45AE8EE627238DA5A8CE5EDDD65112F1BA6AE15C002509
+              EC6065E9F036AB526192225F9642148C2D0845C2A6E9720BD53824245C18506E
+              925801462CA364388F110799A6CB2D94384413CEB9F8DEB18AA94EC7ED228C78
+              7659ADB3DEA9FD33462C649AAAD2604D351A25400000E06065E98836ABB20EA3
+              890600303873C8BEA7E6BCDC9F436FFCF17BBC73CE19638C0304AF7128694827
+              43FA72AC269AACC09F147BFB6F30624559F7A70635D54850EF9DDC3AD5D1D13C
+              0B2396AAAA6A7EC1F08A92451B3FC2881765ACD70F84F87260DBE27B5BADEA2F
+              CD128CC48867300D78EBE945E5CF60C48A36CEB98131E602A01A8704A1404A19
+              56D2389CFC62AC268D374A1CE213E79C55576D2A723A5A2663C45355CE73F386
+              2DC188D55FCE9D3BD7DD42D37A01947AD712CCC1CAD251AD56658B596228CD79
+              7372FA9E274A5E3C83114B0FB4D638742E94404EED2F2B0443FA0B66890DC588
+              E790F9A5990BCA9FC588A5175A13876A9B04623027E7C8B65B73316271CE79F6
+              9082E73162E909250EE9E55A4DCD7EAC589225636FF18CE5BFC08AD78782B5AA
+              7A3C4E9D03A487FD3B56BF6D96D83D18B11CB27A6DD6C2B5F3186311CD7D4114
+              283982550E3D1EA7C4210000C039174E1E2A7FC8D1717B0656CC2179C3E663C5
+              4282D672A269050400000E56968E6CB5AA6F992501E5C35430A61C2D9ABEEC67
+              18B110A1F50E538D4300004015529FC3BAD06997D5DA39A51BA662C4D2113AC7
+              213D7D706CF3375C8E16946615E79C8F1875DF7318B1FA80BFDA46CBE5163AC7
+              21771DDBB3F2BE2B57AF9EC48A2718534E3E5ABCF81DAC78C8FC258896E69BE6
+              1A876EDB1EE738E7692E30CD3419F87D18F1ECB2DAF0CC731B5186E8F4914009
+              12F458B7582C9AA61550D2C431CE39AB3EBCE1416BCBCDA558310B868E9C8D15
+              4B87B8CD66EB4E3C4A9C04C518E30D75F5158280D38B269AD24F4C98FA82DE7A
+              D14211B4B9366EDCB8EE65A582BD69943C716AFF8E97F748A2F20F18B1ECB2DA
+              307BD15A3D37D1B068AA7104A0C4894BEF1EAD78C86EC599D10900306CC4E845
+              58B1FA89D6E35C73E250AF5B1CAABD7A79B7280A2817BF4553FA91C79E7CAE1A
+              23562C09941822D0E0CEB87370D72B3B4C46360623964D566ECE5EB4761A46AC
+              7E16F2714E354E023955B5FEE18EB6A67958F1F2F2872FE49C27CC31E25E1A0A
+              207062F0208F9318D35057BF451405943B549892061F282A5956CD188B7801F3
+              5814283154A0CE81B87160D79A0A495450EE0E6097D506113A3662C48A259C73
+              4D1740A9B6891367AA777CD7D6D688D6F3959B37744D3FDEC3331A821EFBC13A
+              07481CA8B9F4E51BA2281831627121E96745D357ECC188A563415B5A748E13E7
+              0E56AEDA2519F8FD18B1ECB25A376FC9A6473162E998FB8E6DBD1FD0D839A006
+              799CE818E79C9D3C54FE50ABF5F64CAC98794347BE84154BC734B5B4023DC908
+              9D8923A3148744D5A86CDB98E65B2DFB4C06968F12504CF969C9DC5796A3C4D2
+              373374CE8C0E78DC07AB51425964817AE074C4A59A1748A2FA00462CBBACD6CD
+              7D7EC36318B162402AF8C90BADBD6A2284960C34CA40278EBFFDDA8FDA5B1B9F
+              C68A97933BB4DCF3A089734980702BC34479B3E2C6E15DCBC6343535BE2A4962
+              12463C2E583E9C3463C54ECF13E338A7A9F7913A07E20C33A44CC56BA229B7E6
+              2DD9FC6F18B1620807DF354E8F19D1941871E454D5FA879B1A6F9462C51B3A6C
+              145AAC18C2C0775EF0B367CF766F0F761D27E2FBC193E8B959DFB0DE6232A4A2
+              0433249F7E7CCA0B475062C50E77D2F83A45615959599A12C7E02700D1A1236F
+              FE649D5170FD23462CBBACD6CF7D6EE3448C583126D045FF909687A2A65C0C38
+              B463C9E8963B0D688B6EE4158C4AA45E346F2A68686905EB1CA0F16A31A0AD43
+              396A30E08C457371E36F9F98B6644702F5A2796200E004DFD72F9924499A3A07
+              14A0731CDDAB7AB36C9D51501EC488659795D6052FBEF16D8C58318A03801D00
+              241F8FB1D4D4D4EEE9E6981740491471CED9A11D4B46B7DC6A40BB69D3D09163
+              1670CE13BD952183EF0A43B0D96CDDB57AB0F93834E446A71863BCAD831F9524
+              D18C12CF90F253A7F5CEFFEAE85E36E866CC98A1E5BDB281EFE3DEE472B9BA13
+              27D84A27940C3A757CDF86975AEF5CC76AA2B5972E8DFFB16856AB750400FC0D
+              020FA97140E7794E0F66B37990C964EAAE89829DE3685E42A8ACAC8C922C4ACE
+              9CA878A0B1F1CA2AAC78054347AFE09CC7FDBD9264594ED7F0347FE7F5A36459
+              EE6EC6064A1C17843070F3FCF9F39438515273E5CA019351B460C462C6949F4F
+              98FAFC4EC65822740469397FF377CC8F60ECEEADEB037DCA847A8ED36F38E7E2
+              F1BDABEE4D4ECF19E274BA860367499CBB1A8A4A965573CE593C75AD1EDDB7F6
+              B5F63BF5488B6E28ED69C68EE7E3ED3DF2471084B0FF46CEB9A43571626290E7
+              9913150F1CDA5536EB4E4BCB444B5B5B9EE7635BCB9FBD7570E79A33A7AAD657
+              1597ACFCAFFE2A239653FBCB0AEBEA6B9F374B381D5FB9F9235E7E62DAD2EB89
+              903400009C735B04FB3673CE354F9DD6B5D3472B8A2E5FBEF44B87AD79B14512
+              F2BC1FB798C481B2FDD6F4BAEB57AB4F1FDFB6A03FCA88A9B1B9E52DB3242663
+              C4E262D27F7097F5578CB1B00FA658D39538617D48088270B3C7EF019E1B528D
+              3376ECD8A87E6A551FDE3CFEDA958B6F9B256148B0E79A25716063ED851DEF1C
+              DA84B6D078B49D38B061858139FF0523965D56DA924DB0A868E69ABF61C48B15
+              A2285AC3DD57519496B8A871EAAE5FD96D96C49046025FBFFEF596D3472A1EE9
+              AB32F5950FDFDDF1AD9BF5575663C5CBCACEDF3A6DFEA62F13A589E6268A6247
+              98BB3241105ACD66B3A6C40108A173209ABD6A27F6AF5F683242C8B7DFB398C4
+              8CEBD76A2A0EEF5A86B2E878B45CBE7CA9D264145330622920FD7AF2D3AB5FC1
+              88156BDADBDB1DE1EECB18EB716D27D87C1CDDD53A9C73E1F6ADC6A270F73719
+              F9E8F60ED75ECC32F515CEB97474DFDA9744E644193F66732877060F4C9B8B11
+              2B16A5A4A4D821FC8BFA214D2BD0E5B519876C8BE866AF02C8DFA9DA5DB6ED74
+              55F9DF6395A92F1CDFBB6A44E3CD5AB4E902D9D90515C5B3CA3EC78A176BC68E
+              1D1BD2B5490F5C100497D6731C80106A9C68760E88020C883486CDDAB4586596
+              F108C5E9332D5679A7451223FE5B01001426FD66F2EC556B3162C5AAB2B2B2B0
+              8F5141103437D50074D854030050559C45126FDEB8B8B5BA6A53911E276D9D78
+              7BDD0A41753C8C11CBE6505A723207A1DD172786859D38EDEDED8E3EA971A2D9
+              39C0A0679F7AB84451106F5CFF7AAFDE7A97DE3FB2E1FEA6866B6863D1B2B30B
+              B64C2859FD57AC7809CAF7398E9F4F5D5DD63869A9193FC58A6596C4F4ED1B17
+              FFE9CC890A94259530D4D635BC690CB1ABDD1FA72A9E4BF4261A921EF9A1FB21
+              35DE18636A4656E6198753B163C59444F581FAFAC6E5A7F6971562C50C07E75C
+              3CB6AF7C25DE854E57C7C08C8C6518B148CF5CF1FCC5578DA3B90913CDCE81C7
+              26957E92969E5D81195375B54FB63B613A66CC501DDFBBEADEC69BD75FC48A97
+              9B3F72F5943965313F464F277AB4BE043F3FEB5E92098E8160791733A6ADAD69
+              D9A9835B9EC18C198AB60E758B5912333062B954C3EF8B4A5EDC8A118B0080BF
+              C4A9A9A989682253B4E7E314CF2AFB7CEE92CD4FC80A433DE96DA8BF5479FA68
+              45D81758C3C139379C3AB4712128D61F62C49365A5233B6B20DAA2EB0400FC9D
+              E3B85C2E09627039A845CBB7DF6F979566AC789241345DBB72E98D685E1C3D58
+              593AFC466D0DDA09FCE0AC7BD64F9CFEF265AC780400FC258EC56231E6E7E7FB
+              5A1647F7C6147EF3494551D166309A2521AFBEA1E9CD5355EB51AEA304E3504D
+              68173A6545FC6CF2EC156B1369BA4094F8EE1C100481B5B5B5A1AC98126DDF7F
+              6CCED981990568CB24010088CCF96D6B5BC7C4BE1C10CA3967A78FBCB18029B6
+              7FC588A7AAAA9A62E693306291C0BA13C7E9742AAAAA86D254EBB13875B4E7E3
+              78628CB96C6D751F595233CB31E3CAB6DBF30D96414F62C6F474B0B27454EDD5
+              AF3662C51B9435FC9599A59517B0E2911E7C770E343636B6B7B5B5DD092190AE
+              86A9CC2CADBC60321B3E6662F2FB98715B9BAF95F5C51C9EC3BB968D71F2A42D
+              12D28C4E17987E67EB68F93D462C125C77E23CF8E0834E086DC95B063ABB7DE1
+              A4E9AB3F494B31AE7238F99798716F5CBD78ECD0AE97BE8719D39C3C703C77B5
+              FF082396D3A9C879399973A7CF5FFB9F18F1884F5C5555CD63D5348B64E429A6
+              49B35FFB62F0C0B41F3B9C0ADAC9B15112535B5AEEECC28A7760DBE27B6B6BAF
+              BC8A152F6D60CEF61F4F5DF117AC78C4271B63AC7BB44A2489E39D28BA481CC6
+              189F3277FD17B97923504F924D46B877F7EB2F7C8C11CBC9CD5B2D929885124B
+              15CF95CC5D83366787F8E51A3A7468ABFB17CCC4D1D539CF13252F9E494D1F82
+              36C2180040501D0F1FD8F9CA9B91C4A8AEDAFC1C7775FC3B46795C2ED5393823
+              759A1EA745C423CF75B5E3AEC6F1E4B437BF6B300D781B33A66CBB35F7D4A14D
+              2BC2D9F7C481F54575D76B96609525393D73E79373D6FE4D6FD322120166E2E8
+              CEF485AF7F959A6C7CDDA91AFE8019B7B9A1A6FCFD93AF3F1ACA3EC7F6ACBCCF
+              DA667DD424B1028C32B814F1B319F37E827AED8A681753033BC3513CABECF385
+              CBB6FE935D56AF60C5140441B872E9C241ADD31038E782393973BC4BBE330DE3
+              F59D4E45CE2FC89F414DB4A8E995275889A3EB7F20E79CE5E4E5CD743A159429
+              D7009D8B1CDE6CBA5DA52579DE3BBCAEF0DAD58B684B32A50DCEDDFED89417FF
+              8F9A6851638600F37122A1EB7F20638C1797ACFA9F2105239FC28C6B1494712D
+              EDF29A40C3720EEF5A36E676AB6D99961547B570AAC64F4BE6BC4CBD68D19506
+              488913734D3CC6986BE2D4A5EF48E6B49D987155B9B518C4649F6B9571CEC5E4
+              B49C875C769C269A5D767564660E42BBFE4334E310E2BA6A8102C5A4990BD72D
+              04310975584E475BE3F3BE26C031C6946B572FA04D17C8CA2EA8289EB1FAE758
+              F18866B7BC37847B6EA2BBE136A1DABE71D15F2491A3CDB9713A154756EEB0A9
+              C5D397BFE3DEB66FFB4BC715C71D9441A22E45FC6CC1F26DDFC288457C0AE998
+              4EB81AC72D2B2767B15D564219D41A90D1289AEA6A6BB61FDEB56C0CE7DCF4C1
+              89379EC24A1A5976D93387E42CE59CC75C13398684744CEBBA37ACAF9D3E52F1
+              487DEDA5F74551409BF9EA540DBF4F36A9D3DAADCE3F4A4893D32C03B22BA843
+              405F123A7100004E1F797D5E63FDE5DD98316D76B5DE6216723062C98AF0D745
+              CB2BEFC78845F0247CD5DFD25CF3B1D192518919132B691C4EC5919777CF4ACE
+              79CCAD0511EF123E716696565E10B975A70A16DDCD6519343877D3E34F2DF995
+              E7E042A20F099F38009D63DA92CCCA025911FEDCDF65719315F133A6761C638C
+              A18D762000D0797A12F1719FF0E7389E4E1E2A7FE866EDF5F7B04EEAC325BB14
+              E7A041D93F983C7BCD59C6982ED7EF8E610274DE6D3DA20F24AA713C4C9ABEFA
+              93FC9163162A8ADAAF4DA3F48179DBBEF7D8FC3F50D2F4090142B845A73F54E3
+              F8707CDFBAA5AD776E6CEE8FD77638E1C2E2953B46F7C76B2708776511D18712
+              D5383E8882FC0BA369C08EFE78ED9CBCBC799CF38896232641455C9353E2F850
+              3CABECF39464E36E959950D618D02A2D23779DCBD67A833186B62A29E9850342
+              4B8B12C78FE259659F0FCA485D6C97D5DA68BC9EC3C9BE3219F9F12973D77F11
+              8DD74B70110F19A3C409A07856D9E78333B317D865A5AD2F5F8773CE070F1EF4
+              ECE3D356A1AE07477C421967498913C45373D67C907FCFC83E1D279634206BC7
+              E4D96B7ECD1873067F36D1034A1C0D44EEFADD808CDC957D11DBE1840B25CFAC
+              594C173A630B754787E0CD8AA51F326EFF3E563CCE3964E68E7878C29425FF4D
+              C36A620BD5382198F7C2961FC82E016DA9D9A4F49C8A095396FC919226F650E2
+              8428C50213ED0EA529D23876192E95CC79792963AC1DA35C246411B5B6287142
+              34B3B4F242EED01145910CCB511455CDC91B32876674C62EFAC785E189A94B7F
+              9B9D3F627EB8FB1B4D034E4E9ABEFA131A8B16BBA87320026F6F5FBDDBE56899
+              17CA3E0E59BDB678D5AEA17D5526A259440BCE508D1381A717953F2B4A69FBB4
+              3EDF2EAB7519E92928F7FB24FD8B1227422916E175A325A35255D580CD2E5911
+              3ECBCE1CF8DDA9CF6EFC2A5A65237E8555DB78AED58DD9548BF9B5D622517D68
+              D3232DADAD93AC6DB7BFC3989AC538A82A802C49299FE6E4E61CB2B5357D4AE3
+              D0621BE79CF5C57ADD74BE44E29A672F2835D5080903E6CD73A9C621F1AEFB18
+              F7973852940A4248AC6067CF9E0D983822008C0A35EAF9F3E7A9C621F18CA7A6
+              A6063CC65301E0876104A6C42171EDD34F3F35BA7FF655E3300030FAD84E08E9
+              E22B715C00608D7641088925BE12C709008D1062D38B7AD548A213006008847E
+              CE428943E249AFE3F9FCF9F3DDBDCDBE6A1C1500C259D5256187DB90B8E3AB12
+              60369BADFB18F7771DC7DE37E521242618A077F268BAEBB4CBFB895DA8394612
+              410A0439D643197283725F114262800D7AAF2FDD2391BA13C173AE811F093D6D
+              80241407F43ED6B9C562F139E44680C0D513250D49143E8F75CFCE01CFDB4904
+              AB71BC83313FDB09897BDD354ED7AD25822581BFE4218484801287240CCF1B7E
+              45DA4B46CD3492287A748E51F73221DA7040B8052221841012391A2140082184
+              1042082184905E68840021848488017D7812D2837752509210926028E1092184
+              24AAC2C24209A23314C7BBBDEDBD8DE89F7BD896040016004886CE9563520120
+              ADEB7B1274DE19C3F39C8A05F802AFE7C48EF1E3C70F83CE3F1C33811874BE81
+              42D79711004CD039AD5BEAFA327AFCECB9DD739B670CEFF279FF73C0C7CF247C
+              FEDE537702B9B7F9FBFF10420821F14780CEE66344AD0DAA3249A249EDFA4ED3
+              FE09E912742ED9F8F1E3CD582F94487CAE420F9D9F3EFE562AA54F26D28BD8C7
+              F13D7BB3048F6D7AC3E16EF2786F27A4973E3F88BBD6A4365CBC7851484E4E16
+              01001C0E87DAD1D1A11616162A00A032C6E8002531E5FF01CC3BA40E77C7472A
+              0000000049454E44AE426082}
+            FileName = 
+              'D:\Projetos\Delphi\BodyFit\Imagens\Checked-removebg-preview marr' +
+              'om.png'
+          end>
+        Name = 'Item 1'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'Item 0'
+            SourceRect.Right = 225.000000000000000000
+            SourceRect.Bottom = 225.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'Item 1'
+            SourceRect.Right = 206.000000000000000000
+            SourceRect.Bottom = 203.000000000000000000
+          end>
+      end>
+    Left = 152
+    Top = 528
   end
 end

@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.ListBox, FMX.Layouts, FMX.Edit,
-  FMX.Ani, FMX.DateTimeCtrls, FMX.TabControl;
+  FMX.Ani, FMX.DateTimeCtrls, FMX.TabControl, System.ImageList, FMX.ImgList;
 
 type
   TFrmBiomimpedancia = class(TForm)
@@ -15,14 +15,11 @@ type
     Image1: TImage;
     Image5: TImage;
     rectCliente: TRectangle;
-    ComboBox1: TComboBox;
-    Label1: TLabel;
+    cbCliente: TComboBox;
     Layout1: TLayout;
     Label3: TLabel;
     Rectangle1: TRectangle;
     Rectangle2: TRectangle;
-    Label2: TLabel;
-    Image2: TImage;
     ListBox1: TListBox;
     ListBoxItem1: TListBoxItem;
     Rectangle3: TRectangle;
@@ -53,7 +50,6 @@ type
     Edit7: TEdit;
     Layout2: TLayout;
     Rectangle17: TRectangle;
-    Image3: TImage;
     Rectangle18: TRectangle;
     lvBioimpedancia: TListBox;
     SpeedButton1: TSpeedButton;
@@ -205,7 +201,6 @@ type
     Label47: TLabel;
     Z: TLabel;
     lblDireita: TLabel;
-    lblesquerda: TLabel;
     Layout29: TLayout;
     Edit28: TEdit;
     Label48: TLabel;
@@ -246,10 +241,23 @@ type
     Layout35: TLayout;
     Edit33: TEdit;
     Ósseo: TLabel;
+    lblesquerda: TLabel;
+    Circle2: TCircle;
+    Image7: TImage;
+    Rectangle56: TRectangle;
+    Label2: TLabel;
+    ImageList: TImageList;
+    Circle1: TCircle;
+    Image3: TImage;
+    rectAddBio: TRectangle;
+    Glyph1: TGlyph;
+    lblCodigo: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Edit1Change(Sender: TObject);
+    procedure GlyphChanged(Sender: TObject);
   private
     { Private declarations }
   public
@@ -263,6 +271,11 @@ implementation
 
 {$R *.fmx}
 
+procedure TFrmBiomimpedancia.Edit1Change(Sender: TObject);
+begin
+  Glyph.ImageIndex := 1;
+end;
+
 procedure TFrmBiomimpedancia.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
@@ -275,6 +288,14 @@ begin
   TabControl.GotoVisibleTab(0);
   rectForte.Height := TabControl.Height / 2;
   rectGordo.Height := rectForte.Height - 15;
+end;
+
+procedure TFrmBiomimpedancia.GlyphChanged(Sender: TObject);
+begin
+  if Glyph.ImageIndex = 0 then
+    Glyph.ImageIndex := 1
+  else
+    Glyph.ImageIndex := 0;
 end;
 
 procedure TFrmBiomimpedancia.Image5Click(Sender: TObject);

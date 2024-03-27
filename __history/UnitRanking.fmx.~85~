@@ -10,7 +10,6 @@ object FrmRanking: TFrmRanking
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
   OnClose = FormClose
-  OnShow = FormShow
   DesignerMasterStyle = 3
   object Rectangle1: TRectangle
     Align = MostTop
@@ -45091,7 +45090,7 @@ object FrmRanking: TFrmRanking
     Size.Height = 543.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 1
     TabPosition = None
     Sizes = (
@@ -45106,7 +45105,7 @@ object FrmRanking: TFrmRanking
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -45121,15 +45120,15 @@ object FrmRanking: TFrmRanking
         Margins.Right = 10.000000000000000000
         Margins.Bottom = 10.000000000000000000
         Position.X = 10.000000000000000000
-        Position.Y = 481.000000000000000000
+        Position.Y = 493.000000000000000000
         Size.Width = 356.000000000000000000
-        Size.Height = 52.000000000000000000
+        Size.Height = 40.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
         object btnDetalhe: TCircle
           Align = Center
           Fill.Color = xFF948B6D
-          Size.Width = 50.000000000000000000
+          Size.Width = 37.000000000000000000
           Size.Height = 56.000000000000000000
           Size.PlatformDefault = False
           Stroke.Kind = None
@@ -45514,7 +45513,7 @@ object FrmRanking: TFrmRanking
             Margins.Top = 9.000000000000000000
             Margins.Right = 9.000000000000000000
             Margins.Bottom = 9.000000000000000000
-            Size.Width = 32.000000000000000000
+            Size.Width = 19.000000000000000000
             Size.Height = 38.000000000000000000
             Size.PlatformDefault = False
           end
@@ -45528,7 +45527,7 @@ object FrmRanking: TFrmRanking
         Margins.Right = 10.000000000000000000
         Margins.Bottom = 10.000000000000000000
         Size.Width = 356.000000000000000000
-        Size.Height = 403.000000000000000000
+        Size.Height = 415.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = xFF948B6C
         XRadius = 4.000000000000000000
@@ -45544,7 +45543,7 @@ object FrmRanking: TFrmRanking
           Margins.Right = 5.000000000000000000
           Margins.Bottom = 5.000000000000000000
           Size.Width = 346.000000000000000000
-          Size.Height = 393.000000000000000000
+          Size.Height = 405.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
           ItemAppearance.ItemHeight = 25
@@ -45609,7 +45608,7 @@ object FrmRanking: TFrmRanking
           TabOrder = 1
         end
         object dtIniGrafico: TDateEdit
-          Date = 45375.000000000000000000
+          Date = 45377.000000000000000000
           TodayDefault = True
           Align = Left
           Position.X = 41.000000000000000000
@@ -45635,7 +45634,7 @@ object FrmRanking: TFrmRanking
           TabOrder = 0
         end
         object dtFinGrafico: TDateEdit
-          Date = 45375.000000000000000000
+          Date = 45377.000000000000000000
           TodayDefault = True
           Align = Left
           Position.X = 161.000000000000000000
@@ -45907,7 +45906,7 @@ object FrmRanking: TFrmRanking
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -45997,7 +45996,7 @@ object FrmRanking: TFrmRanking
               Appearance.TextAlign = Leading
               Appearance.TextVertAlign = Leading
               Appearance.WordWrap = True
-              Appearance.Width = 247.000000000000000000
+              Appearance.Width = 323.000000000000000000
               Appearance.Height = 31.000000000000000000
               Appearance.PlaceOffset.Y = 18.000000000000000000
             end>
@@ -46006,6 +46005,7 @@ object FrmRanking: TFrmRanking
               AppearanceObjectName = 'Text1'
               AppearanceClassName = 'TTextObjectAppearance'
             end>
+          OnItemClick = lvDetalheInvesteItemClick
         end
       end
       object Rectangle6: TRectangle
@@ -46038,6 +46038,7 @@ object FrmRanking: TFrmRanking
           Stroke.Color = xFF948B6D
           XRadius = 4.000000000000000000
           YRadius = 4.000000000000000000
+          OnClick = rectAddClick
           object GlyphAdd: TGlyph
             Align = Client
             Size.Width = 45.000000000000000000
@@ -46045,11 +46046,10 @@ object FrmRanking: TFrmRanking
             Size.PlatformDefault = False
             ImageIndex = 0
             Images = ImageList
-            OnChanged = GlyphAddChanged
           end
         end
-        object DateEdit1: TDateEdit
-          Date = 45375.000000000000000000
+        object edtData: TDateEdit
+          Date = 45377.000000000000000000
           TodayDefault = True
           Align = Left
           Margins.Left = 5.000000000000000000
@@ -46064,7 +46064,7 @@ object FrmRanking: TFrmRanking
           TabOrder = 1
           TextSettings.HorzAlign = Center
         end
-        object Edit1: TEdit
+        object edtValor: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           Align = Left
           TabOrder = 2
@@ -46079,7 +46079,6 @@ object FrmRanking: TFrmRanking
           Size.PlatformDefault = False
           TextPrompt = 'R$ 0,00'
           StyledSettings = [Family, Style, FontColor]
-          OnChange = DateEdit1Change
         end
         object Rectangle10: TRectangle
           Align = Bottom
@@ -46096,11 +46095,10 @@ object FrmRanking: TFrmRanking
           Stroke.Color = xFF948B6D
           XRadius = 4.000000000000000000
           YRadius = 4.000000000000000000
-          object Memo1: TMemo
+          object edtObs: TMemo
             Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
             DataDetectorTypes = []
             StyledSettings = [Family, Style, FontColor]
-            OnChange = DateEdit1Change
             Align = Client
             Margins.Left = 2.000000000000000000
             Margins.Top = 2.000000000000000000
@@ -46127,8 +46125,10 @@ object FrmRanking: TFrmRanking
           Size.Height = 37.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFF948B6D
+          Visible = False
           XRadius = 4.000000000000000000
           YRadius = 4.000000000000000000
+          OnClick = rectCancelClick
           object GlyphCancel: TGlyph
             Tag = 1
             Align = Client
@@ -46137,7 +46137,6 @@ object FrmRanking: TFrmRanking
             Size.PlatformDefault = False
             ImageIndex = 2
             Images = ImageList
-            OnChanged = GlyphAddChanged
           end
         end
       end
@@ -46156,8 +46155,8 @@ object FrmRanking: TFrmRanking
         object Circle1: TCircle
           Align = Center
           Fill.Color = xFF948B6D
-          Size.Width = 50.000000000000000000
-          Size.Height = 56.000000000000000000
+          Size.Width = 37.000000000000000000
+          Size.Height = 40.000000000000000000
           Size.PlatformDefault = False
           Stroke.Kind = None
           OnClick = btnDetalheClick
@@ -46355,8 +46354,8 @@ object FrmRanking: TFrmRanking
             Margins.Top = 9.000000000000000000
             Margins.Right = 9.000000000000000000
             Margins.Bottom = 9.000000000000000000
-            Size.Width = 32.000000000000000000
-            Size.Height = 38.000000000000000000
+            Size.Width = 19.000000000000000000
+            Size.Height = 22.000000000000000000
             Size.PlatformDefault = False
           end
         end
@@ -49725,6 +49724,59 @@ object FrmRanking: TFrmRanking
             FileName = 'D:\Projetos\Delphi\BodyFit\Imagens\cancel marrom.png'
           end>
         Name = 'Item 2'
+      end
+      item
+        MultiResBitmap.Height = 225
+        MultiResBitmap.Width = 225
+        MultiResBitmap = <
+          item
+            Width = 225
+            Height = 225
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000E1000000E108060000003EB3D2
+              7A0000000473424954080808087C0864880000048B49444154789CEDDDC16EDB
+              381440517B30FDD620FB7C46F641BE7580F12C3A450B23B12C89E47BE43B67DD
+              DA12C32B4AB4DB5C2E0000000000000000000000000000000000000000000000
+              0000000000000000001C728D3E00FAF87C7FBD3DF3E75EDE3ECC81607E00937B
+              36B62D628C63E027D02AB46788713C039EC4C8D0B608712C831D2453745F11E2
+              387F471F4015D9A323CE5FD107404E2E1AE3887000139A47DCF7771619E0A3E7
+              3A9F23E661803B1A15E0D1509E39BE5111DE1F4BA5F8CB9CE8683D02EC3131B7
+              8EB3F57BEE19972A21DA1D4D668589D7EA02F4F9FE7A5B613CB688B0830ACF5B
+              A36EB52B84B8F4C945C9F4ACF58CECBBB799C6AA071F5104C834A9B20778B9CC
+              718C67B81D0D10758BB5FA649E950803F40C5068F311E18484B616112626B61A
+              D26C10AC66CF87E062DB966933AB352B6110E1F1CBB2579728E2EA67D5D5D04A
+              7880D06869C92B4B0B42CBE1E5EDE3BAFA57D7963DB12D22CB65E5C8B6943971
+              D1C5AB1CDA23CB0F8AF8C613DB3E4B0F9600FB13DC797647D924B4BE961D5CAB
+              E0F34416CB4A5888D87212E16284361F114E4A6CEB58FA0739FB73A1D06AB012
+              06131A22EC4C646C116163A2632F11EE24325A13E137C4C628A523141A0C30FB
+              C71400004077951F1B4A6F4C54FEC1675769D3ACCC89DE13607E55422C7192F7
+              04388F0A2196FB25A102249B7211423622846022846022846022846022846022
+              8460228460E522ACF00D0CE6522E42C8A6F47F6F71D457AB69EBAFC3DDFF9AE8
+              56AFDFFBD8478CCD6A4ADE9A9D99148F6E675B4CB6A8D7CF78EC551E1DDC8E16
+              526552CF46843B444FE233EF1F7DEC7C4F84104C843BD860A0071142B092117A
+              3E6ACF981E573242C844840D590D38428445D854CA4B84104C84104C84A454E9
+              F95A84104C84104C84104C843BCDBAD55FE9196B3622846065233CBA325851F6
+              9BF5EE6194B211421622DCC9559DD64408C14408C14408C144C869AD778CABED
+              408B108289B0B16A5771CE1321042B1DA1558B0C4A4708198810828910828910
+              828910828910828990AEFCD3AF6D228460223CC0D5BD9F8A5FA0102104132104
+              1321A7B93D3F4784104C841D64DC5CB05AE5553EC28CC1504BF90839CF85EC1C
+              11728A00CF132169540D5A8410AC7C8455760DABAE3233281FA1C949B4F21142
+              34115EAC86BD54B9D53FAB7C84B7DBEDD0189860B4523EC2EBF5FA6FF431505B
+              F908219A0821980839ACE58656E5CD3111423011423011423011423011765279
+              A3817D44F83FD1104584104C8445F8AE6B5E22846022846022846022A48B3DCF
+              A0D577A6457882CD0E5A10210413210413E11F323C9B7CBEBFFED3E3751F9D5B
+              AFF7E439224CE6E5EDE34785F7E437114230114E24DB6E6CB6E39995082792E1
+              99F5974CC7323B1116D163D512621B229C48A6DBBF4CC7323B119EF4DD643C3A
+              49232677EBF714E83E226C60C4246EF11EAD5FF7F3FDF576FFF7F7BE9E5BDACB
+              A5FC00DC73151F4B8456420827420826420826C23B9E51184D84104C848471D7
+              F19308BF607230920809E142F79B08BF6192308A89B6C13768DA738103000000
+              00000000000000000000000000000000000000000000000000000000A089FF00
+              B6978C850A8E1D010000000049454E44AE426082}
+            FileName = 
+              'D:\Projetos\Delphi\BodyFit\Imagens\delete-removebg-preview marro' +
+              'm.png'
+          end>
+        Name = 'Item 3'
       end>
     Destination = <
       item
@@ -49749,6 +49801,14 @@ object FrmRanking: TFrmRanking
             Name = 'Item 2'
             SourceRect.Right = 4096.000000000000000000
             SourceRect.Bottom = 4096.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'Item 3'
+            SourceRect.Right = 225.000000000000000000
+            SourceRect.Bottom = 225.000000000000000000
           end>
       end>
     Left = 168
