@@ -9,7 +9,8 @@ uses
   FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
   FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.FMXUI.Wait, FireDAC.Comp.UI, Data.DB,
   FireDAC.Comp.Client, FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf,
-  FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.DApt, FireDAC.Comp.DataSet, FMX.Objects, System.IOUtils,
+
   DataSet.Serialize.Config,
   RESTRequest4D,
   Dataset.Serialize.Adapter.RESTRequest4D,
@@ -102,7 +103,7 @@ begin
   {$IFDEF MSWINDOWS}
   FDConn.Params.Values['DataBase'] := System.SysUtils.GetCurrentDir + '\BodyFit_BD.db';
   {$ELSE}
-  Conn.Params.Values['DataBase'] := TPath.Combine(TPath.GetDocumentsPath, 'BodyFit_BD');
+  FDConn.Params.Values['DataBase'] := TPath.Combine(TPath.GetDocumentsPath, 'BodyFit_BD');
   {$ENDIF}
 end;
 

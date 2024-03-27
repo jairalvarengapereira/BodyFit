@@ -2,9 +2,10 @@
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 584
-  ClientWidth = 636
+  ClientHeight = 688
+  ClientWidth = 436
   Fill.Kind = Solid
+  StyleBook = StyleBook1
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
@@ -14,7 +15,7 @@
   object rectTit: TRectangle
     Align = Top
     Fill.Kind = None
-    Size.Width = 636.000000000000000000
+    Size.Width = 436.000000000000000000
     Size.Height = 57.000000000000000000
     Size.PlatformDefault = False
     Stroke.Color = xFF948B6D
@@ -22,7 +23,7 @@
       Align = Contents
       StyledSettings = [Family]
       Locked = True
-      Size.Width = 636.000000000000000000
+      Size.Width = 436.000000000000000000
       Size.Height = 57.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Size = 18.000000000000000000
@@ -45077,7 +45078,7 @@
         end>
       Align = Right
       Margins.Right = 10.000000000000000000
-      Position.X = 576.000000000000000000
+      Position.X = 376.000000000000000000
       Size.Width = 50.000000000000000000
       Size.Height = 57.000000000000000000
       Size.PlatformDefault = False
@@ -45086,18 +45087,18 @@
   end
   object TabControl: TTabControl
     Align = Client
-    Size.Width = 636.000000000000000000
-    Size.Height = 527.000000000000000000
+    Size.Width = 436.000000000000000000
+    Size.Height = 631.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
     TabIndex = 0
     TabOrder = 1
     TabPosition = None
     Sizes = (
-      636s
-      527s
-      636s
-      527s)
+      436s
+      631s
+      436s
+      631s)
     object tbBio: TTabItem
       CustomIcon = <
         item
@@ -45118,7 +45119,7 @@
         Margins.Top = 10.000000000000000000
         Position.X = 10.000000000000000000
         Position.Y = 10.000000000000000000
-        Size.Width = 626.000000000000000000
+        Size.Width = 426.000000000000000000
         Size.Height = 52.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
@@ -45126,7 +45127,7 @@
           Align = Client
           Fill.Kind = None
           Margins.Right = 10.000000000000000000
-          Size.Width = 425.000000000000000000
+          Size.Width = 225.000000000000000000
           Size.Height = 35.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = xFF948B6D
@@ -45134,7 +45135,7 @@
           YRadius = 4.000000000000000000
           object cbCliente: TComboBox
             Align = Client
-            Size.Width = 425.000000000000000000
+            Size.Width = 225.000000000000000000
             Size.Height = 32.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -45144,7 +45145,7 @@
           Align = Right
           Fill.Kind = None
           Margins.Right = 10.000000000000000000
-          Position.X = 480.000000000000000000
+          Position.X = 280.000000000000000000
           Position.Y = 17.000000000000000000
           Size.Width = 91.000000000000000000
           Size.Height = 35.000000000000000000
@@ -45167,7 +45168,7 @@
           Align = Right
           Fill.Kind = None
           Margins.Right = 10.000000000000000000
-          Position.X = 435.000000000000000000
+          Position.X = 235.000000000000000000
           Position.Y = 17.000000000000000000
           Size.Width = 35.000000000000000000
           Size.Height = 35.000000000000000000
@@ -45192,7 +45193,7 @@
         object Label2: TLabel
           Align = MostTop
           StyledSettings = [Family, Style]
-          Size.Width = 626.000000000000000000
+          Size.Width = 426.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.FontColor = xFF948B6D
@@ -45204,7 +45205,7 @@
           Align = Right
           Fill.Kind = None
           Margins.Right = 10.000000000000000000
-          Position.X = 581.000000000000000000
+          Position.X = 381.000000000000000000
           Position.Y = 17.000000000000000000
           Size.Width = 35.000000000000000000
           Size.Height = 35.000000000000000000
@@ -45229,8 +45230,8 @@
         Margins.Top = 5.000000000000000000
         Margins.Right = 10.000000000000000000
         Margins.Bottom = 5.000000000000000000
-        Size.Width = 616.000000000000000000
-        Size.Height = 283.000000000000000000
+        Size.Width = 416.000000000000000000
+        Size.Height = 387.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         object lvBioimpedancia: TListBox
@@ -45239,8 +45240,8 @@
           Margins.Top = 2.000000000000000000
           Margins.Right = 2.000000000000000000
           Margins.Bottom = 2.000000000000000000
-          Size.Width = 612.000000000000000000
-          Size.Height = 279.000000000000000000
+          Size.Width = 412.000000000000000000
+          Size.Height = 383.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
           CanFocus = False
@@ -45248,21 +45249,21 @@
           DefaultItemStyles.ItemStyle = ''
           DefaultItemStyles.GroupHeaderStyle = ''
           DefaultItemStyles.GroupFooterStyle = ''
-          Viewport.Width = 607.000000000000000000
-          Viewport.Height = 279.000000000000000000
+          Viewport.Width = 407.000000000000000000
+          Viewport.Height = 383.000000000000000000
           object ListBoxItem8: TListBoxItem
             Margins.Top = 10.000000000000000000
             Position.Y = 10.000000000000000000
-            Size.Width = 607.000000000000000000
+            Size.Width = 407.000000000000000000
             Size.Height = 80.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 4
+            TabOrder = 5
             object Label11: TLabel
               Align = Top
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 602.000000000000000000
+              Size.Width = 257.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
@@ -45274,9 +45275,9 @@
               Align = Left
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
-              Position.X = 130.000000000000000000
+              Position.X = 90.000000000000000000
               Position.Y = 17.000000000000000000
-              Size.Width = 120.000000000000000000
+              Size.Width = 80.000000000000000000
               Size.Height = 63.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
@@ -45285,7 +45286,7 @@
               object Rectangle24: TRectangle
                 Align = Top
                 Fill.Kind = None
-                Size.Width = 120.000000000000000000
+                Size.Width = 80.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
                 Stroke.Color = xFF948B6D
@@ -45294,7 +45295,7 @@
                 object Label16: TLabel
                   Align = Client
                   StyledSettings = [Family, Style]
-                  Size.Width = 120.000000000000000000
+                  Size.Width = 80.000000000000000000
                   Size.Height = 17.000000000000000000
                   Size.PlatformDefault = False
                   TextSettings.FontColor = xFF948B6D
@@ -45313,7 +45314,7 @@
                 Margins.Top = 10.000000000000000000
                 Margins.Right = 10.000000000000000000
                 Margins.Bottom = 10.000000000000000000
-                Size.Width = 100.000000000000000000
+                Size.Width = 60.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 OnChange = edtAccTBWChange
@@ -45324,7 +45325,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Position.Y = 17.000000000000000000
-              Size.Width = 120.000000000000000000
+              Size.Width = 80.000000000000000000
               Size.Height = 63.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
@@ -45333,7 +45334,7 @@
               object Rectangle23: TRectangle
                 Align = Top
                 Fill.Kind = None
-                Size.Width = 120.000000000000000000
+                Size.Width = 80.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
                 Stroke.Color = xFF948B6D
@@ -45342,7 +45343,7 @@
                 object Label15: TLabel
                   Align = Client
                   StyledSettings = [Family, Style]
-                  Size.Width = 120.000000000000000000
+                  Size.Width = 80.000000000000000000
                   Size.Height = 17.000000000000000000
                   Size.PlatformDefault = False
                   TextSettings.FontColor = xFF948B6D
@@ -45361,201 +45362,83 @@
                 Margins.Top = 10.000000000000000000
                 Margins.Right = 10.000000000000000000
                 Margins.Bottom = 10.000000000000000000
-                Size.Width = 100.000000000000000000
+                Size.Width = 60.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 OnChange = edtAccTBWChange
               end
             end
-          end
-          object ListBoxItem13: TListBoxItem
-            Position.Y = 90.000000000000000000
-            Size.Width = 607.000000000000000000
-            Size.Height = 89.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 6
-            object ListBoxItem14: TListBoxItem
-              Margins.Top = 10.000000000000000000
-              Position.X = 4.000000000000000000
-              Position.Y = 9.000000000000000000
-              Size.Width = 392.000000000000000000
+            object Rectangle55: TRectangle
+              Align = MostRight
+              Fill.Kind = None
+              Margins.Right = 10.000000000000000000
+              Position.X = 262.000000000000000000
+              Size.Width = 135.000000000000000000
               Size.Height = 80.000000000000000000
               Size.PlatformDefault = False
-              TabOrder = 0
-              object Rectangle49: TRectangle
-                Align = Left
-                Fill.Kind = None
-                Margins.Right = 10.000000000000000000
-                Position.Y = 17.000000000000000000
-                Size.Width = 120.000000000000000000
-                Size.Height = 63.000000000000000000
+              Stroke.Color = xFF948B6D
+              XRadius = 2.000000000000000000
+              YRadius = 2.000000000000000000
+              object Edit14: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Right
+                TabOrder = 1
+                KeyboardType = DecimalNumberPad
+                TextSettings.HorzAlign = Center
+                TextSettings.VertAlign = Trailing
+                Position.X = 80.000000000000000000
+                Position.Y = 16.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Size.Width = 50.000000000000000000
+                Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
-                Stroke.Color = xFF948B6D
-                XRadius = 2.000000000000000000
-                YRadius = 2.000000000000000000
-                object Rectangle50: TRectangle
-                  Align = Top
-                  Fill.Kind = None
-                  Size.Width = 120.000000000000000000
-                  Size.Height = 17.000000000000000000
-                  Size.PlatformDefault = False
-                  Stroke.Color = xFF948B6D
-                  XRadius = 2.000000000000000000
-                  YRadius = 2.000000000000000000
-                  object Label31: TLabel
-                    Align = Client
-                    StyledSettings = [Family, Style]
-                    Size.Width = 120.000000000000000000
-                    Size.Height = 17.000000000000000000
-                    Size.PlatformDefault = False
-                    TextSettings.FontColor = xFF948B6D
-                    TextSettings.HorzAlign = Center
-                    TextSettings.Trimming = None
-                    Text = 'Controle de Peso'
-                    TabOrder = 0
-                  end
-                end
-                object Edit23: TEdit
-                  Touch.InteractiveGestures = [LongTap, DoubleTap]
-                  Align = Client
-                  TabOrder = 1
-                  KeyboardType = DecimalNumberPad
-                  Margins.Left = 10.000000000000000000
-                  Margins.Top = 10.000000000000000000
-                  Margins.Right = 10.000000000000000000
-                  Margins.Bottom = 10.000000000000000000
-                  Size.Width = 100.000000000000000000
-                  Size.Height = 32.000000000000000000
-                  Size.PlatformDefault = False
-                  OnChange = edtAccTBWChange
-                end
+                OnChange = edtAccTBWChange
               end
-              object Label32: TLabel
-                Align = Top
+              object Label27: TLabel
+                Align = Left
                 StyledSettings = [Family]
                 Margins.Left = 5.000000000000000000
                 Position.X = 5.000000000000000000
-                Size.Width = 387.000000000000000000
-                Size.Height = 17.000000000000000000
+                Size.Width = 68.000000000000000000
+                Size.Height = 64.000000000000000000
                 Size.PlatformDefault = False
+                TextSettings.Font.Size = 11.000000000000000000
                 TextSettings.FontColor = xFF948B6D
                 TextSettings.Trimming = None
-                Text = 'Controle de Peso'
+                Text = 'Taxa de Metabolismo Basal:'
                 TabOrder = 0
               end
-              object Rectangle51: TRectangle
-                Align = Left
-                Fill.Kind = None
-                Margins.Right = 10.000000000000000000
-                Position.X = 260.000000000000000000
-                Position.Y = 17.000000000000000000
-                Size.Width = 120.000000000000000000
-                Size.Height = 63.000000000000000000
+              object Label1: TLabel
+                Align = Bottom
+                StyledSettings = [Family, Style]
+                Margins.Right = 20.000000000000000000
+                Position.Y = 64.000000000000000000
+                Size.Width = 115.000000000000000000
+                Size.Height = 16.000000000000000000
                 Size.PlatformDefault = False
-                Stroke.Color = xFF948B6D
-                XRadius = 2.000000000000000000
-                YRadius = 2.000000000000000000
-                object Rectangle52: TRectangle
-                  Align = Top
-                  Fill.Kind = None
-                  Size.Width = 120.000000000000000000
-                  Size.Height = 17.000000000000000000
-                  Size.PlatformDefault = False
-                  Stroke.Color = xFF948B6D
-                  XRadius = 2.000000000000000000
-                  YRadius = 2.000000000000000000
-                  object Label33: TLabel
-                    Align = Client
-                    StyledSettings = [Family, Style]
-                    Size.Width = 120.000000000000000000
-                    Size.Height = 17.000000000000000000
-                    Size.PlatformDefault = False
-                    TextSettings.FontColor = xFF948B6D
-                    TextSettings.HorzAlign = Center
-                    TextSettings.Trimming = None
-                    Text = 'Controle Muscular'
-                    TabOrder = 0
-                  end
-                end
-                object Edit24: TEdit
-                  Touch.InteractiveGestures = [LongTap, DoubleTap]
-                  Align = Client
-                  TabOrder = 1
-                  KeyboardType = DecimalNumberPad
-                  Margins.Left = 10.000000000000000000
-                  Margins.Top = 10.000000000000000000
-                  Margins.Right = 10.000000000000000000
-                  Margins.Bottom = 10.000000000000000000
-                  Size.Width = 100.000000000000000000
-                  Size.Height = 32.000000000000000000
-                  Size.PlatformDefault = False
-                  OnChange = edtAccTBWChange
-                end
-              end
-              object Rectangle53: TRectangle
-                Align = Left
-                Fill.Kind = None
-                Margins.Right = 10.000000000000000000
-                Position.X = 130.000000000000000000
-                Position.Y = 17.000000000000000000
-                Size.Width = 120.000000000000000000
-                Size.Height = 63.000000000000000000
-                Size.PlatformDefault = False
-                Stroke.Color = xFF948B6D
-                XRadius = 2.000000000000000000
-                YRadius = 2.000000000000000000
-                object Rectangle54: TRectangle
-                  Align = Top
-                  Fill.Kind = None
-                  Size.Width = 120.000000000000000000
-                  Size.Height = 17.000000000000000000
-                  Size.PlatformDefault = False
-                  Stroke.Color = xFF948B6D
-                  XRadius = 2.000000000000000000
-                  YRadius = 2.000000000000000000
-                  object Label34: TLabel
-                    Align = Client
-                    StyledSettings = [Family, Style]
-                    Size.Width = 120.000000000000000000
-                    Size.Height = 17.000000000000000000
-                    Size.PlatformDefault = False
-                    TextSettings.FontColor = xFF948B6D
-                    TextSettings.HorzAlign = Center
-                    TextSettings.Trimming = None
-                    Text = 'Controle de Gordura'
-                    TabOrder = 0
-                  end
-                end
-                object Edit25: TEdit
-                  Touch.InteractiveGestures = [LongTap, DoubleTap]
-                  Align = Client
-                  TabOrder = 1
-                  KeyboardType = DecimalNumberPad
-                  Margins.Left = 10.000000000000000000
-                  Margins.Top = 10.000000000000000000
-                  Margins.Right = 10.000000000000000000
-                  Margins.Bottom = 10.000000000000000000
-                  Size.Width = 100.000000000000000000
-                  Size.Height = 32.000000000000000000
-                  Size.PlatformDefault = False
-                  OnChange = edtAccTBWChange
-                end
+                TextSettings.Font.Size = 11.000000000000000000
+                TextSettings.FontColor = xFF948B6D
+                TextSettings.HorzAlign = Trailing
+                TextSettings.VertAlign = Leading
+                TextSettings.Trimming = None
+                Text = 'kcal'
+                TabOrder = 2
               end
             end
           end
           object ListBoxItem9: TListBoxItem
             Margins.Top = 10.000000000000000000
-            Position.Y = 189.000000000000000000
-            Size.Width = 607.000000000000000000
+            Position.Y = 100.000000000000000000
+            Size.Width = 407.000000000000000000
             Size.Height = 80.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 3
+            TabOrder = 4
             object Rectangle25: TRectangle
               Align = Left
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Position.Y = 17.000000000000000000
-              Size.Width = 120.000000000000000000
+              Size.Width = 80.000000000000000000
               Size.Height = 63.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
@@ -45564,7 +45447,7 @@
               object Rectangle26: TRectangle
                 Align = Top
                 Fill.Kind = None
-                Size.Width = 120.000000000000000000
+                Size.Width = 80.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
                 Stroke.Color = xFF948B6D
@@ -45573,7 +45456,7 @@
                 object Label13: TLabel
                   Align = Client
                   StyledSettings = [Family, Style]
-                  Size.Width = 120.000000000000000000
+                  Size.Width = 80.000000000000000000
                   Size.Height = 17.000000000000000000
                   Size.PlatformDefault = False
                   TextSettings.FontColor = xFF948B6D
@@ -45592,7 +45475,7 @@
                 Margins.Top = 10.000000000000000000
                 Margins.Right = 10.000000000000000000
                 Margins.Bottom = 10.000000000000000000
-                Size.Width = 100.000000000000000000
+                Size.Width = 60.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 OnChange = edtAccTBWChange
@@ -45603,7 +45486,7 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 602.000000000000000000
+              Size.Width = 402.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
@@ -45615,9 +45498,9 @@
               Align = Left
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
-              Position.X = 260.000000000000000000
+              Position.X = 180.000000000000000000
               Position.Y = 17.000000000000000000
-              Size.Width = 120.000000000000000000
+              Size.Width = 80.000000000000000000
               Size.Height = 63.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
@@ -45626,7 +45509,7 @@
               object Rectangle28: TRectangle
                 Align = Top
                 Fill.Kind = None
-                Size.Width = 120.000000000000000000
+                Size.Width = 80.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
                 Stroke.Color = xFF948B6D
@@ -45635,7 +45518,7 @@
                 object Label18: TLabel
                   Align = Client
                   StyledSettings = [Family, Style]
-                  Size.Width = 120.000000000000000000
+                  Size.Width = 80.000000000000000000
                   Size.Height = 17.000000000000000000
                   Size.PlatformDefault = False
                   TextSettings.FontColor = xFF948B6D
@@ -45654,7 +45537,7 @@
                 Margins.Top = 10.000000000000000000
                 Margins.Right = 10.000000000000000000
                 Margins.Bottom = 10.000000000000000000
-                Size.Width = 100.000000000000000000
+                Size.Width = 60.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 OnChange = edtAccTBWChange
@@ -45664,9 +45547,9 @@
               Align = Left
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
-              Position.X = 130.000000000000000000
+              Position.X = 90.000000000000000000
               Position.Y = 17.000000000000000000
-              Size.Width = 120.000000000000000000
+              Size.Width = 80.000000000000000000
               Size.Height = 63.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
@@ -45675,7 +45558,7 @@
               object Rectangle30: TRectangle
                 Align = Top
                 Fill.Kind = None
-                Size.Width = 120.000000000000000000
+                Size.Width = 80.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
                 Stroke.Color = xFF948B6D
@@ -45684,7 +45567,7 @@
                 object Label17: TLabel
                   Align = Client
                   StyledSettings = [Family, Style]
-                  Size.Width = 120.000000000000000000
+                  Size.Width = 80.000000000000000000
                   Size.Height = 17.000000000000000000
                   Size.PlatformDefault = False
                   TextSettings.FontColor = xFF948B6D
@@ -45703,67 +45586,187 @@
                 Margins.Top = 10.000000000000000000
                 Margins.Right = 10.000000000000000000
                 Margins.Bottom = 10.000000000000000000
-                Size.Width = 100.000000000000000000
+                Size.Width = 60.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 OnChange = edtAccTBWChange
               end
             end
           end
-          object ListBoxItem15: TListBoxItem
+          object ListBoxItem14: TListBoxItem
             Margins.Top = 10.000000000000000000
-            Position.Y = 279.000000000000000000
-            Size.Width = 607.000000000000000000
-            Size.Height = 58.000000000000000000
+            Position.Y = 190.000000000000000000
+            Size.Width = 407.000000000000000000
+            Size.Height = 80.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 5
-            object Rectangle55: TRectangle
+            TabOrder = 0
+            object Rectangle49: TRectangle
               Align = Left
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
-              Size.Width = 248.000000000000000000
-              Size.Height = 58.000000000000000000
+              Position.Y = 17.000000000000000000
+              Size.Width = 80.000000000000000000
+              Size.Height = 63.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
               YRadius = 2.000000000000000000
-              object Edit14: TEdit
+              object Rectangle50: TRectangle
+                Align = Top
+                Fill.Kind = None
+                Size.Width = 80.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Color = xFF948B6D
+                XRadius = 2.000000000000000000
+                YRadius = 2.000000000000000000
+                object Label31: TLabel
+                  Align = Client
+                  StyledSettings = [Family, Style]
+                  Size.Width = 80.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.FontColor = xFF948B6D
+                  TextSettings.HorzAlign = Center
+                  TextSettings.Trimming = None
+                  Text = 'Peso'
+                  TabOrder = 0
+                end
+              end
+              object Edit23: TEdit
                 Touch.InteractiveGestures = [LongTap, DoubleTap]
                 Align = Client
                 TabOrder = 1
                 KeyboardType = DecimalNumberPad
-                TextSettings.HorzAlign = Center
-                Margins.Left = 5.000000000000000000
-                Margins.Top = 5.000000000000000000
-                Margins.Right = 5.000000000000000000
-                Margins.Bottom = 5.000000000000000000
-                Size.Width = 238.000000000000000000
+                Margins.Left = 10.000000000000000000
+                Margins.Top = 10.000000000000000000
+                Margins.Right = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Size.Width = 60.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
                 OnChange = edtAccTBWChange
               end
-              object Label27: TLabel
+            end
+            object Label32: TLabel
+              Align = Top
+              StyledSettings = [Family]
+              Margins.Left = 5.000000000000000000
+              Position.X = 5.000000000000000000
+              Size.Width = 402.000000000000000000
+              Size.Height = 17.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.FontColor = xFF948B6D
+              TextSettings.Trimming = None
+              Text = 'Controle de Peso'
+              TabOrder = 0
+            end
+            object Rectangle51: TRectangle
+              Align = Left
+              Fill.Kind = None
+              Margins.Right = 10.000000000000000000
+              Position.X = 180.000000000000000000
+              Position.Y = 17.000000000000000000
+              Size.Width = 80.000000000000000000
+              Size.Height = 63.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFF948B6D
+              XRadius = 2.000000000000000000
+              YRadius = 2.000000000000000000
+              object Rectangle52: TRectangle
                 Align = Top
-                StyledSettings = [Family]
-                Margins.Left = 5.000000000000000000
-                Position.X = 5.000000000000000000
-                Size.Width = 243.000000000000000000
+                Fill.Kind = None
+                Size.Width = 80.000000000000000000
                 Size.Height = 17.000000000000000000
                 Size.PlatformDefault = False
-                TextSettings.FontColor = xFF948B6D
-                TextSettings.Trimming = None
-                Text = 'Taxa de Metabolismo Basal:'
-                TabOrder = 0
+                Stroke.Color = xFF948B6D
+                XRadius = 2.000000000000000000
+                YRadius = 2.000000000000000000
+                object Label33: TLabel
+                  Align = Client
+                  StyledSettings = [Family, Style]
+                  Size.Width = 80.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.FontColor = xFF948B6D
+                  TextSettings.HorzAlign = Center
+                  TextSettings.Trimming = None
+                  Text = 'Muscular'
+                  TabOrder = 0
+                end
+              end
+              object Edit24: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                KeyboardType = DecimalNumberPad
+                Margins.Left = 10.000000000000000000
+                Margins.Top = 10.000000000000000000
+                Margins.Right = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Size.Width = 60.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
+              end
+            end
+            object Rectangle53: TRectangle
+              Align = Left
+              Fill.Kind = None
+              Margins.Right = 10.000000000000000000
+              Position.X = 90.000000000000000000
+              Position.Y = 17.000000000000000000
+              Size.Width = 80.000000000000000000
+              Size.Height = 63.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFF948B6D
+              XRadius = 2.000000000000000000
+              YRadius = 2.000000000000000000
+              object Rectangle54: TRectangle
+                Align = Top
+                Fill.Kind = None
+                Size.Width = 80.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Color = xFF948B6D
+                XRadius = 2.000000000000000000
+                YRadius = 2.000000000000000000
+                object Label34: TLabel
+                  Align = Client
+                  StyledSettings = [Family, Style]
+                  Size.Width = 80.000000000000000000
+                  Size.Height = 17.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.FontColor = xFF948B6D
+                  TextSettings.HorzAlign = Center
+                  TextSettings.Trimming = None
+                  Text = 'Gordura'
+                  TabOrder = 0
+                end
+              end
+              object Edit25: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                KeyboardType = DecimalNumberPad
+                Margins.Left = 10.000000000000000000
+                Margins.Top = 10.000000000000000000
+                Margins.Right = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Size.Width = 60.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                OnChange = edtAccTBWChange
               end
             end
           end
           object ListBoxItem10: TListBoxItem
             Margins.Top = 10.000000000000000000
-            Position.Y = 347.000000000000000000
-            Size.Width = 607.000000000000000000
+            Position.Y = 280.000000000000000000
+            Size.Width = 407.000000000000000000
             Size.Height = 70.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 2
+            TabOrder = 3
             object Rectangle31: TRectangle
               Align = Left
               Fill.Kind = None
@@ -45810,6 +45813,7 @@
                 Size.Width = 116.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                StyleLookup = 'ComboBox3Style1'
                 TabOrder = 1
                 OnChange = edtAccTBWChange
               end
@@ -45819,7 +45823,7 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 602.000000000000000000
+              Size.Width = 402.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
@@ -45867,7 +45871,7 @@
                   'Normal'
                   'Deficiente'
                   'Excessivo')
-                ItemIndex = 2
+                ItemIndex = 0
                 Margins.Left = 2.000000000000000000
                 Margins.Right = 2.000000000000000000
                 Position.X = 2.000000000000000000
@@ -45933,11 +45937,11 @@
           end
           object ListBoxItem11: TListBoxItem
             Margins.Top = 10.000000000000000000
-            Position.Y = 427.000000000000000000
-            Size.Width = 607.000000000000000000
+            Position.Y = 360.000000000000000000
+            Size.Width = 407.000000000000000000
             Size.Height = 70.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 1
+            TabOrder = 2
             object Rectangle37: TRectangle
               Align = Left
               Fill.Kind = None
@@ -45994,7 +45998,7 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 602.000000000000000000
+              Size.Width = 402.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
@@ -46109,11 +46113,11 @@
           end
           object ListBoxItem12: TListBoxItem
             Margins.Top = 10.000000000000000000
-            Position.Y = 507.000000000000000000
-            Size.Width = 607.000000000000000000
+            Position.Y = 440.000000000000000000
+            Size.Width = 407.000000000000000000
             Size.Height = 70.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 0
+            TabOrder = 1
             object Rectangle43: TRectangle
               Align = Left
               Fill.Kind = None
@@ -46148,7 +46152,7 @@
                 end
               end
               object ComboBox9: TComboBox
-                Align = VertCenter
+                Align = Right
                 Items.Strings = (
                   'Normal'
                   'Abaixo'
@@ -46157,12 +46161,30 @@
                 ItemIndex = 0
                 Margins.Left = 2.000000000000000000
                 Margins.Right = 2.000000000000000000
-                Position.X = 2.000000000000000000
+                Position.X = 78.000000000000000000
                 Position.Y = 19.000000000000000000
-                Size.Width = 116.000000000000000000
+                Size.Width = 40.000000000000000000
                 Size.Height = 32.000000000000000000
                 Size.PlatformDefault = False
+                TabOrder = 2
+                OnChange = edtAccTBWChange
+              end
+              object Edit1: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Left
                 TabOrder = 1
+                KeyboardType = DecimalNumberPad
+                TextSettings.Font.Size = 11.000000000000000000
+                Position.X = 10.000000000000000000
+                Position.Y = 27.000000000000000000
+                Margins.Left = 10.000000000000000000
+                Margins.Top = 10.000000000000000000
+                Margins.Right = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Size.Width = 31.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyledSettings = [Family, Style, FontColor]
                 OnChange = edtAccTBWChange
               end
             end
@@ -46171,7 +46193,7 @@
               StyledSettings = [Family]
               Margins.Left = 5.000000000000000000
               Position.X = 5.000000000000000000
-              Size.Width = 602.000000000000000000
+              Size.Width = 402.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.FontColor = xFF948B6D
@@ -46294,7 +46316,7 @@
         Margins.Right = 10.000000000000000000
         Position.X = 10.000000000000000000
         Position.Y = 72.000000000000000000
-        Size.Width = 616.000000000000000000
+        Size.Width = 416.000000000000000000
         Size.Height = 96.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = xFF948B6D
@@ -46305,7 +46327,7 @@
           StyledSettings = [Family]
           Margins.Left = 5.000000000000000000
           Position.X = 5.000000000000000000
-          Size.Width = 611.000000000000000000
+          Size.Width = 411.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.FontColor = xFF948B6D
@@ -46318,7 +46340,7 @@
           Margins.Left = 3.000000000000000000
           Margins.Right = 3.000000000000000000
           Margins.Bottom = 3.000000000000000000
-          Size.Width = 610.000000000000000000
+          Size.Width = 410.000000000000000000
           Size.Height = 76.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 2
@@ -46327,11 +46349,11 @@
           DefaultItemStyles.GroupHeaderStyle = ''
           DefaultItemStyles.GroupFooterStyle = ''
           ListStyle = Horizontal
-          Viewport.Width = 610.000000000000000000
-          Viewport.Height = 76.000000000000000000
+          Viewport.Width = 410.000000000000000000
+          Viewport.Height = 71.000000000000000000
           object ListBoxItem1: TListBoxItem
             Size.Width = 77.000000000000000000
-            Size.Height = 76.000000000000000000
+            Size.Height = 71.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             object Rectangle3: TRectangle
@@ -46339,7 +46361,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 76.000000000000000000
+              Size.Height = 71.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46385,7 +46407,7 @@
           object ListBoxItem2: TListBoxItem
             Position.X = 77.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 76.000000000000000000
+            Size.Height = 71.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
             object Rectangle5: TRectangle
@@ -46393,7 +46415,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 76.000000000000000000
+              Size.Height = 71.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46439,7 +46461,7 @@
           object ListBoxItem3: TListBoxItem
             Position.X = 154.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 76.000000000000000000
+            Size.Height = 71.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
             object Rectangle7: TRectangle
@@ -46447,7 +46469,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 76.000000000000000000
+              Size.Height = 71.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46493,7 +46515,7 @@
           object ListBoxItem4: TListBoxItem
             Position.X = 231.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 76.000000000000000000
+            Size.Height = 71.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 3
             object Rectangle9: TRectangle
@@ -46501,7 +46523,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 76.000000000000000000
+              Size.Height = 71.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46550,14 +46572,14 @@
             Margins.Right = 10.000000000000000000
             Position.X = 308.000000000000000000
             Size.Width = 133.000000000000000000
-            Size.Height = 76.000000000000000000
+            Size.Height = 71.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 4
             object Rectangle11: TRectangle
               Align = Client
               Fill.Kind = None
               Size.Width = 133.000000000000000000
-              Size.Height = 59.000000000000000000
+              Size.Height = 54.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46565,7 +46587,7 @@
               object Layout34: TLayout
                 Align = Left
                 Size.Width = 65.000000000000000000
-                Size.Height = 59.000000000000000000
+                Size.Height = 54.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
                 object edtAccMassaMagraO: TEdit
@@ -46599,7 +46621,7 @@
                 Align = Left
                 Position.X = 65.000000000000000000
                 Size.Width = 65.000000000000000000
-                Size.Height = 59.000000000000000000
+                Size.Height = 54.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
                 object edtAccMassaMagraNO: TEdit
@@ -46656,7 +46678,7 @@
           object ListBoxItem6: TListBoxItem
             Position.X = 451.000000000000000000
             Size.Width = 77.000000000000000000
-            Size.Height = 76.000000000000000000
+            Size.Height = 71.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 5
             object Rectangle13: TRectangle
@@ -46664,7 +46686,7 @@
               Fill.Kind = None
               Margins.Right = 10.000000000000000000
               Size.Width = 67.000000000000000000
-              Size.Height = 76.000000000000000000
+              Size.Height = 71.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46710,14 +46732,14 @@
           object ListBoxItem7: TListBoxItem
             Position.X = 528.000000000000000000
             Size.Width = 67.000000000000000000
-            Size.Height = 76.000000000000000000
+            Size.Height = 71.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 6
             object Rectangle15: TRectangle
               Align = Client
               Fill.Kind = None
               Size.Width = 67.000000000000000000
-              Size.Height = 76.000000000000000000
+              Size.Height = 71.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 2.000000000000000000
@@ -46766,9 +46788,9 @@
         Align = Bottom
         Fill.Kind = None
         Margins.Bottom = 10.000000000000000000
-        Position.Y = 461.000000000000000000
+        Position.Y = 565.000000000000000000
         Sides = [Top]
-        Size.Width = 636.000000000000000000
+        Size.Width = 436.000000000000000000
         Size.Height = 56.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = xFF948B6D
@@ -46777,7 +46799,7 @@
           Fill.Color = xFF948B6D
           Margins.Top = 5.000000000000000000
           Margins.Right = 10.000000000000000000
-          Position.X = 407.000000000000000000
+          Position.X = 207.000000000000000000
           Position.Y = 5.000000000000000000
           Size.Width = 219.000000000000000000
           Size.Height = 51.000000000000000000
@@ -46804,7 +46826,6 @@
               Size.Width = 219.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
-              TextSettings.Font.Size = 11.000000000000000000
               TextSettings.FontColor = claWhite
               TextSettings.HorzAlign = Center
               TextSettings.Trimming = None
@@ -46820,7 +46841,6 @@
               Size.Width = 219.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
-              TextSettings.Font.Size = 11.000000000000000000
               TextSettings.FontColor = claWhite
               TextSettings.HorzAlign = Center
               TextSettings.Trimming = None
@@ -47211,7 +47231,7 @@
         Margins.Right = 50.000000000000000000
         Position.X = 50.000000000000000000
         Position.Y = 5.000000000000000000
-        Size.Width = 536.000000000000000000
+        Size.Width = 336.000000000000000000
         Size.Height = 252.000000000000000000
         Size.PlatformDefault = False
         XRadius = 5.000000000000000000
@@ -47356,14 +47376,14 @@
           Margins.Top = 5.000000000000000000
           Margins.Right = 5.000000000000000000
           Margins.Bottom = 5.000000000000000000
-          Size.Width = 526.000000000000000000
+          Size.Width = 326.000000000000000000
           Size.Height = 242.000000000000000000
           Size.PlatformDefault = False
           object Layout3: TLayout
             Align = Top
             Margins.Top = 40.000000000000000000
             Position.Y = 40.000000000000000000
-            Size.Width = 526.000000000000000000
+            Size.Width = 326.000000000000000000
             Size.Height = 55.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
@@ -47422,7 +47442,7 @@
             object Layout9: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 437.000000000000000000
+              Position.X = 237.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 55.000000000000000000
               Size.PlatformDefault = False
@@ -47476,7 +47496,7 @@
             Align = Top
             Margins.Top = 10.000000000000000000
             Position.Y = 105.000000000000000000
-            Size.Width = 526.000000000000000000
+            Size.Width = 326.000000000000000000
             Size.Height = 80.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -47533,7 +47553,7 @@
             end
             object Label47: TLabel
               Align = Top
-              Size.Width = 526.000000000000000000
+              Size.Width = 326.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.HorzAlign = Center
@@ -47546,7 +47566,7 @@
             Align = Top
             Margins.Top = 10.000000000000000000
             Position.Y = 195.000000000000000000
-            Size.Width = 526.000000000000000000
+            Size.Width = 326.000000000000000000
             Size.Height = 55.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
@@ -47605,7 +47625,7 @@
             object Layout14: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 437.000000000000000000
+              Position.X = 237.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 55.000000000000000000
               Size.PlatformDefault = False
@@ -47661,7 +47681,7 @@
           StyledSettings = [Family]
           Margins.Left = 10.000000000000000000
           Position.X = 10.000000000000000000
-          Size.Width = 526.000000000000000000
+          Size.Width = 326.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -47679,7 +47699,7 @@
         Margins.Bottom = 5.000000000000000000
         Position.X = 50.000000000000000000
         Position.Y = 262.000000000000000000
-        Size.Width = 536.000000000000000000
+        Size.Width = 336.000000000000000000
         Size.Height = 265.000000000000000000
         Size.PlatformDefault = False
         XRadius = 5.000000000000000000
@@ -48991,14 +49011,14 @@
           Margins.Top = 5.000000000000000000
           Margins.Right = 5.000000000000000000
           Margins.Bottom = 5.000000000000000000
-          Size.Width = 526.000000000000000000
+          Size.Width = 326.000000000000000000
           Size.Height = 255.000000000000000000
           Size.PlatformDefault = False
           object Layout16: TLayout
             Align = Top
             Margins.Top = 5.000000000000000000
             Position.Y = 238.000000000000000000
-            Size.Width = 526.000000000000000000
+            Size.Width = 326.000000000000000000
             Size.Height = 81.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
@@ -49086,7 +49106,7 @@
             object Layout31: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 437.000000000000000000
+              Position.X = 237.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 81.000000000000000000
               Size.PlatformDefault = False
@@ -49170,13 +49190,13 @@
             Align = Top
             Margins.Top = 5.000000000000000000
             Position.Y = 126.000000000000000000
-            Size.Width = 526.000000000000000000
+            Size.Width = 326.000000000000000000
             Size.Height = 107.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             object Z: TLabel
               Align = Top
-              Size.Width = 526.000000000000000000
+              Size.Width = 326.000000000000000000
               Size.Height = 17.000000000000000000
               Size.PlatformDefault = False
               TextSettings.HorzAlign = Center
@@ -49270,7 +49290,7 @@
             Align = Top
             Margins.Top = 40.000000000000000000
             Position.Y = 40.000000000000000000
-            Size.Width = 526.000000000000000000
+            Size.Width = 326.000000000000000000
             Size.Height = 81.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
@@ -49359,7 +49379,7 @@
             object Layout27: TLayout
               Align = Right
               Margins.Right = 10.000000000000000000
-              Position.X = 437.000000000000000000
+              Position.X = 237.000000000000000000
               Size.Width = 79.000000000000000000
               Size.Height = 81.000000000000000000
               Size.PlatformDefault = False
@@ -49445,7 +49465,7 @@
           StyledSettings = [Family]
           Margins.Left = 10.000000000000000000
           Position.X = 10.000000000000000000
-          Size.Width = 526.000000000000000000
+          Size.Width = 326.000000000000000000
           Size.Height = 17.000000000000000000
           Size.PlatformDefault = False
           TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -49458,11 +49478,11 @@
       object lblDireita: TLabel
         Align = Scale
         StyledSettings = [Family]
-        Position.X = 537.310546875000000000
-        Position.Y = 253.382308959960900000
+        Position.X = 368.344940185546900000
+        Position.Y = 303.385620117187500000
         RotationAngle = 90.000000000000000000
-        Size.Width = 100.060729980468800000
-        Size.Height = 16.716445922851560000
+        Size.Width = 68.595184326171880000
+        Size.Height = 20.015380859375000000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 16.000000000000000000
         TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -49475,11 +49495,11 @@
       object lblesquerda: TLabel
         Align = Scale
         StyledSettings = [Family]
-        Position.X = -13.706903457641600000
-        Position.Y = 254.262039184570300000
+        Position.X = -9.396557807922363000
+        Position.Y = 304.439025878906300000
         RotationAngle = 270.000000000000000000
-        Size.Width = 116.508811950683600000
-        Size.Height = 20.235458374023440000
+        Size.Width = 79.870849609375000000
+        Size.Height = 24.228881835937500000
         Size.PlatformDefault = False
         TextSettings.Font.Size = 16.000000000000000000
         TextSettings.Font.StyleExt = {00060000000000000004000000}
@@ -49764,5 +49784,134 @@
       end>
     Left = 152
     Top = 528
+  end
+  object StyleBook1: TStyleBook
+    Styles = <
+      item
+      end
+      item
+        Platform = 'AndroidL Light'
+        ResourcesBin = {
+          464D585F5354594C4520322E3501060F436F6D626F426F78335374796C653103
+          D10E005450463007544C61796F757400095374796C654E616D65060F436F6D62
+          6F426F78335374796C653105416C69676E070643656E7465720A53697A652E57
+          696474680500000000000000E805400B53697A652E4865696768740500000000
+          0000008004401453697A652E506C6174666F726D44656661756C740808546162
+          4F7264657202530B46697865644865696768740220001254427574746F6E5374
+          796C654F626A65637400095374796C654E616D65060A6261636B67726F756E64
+          05416C69676E0708436F6E74656E74730C50616464696E672E4C656674050000
+          00000000008000400B50616464696E672E546F7005000000000000008000400D
+          50616464696E672E526967687405000000000000008000400E50616464696E67
+          2E426F74746F6D05000000000000008000400C536F757263654C6F6F6B757006
+          17416E64726F69644C204C696768747374796C652E706E670A53697A652E5769
+          6474680500000000000000E805400B53697A652E486569676874050000000000
+          00008004401453697A652E506C6174666F726D44656661756C740807486F744C
+          696E6B0E010E436170496E736574732E4C65667405000000000000008000400F
+          436170496E736574732E52696768740500000000000000F002400F536F757263
+          65526563742E4C65667405000000000000008506400E536F7572636552656374
+          2E546F700500000000000000FC044010536F75726365526563742E5269676874
+          0500000000000000A6064011536F75726365526563742E426F74746F6D050000
+          0000000000BE054000010E436170496E736574732E4C65667405000000000000
+          00C000400F436170496E736574732E52696768740500000000000000C0034005
+          5363616C650500000000000000C0FF3F0F536F75726365526563742E4C656674
+          0500000000000000D806400E536F75726365526563742E546F70050000000000
+          0000BE054010536F75726365526563742E526967687405000000000000008507
+          4011536F75726365526563742E426F74746F6D05000000000000008F06400001
+          0E436170496E736574732E4C65667405000000000000008001400F436170496E
+          736574732E52696768740500000000000000F00340055363616C650500000000
+          0000008000400F536F75726365526563742E4C65667405000000000000008207
+          400E536F75726365526563742E546F700500000000000000F4054010536F7572
+          6365526563742E52696768740500000000000000A3074011536F757263655265
+          63742E426F74746F6D0500000000000000BA064000010E436170496E73657473
+          2E4C6566740500000000000000C001400F436170496E736574732E5269676874
+          0500000000000000B40440055363616C650500000000000000C000400F536F75
+          726365526563742E4C6566740500000000000080E407400E536F757263655265
+          63742E546F700500000000000000BE064010536F75726365526563742E526967
+          687405000000000000008B084011536F75726365526563742E426F74746F6D05
+          000000000000008F074000000B466F63757365644C696E6B0E010E436170496E
+          736574732E4C65667405000000000000008000400F436170496E736574732E52
+          696768740500000000000000F002400F536F75726365526563742E4C65667405
+          000000000000008506400E536F75726365526563742E546F7005000000000000
+          00FC044010536F75726365526563742E52696768740500000000000000A60640
+          11536F75726365526563742E426F74746F6D0500000000000000BE054000010E
+          436170496E736574732E4C6566740500000000000000C000400F436170496E73
+          6574732E52696768740500000000000000C00340055363616C65050000000000
+          0000C0FF3F0F536F75726365526563742E4C6566740500000000000000D80640
+          0E536F75726365526563742E546F700500000000000000BE054010536F757263
+          65526563742E5269676874050000000000000085074011536F75726365526563
+          742E426F74746F6D05000000000000008F064000010E436170496E736574732E
+          4C65667405000000000000008001400F436170496E736574732E526967687405
+          00000000000000F00340055363616C6505000000000000008000400F536F7572
+          6365526563742E4C65667405000000000000008207400E536F75726365526563
+          742E546F700500000000000000F4054010536F75726365526563742E52696768
+          740500000000000000A3074011536F75726365526563742E426F74746F6D0500
+          000000000000BA064000010E436170496E736574732E4C656674050000000000
+          0000C001400F436170496E736574732E52696768740500000000000000B40440
+          055363616C650500000000000000C000400F536F75726365526563742E4C6566
+          740500000000000080E407400E536F75726365526563742E546F700500000000
+          000000BE064010536F75726365526563742E526967687405000000000000008B
+          084011536F75726365526563742E426F74746F6D05000000000000008F074000
+          000A4E6F726D616C4C696E6B0E010E436170496E736574732E4C656674050000
+          00000000008000400F436170496E736574732E52696768740500000000000000
+          F002400F536F75726365526563742E4C65667405000000000000008506400E53
+          6F75726365526563742E546F700500000000000000F0034010536F7572636552
+          6563742E52696768740500000000000000A6064011536F75726365526563742E
+          426F74746F6D0500000000000000F8044000010E436170496E736574732E4C65
+          66740500000000000000C000400F436170496E736574732E5269676874050000
+          0000000000C00340055363616C650500000000000000C0FF3F0F536F75726365
+          526563742E4C6566740500000000000000D806400E536F75726365526563742E
+          546F700500000000000000B4044010536F75726365526563742E526967687405
+          0000000000000085074011536F75726365526563742E426F74746F6D05000000
+          00000000BA054000010E436170496E736574732E4C6566740500000000000000
+          8001400F436170496E736574732E52696768740500000000000000F003400553
+          63616C6505000000000000008000400F536F75726365526563742E4C65667405
+          000000000000808207400E536F75726365526563742E546F7005000000000000
+          00E4044010536F75726365526563742E52696768740500000000000080A30740
+          11536F75726365526563742E426F74746F6D0500000000000000F2054000010E
+          436170496E736574732E4C6566740500000000000000C001400F436170496E73
+          6574732E52696768740500000000000000B40440055363616C65050000000000
+          0000C000400F536F75726365526563742E4C6566740500000000000080E40740
+          0E536F75726365526563742E546F700500000000000000BA054010536F757263
+          65526563742E526967687405000000000000008B084011536F75726365526563
+          742E426F74746F6D0500000000000000BD064000000B507265737365644C696E
+          6B0E010E436170496E736574732E4C65667405000000000000008000400F4361
+          70496E736574732E52696768740500000000000000F002400F536F7572636552
+          6563742E4C65667405000000000000008506400E536F75726365526563742E54
+          6F700500000000000000FC044010536F75726365526563742E52696768740500
+          000000000000A6064011536F75726365526563742E426F74746F6D0500000000
+          000000BE054000010E436170496E736574732E4C6566740500000000000000C0
+          00400F436170496E736574732E52696768740500000000000000C00340055363
+          616C650500000000000000C0FF3F0F536F75726365526563742E4C6566740500
+          000000000000D806400E536F75726365526563742E546F700500000000000000
+          BE054010536F75726365526563742E5269676874050000000000000085074011
+          536F75726365526563742E426F74746F6D05000000000000008F064000010E43
+          6170496E736574732E4C65667405000000000000008001400F436170496E7365
+          74732E52696768740500000000000000F00340055363616C6505000000000000
+          008000400F536F75726365526563742E4C65667405000000000000008207400E
+          536F75726365526563742E546F700500000000000000F4054010536F75726365
+          526563742E52696768740500000000000000A3074011536F7572636552656374
+          2E426F74746F6D0500000000000000BA064000010E436170496E736574732E4C
+          6566740500000000000000C001400F436170496E736574732E52696768740500
+          000000000000B40440055363616C650500000000000000C000400F536F757263
+          65526563742E4C6566740500000000000080E407400E536F7572636552656374
+          2E546F700500000000000000BE064010536F75726365526563742E5269676874
+          05000000000000008B084011536F75726365526563742E426F74746F6D050000
+          00000000008F0740000013546F756368416E696D6174696F6E2E4C696E6B0E00
+          0007544C61796F75740005416C69676E070552696768740A506F736974696F6E
+          2E580500000000000000C005400A506F736974696F6E2E590500000000000000
+          8000400A53697A652E576964746805000000000000009003400B53697A652E48
+          65696768740500000000000000E003401453697A652E506C6174666F726D4465
+          6661756C740800000007544C61796F757400095374796C654E616D650607636F
+          6E74656E7405416C69676E0706436C69656E74064C6F636B6564090C4D617267
+          696E732E4C65667405000000000000008000400B4D617267696E732E546F7005
+          000000000000008000400D4D617267696E732E52696768740500000000000000
+          8000400E4D617267696E732E426F74746F6D05000000000000008000400A5369
+          7A652E57696474680500000000000000E005400B53697A652E48656967687405
+          00000000000000E003401453697A652E506C6174666F726D44656661756C7408
+          00000B54466F6E744F626A65637400095374796C654E616D650604666F6E7409
+          466F6E742E53697A650500000000000000B0024000000C5442727573684F626A
+          65637400095374796C654E616D65060A666F726567726F756E640B4272757368
+          2E436F6C6F720709784646323232323232000000}
+      end>
   end
 end

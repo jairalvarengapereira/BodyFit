@@ -56,6 +56,6 @@
     <Transaction>2024/03/25 10:50:57.621,D:\Projetos\Delphi\BodyFit\Units\uDM.dfm=D:\Projetos\Delphi\BodyFit\Unit1.dfm</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile Android="RQCT700DW3M" Android64="RQCT700DW3M"/>
+		<NoProfile Android="" Android64="RQCT700DW3M"/>
 	</ActiveMobileDevice>
 </BorlandProject>

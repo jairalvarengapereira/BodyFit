@@ -130,14 +130,12 @@ type
     DateEdit1: TDateEdit;
     Label29: TLabel;
     Label30: TLabel;
-    ListBoxItem15: TListBoxItem;
     Label27: TLabel;
     Rectangle55: TRectangle;
     Edit14: TEdit;
     TabControl: TTabControl;
     tbBio: TTabItem;
     tbSegmentar: TTabItem;
-    ListBoxItem13: TListBoxItem;
     ListBoxItem14: TListBoxItem;
     Rectangle49: TRectangle;
     Rectangle50: TRectangle;
@@ -248,6 +246,9 @@ type
     rectAddBio: TRectangle;
     Glyph: TGlyph;
     lblCodigo: TLabel;
+    Edit1: TEdit;
+    StyleBook1: TStyleBook;
+    Label1: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);
