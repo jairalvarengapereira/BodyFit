@@ -6,7 +6,8 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Objects,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.ListBox, FMX.Layouts, FMX.Edit,
-  FMX.Ani, FMX.DateTimeCtrls, FMX.TabControl, System.ImageList, FMX.ImgList;
+  FMX.Ani, FMX.DateTimeCtrls, FMX.TabControl, System.ImageList, FMX.ImgList,
+  FMX.VirtualKeyboard, FMX.Platform;
 
 type
   TFrmBiomimpedancia = class(TForm)
@@ -16,50 +17,17 @@ type
     Image5: TImage;
     rectCliente: TRectangle;
     cbCliente: TComboBox;
-    Layout1: TLayout;
-    Label3: TLabel;
-    Rectangle1: TRectangle;
+    lytCabecalho: TLayout;
+    rectAcc: TRectangle;
     Rectangle2: TRectangle;
-    ListBox1: TListBox;
-    ListBoxItem1: TListBoxItem;
-    Rectangle3: TRectangle;
-    Rectangle4: TRectangle;
-    ListBoxItem2: TListBoxItem;
-    ListBoxItem3: TListBoxItem;
-    ListBoxItem4: TListBoxItem;
-    ListBoxItem5: TListBoxItem;
-    ListBoxItem6: TListBoxItem;
-    ListBoxItem7: TListBoxItem;
-    Rectangle9: TRectangle;
-    Rectangle10: TRectangle;
-    Rectangle11: TRectangle;
-    Rectangle12: TRectangle;
-    Rectangle13: TRectangle;
-    Rectangle14: TRectangle;
-    Rectangle15: TRectangle;
-    Rectangle16: TRectangle;
-    Label4: TLabel;
-    Label7: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
-    Label10: TLabel;
-    edtAccTBW: TEdit;
-    edtAccMGC: TEdit;
-    edtAccMassaMagraO: TEdit;
-    edtAccMLG: TEdit;
-    edtAccPeso: TEdit;
-    Layout2: TLayout;
-    Rectangle17: TRectangle;
+    recRodape: TRectangle;
     Rectangle18: TRectangle;
-    lvBioimpedancia: TListBox;
     SpeedButton1: TSpeedButton;
-    ListBoxItem8: TListBoxItem;
     Label11: TLabel;
     Rectangle20: TRectangle;
     Rectangle21: TRectangle;
     Rectangle23: TRectangle;
     Rectangle24: TRectangle;
-    ListBoxItem9: TListBoxItem;
     Rectangle25: TRectangle;
     Rectangle26: TRectangle;
     Label13: TLabel;
@@ -70,14 +38,13 @@ type
     Rectangle30: TRectangle;
     Label15: TLabel;
     Label16: TLabel;
-    Label17: TLabel;
+    lblTitDoPGC: TLabel;
     Label18: TLabel;
     edtAmgMME: TEdit;
     edtAmgMGC: TEdit;
     edtDoIMC: TEdit;
     edtDoPGC: TEdit;
     edtDoRCQ: TEdit;
-    ListBoxItem10: TListBoxItem;
     Rectangle31: TRectangle;
     Rectangle32: TRectangle;
     Label19: TLabel;
@@ -88,7 +55,6 @@ type
     Rectangle35: TRectangle;
     Rectangle36: TRectangle;
     Label22: TLabel;
-    ListBoxItem11: TListBoxItem;
     Rectangle37: TRectangle;
     Rectangle38: TRectangle;
     Label23: TLabel;
@@ -99,34 +65,12 @@ type
     Rectangle41: TRectangle;
     Rectangle42: TRectangle;
     Label26: TLabel;
-    ListBoxItem12: TListBoxItem;
-    Rectangle43: TRectangle;
-    Rectangle44: TRectangle;
-    IMC: TLabel;
-    Label28: TLabel;
-    Rectangle45: TRectangle;
-    Rectangle46: TRectangle;
-    RCQ: TLabel;
-    Rectangle47: TRectangle;
-    Rectangle48: TRectangle;
-    PGC: TLabel;
     ComboBox3: TComboBox;
     ComboBox4: TComboBox;
     ComboBox5: TComboBox;
     ComboBox6: TComboBox;
     ComboBox7: TComboBox;
     ComboBox8: TComboBox;
-    ComboBox9: TComboBox;
-    ComboBox10: TComboBox;
-    ComboBox11: TComboBox;
-    Rectangle5: TRectangle;
-    Rectangle6: TRectangle;
-    Label5: TLabel;
-    edtaccProteina: TEdit;
-    Rectangle7: TRectangle;
-    Rectangle8: TRectangle;
-    Label6: TLabel;
-    edtAccMinerais: TEdit;
     DateEdit1: TDateEdit;
     Label29: TLabel;
     Label30: TLabel;
@@ -136,23 +80,22 @@ type
     TabControl: TTabControl;
     tbBio: TTabItem;
     tbSegmentar: TTabItem;
-    ListBoxItem14: TListBoxItem;
     Rectangle49: TRectangle;
     Rectangle50: TRectangle;
     Label31: TLabel;
-    Edit23: TEdit;
+    edtCpPeso: TEdit;
     Label32: TLabel;
     Rectangle51: TRectangle;
     Rectangle52: TRectangle;
     Label33: TLabel;
-    Edit24: TEdit;
+    edtCpMuscular: TEdit;
     Rectangle53: TRectangle;
     Rectangle54: TRectangle;
     Label34: TLabel;
-    Edit25: TEdit;
-    rectForte: TRectangle;
+    edtCpGordura: TEdit;
+    rectMassaMagra: TRectangle;
     Image4: TImage;
-    rectGordo: TRectangle;
+    rectGordura: TRectangle;
     Image6: TImage;
     Label36: TLabel;
     Label35: TLabel;
@@ -230,32 +173,95 @@ type
     Layout33: TLayout;
     Edit32: TEdit;
     Label52: TLabel;
-    Layout34: TLayout;
-    Label53: TLabel;
-    Layout35: TLayout;
-    edtAccMassaMagraNO: TEdit;
-    Ósseo: TLabel;
     lblesquerda: TLabel;
     Circle2: TCircle;
     Image7: TImage;
     Rectangle56: TRectangle;
     Label2: TLabel;
     ImageList: TImageList;
-    Circle1: TCircle;
-    Image3: TImage;
     rectAddBio: TRectangle;
     Glyph: TGlyph;
     lblCodigo: TLabel;
-    Edit1: TEdit;
     StyleBook1: TStyleBook;
     Label1: TLabel;
+    lblDoIMC: TLabel;
+    lblDoPGC: TLabel;
+    lblDORCQ: TLabel;
+    Label3: TLabel;
+    lytACCTop: TLayout;
+    lytACCBottom: TLayout;
+    Rectangle3: TRectangle;
+    Rectangle4: TRectangle;
+    Label4: TLabel;
+    edtAccTBW: TEdit;
+    Rectangle5: TRectangle;
+    Rectangle6: TRectangle;
+    Label5: TLabel;
+    edtaccProteina: TEdit;
+    Rectangle7: TRectangle;
+    Rectangle8: TRectangle;
+    Label6: TLabel;
+    edtAccMinerais: TEdit;
+    Rectangle9: TRectangle;
+    Rectangle10: TRectangle;
+    Label7: TLabel;
+    edtAccMGC: TEdit;
+    Rectangle11: TRectangle;
+    Layout34: TLayout;
+    edtAccMassaMagraO: TEdit;
+    Label53: TLabel;
+    Layout35: TLayout;
+    edtAccMassaMagraNO: TEdit;
+    Ósseo: TLabel;
+    Rectangle12: TRectangle;
+    Label8: TLabel;
+    Rectangle13: TRectangle;
+    Rectangle14: TRectangle;
+    Label9: TLabel;
+    edtAccMLG: TEdit;
+    Rectangle15: TRectangle;
+    Rectangle16: TRectangle;
+    Label10: TLabel;
+    edtAccPeso: TEdit;
+    rectDO: TRectangle;
+    rectAMG: TRectangle;
+    rectGP: TRectangle;
+    rectCP: TRectangle;
+    rectAN: TRectangle;
+    lytRodape: TLayout;
+    lytACC: TLayout;
+    lytAMG: TLayout;
+    lytAN: TLayout;
+    lytCP: TLayout;
+    lytDO: TLayout;
+    lytGP: TLayout;
+    lbBio: TListBox;
+    lbiACC: TListBoxItem;
+    lbiAMG: TListBoxItem;
+    lbiAN: TListBoxItem;
+    lbiCP: TListBoxItem;
+    lbiDO: TListBoxItem;
+    lbiGP: TListBoxItem;
+    lbSeg: TListBox;
+    lbiMassaMagra: TListBoxItem;
+    lbiGordura: TListBoxItem;
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure edtAccTBWChange(Sender: TObject);
     procedure GlyphChanged(Sender: TObject);
+    procedure edtDoIMCExit(Sender: TObject);
+    procedure edtDoPGCExit(Sender: TObject);
+    procedure edtDoRCQExit(Sender: TObject);
+    procedure edtDoRCQKeyDown(Sender: TObject; var Key: Word;
+      var KeyChar: WideChar; Shift: TShiftState);
+    procedure FormVirtualKeyboardHidden(Sender: TObject;
+      KeyboardVisible: Boolean; const Bounds: TRect);
+    procedure FormVirtualKeyboardShown(Sender: TObject;
+      KeyboardVisible: Boolean; const Bounds: TRect);
   private
+    Foco : TControl;
     { Private declarations }
   public
     { Public declarations }
@@ -273,6 +279,49 @@ begin
   Glyph.ImageIndex := 1;
 end;
 
+procedure TFrmBiomimpedancia.edtDoIMCExit(Sender: TObject);
+begin
+  if edtDoIMC.Text <> '' then
+    if StrToFloat(edtDoIMC.Text) < 18.5 then
+      lblDoIMC.Text := 'Abaixo'
+    else
+    if (StrToFloat(edtDoIMC.Text) >= 18.5) and (StrToFloat(edtDoIMC.Text) <= 25) then
+      lblDoIMC.Text := 'Normal'
+    else
+      lblDoIMC.Text := 'Acima';
+end;
+
+procedure TFrmBiomimpedancia.edtDoPGCExit(Sender: TObject);
+begin
+  if edtDoPGC.Text <> '' then
+    if StrToFloat(edtDoPGC.Text) < 10 then
+      lblDoPGC.Text := 'Abaixo'
+    else
+    if (StrToFloat(edtDoPGC.Text) >= 10) and (StrToFloat(edtDoPGC.Text) <= 20) then
+      lblDoPGC.Text := 'Normal'
+    else
+      lblDoPGC.Text := 'Acima';
+end;
+
+procedure TFrmBiomimpedancia.edtDoRCQExit(Sender: TObject);
+begin
+  if edtDoRCQ.Text <> '' then
+    if StrToFloat(edtDoRCQ.Text) < 0.8 then
+      lblDoRCQ.Text := 'Abaixo'
+    else
+    if (StrToFloat(edtDoRCQ.Text) >= 0.8) and (StrToFloat(edtDoRCQ.Text) <= 0.9) then
+      lblDORCQ.Text := 'Normal'
+    else
+      lblDORCQ.Text := 'Acima';
+end;
+
+procedure TFrmBiomimpedancia.edtDoRCQKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: WideChar; Shift: TShiftState);
+begin
+  if KeyChar = #46 then
+    keychar := #44;
+end;
+
 procedure TFrmBiomimpedancia.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
@@ -283,8 +332,23 @@ end;
 procedure TFrmBiomimpedancia.FormCreate(Sender: TObject);
 begin
   TabControl.GotoVisibleTab(0);
-  rectForte.Height := TabControl.Height / 2;
-  rectGordo.Height := rectForte.Height - 15;
+  rectMassaMagra.Height := TabControl.Height / 2;
+  rectGordura.Height := rectMassaMagra.Height - 15;
+end;
+
+procedure TFrmBiomimpedancia.FormVirtualKeyboardHidden(Sender: TObject;
+  KeyboardVisible: Boolean; const Bounds: TRect);
+begin
+  tabcontrol.Margins.Bottom := 0;
+end;
+
+procedure TFrmBiomimpedancia.FormVirtualKeyboardShown(Sender: TObject;
+  KeyboardVisible: Boolean; const Bounds: TRect);
+begin
+  if TabControl.TabIndex = 0 then
+    tabcontrol.Margins.Bottom := 90
+  else
+    tabcontrol.Margins.Bottom := 300;
 end;
 
 procedure TFrmBiomimpedancia.GlyphChanged(Sender: TObject);

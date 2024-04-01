@@ -12,7 +12,9 @@ uses
   u99Permissions in 'Units\u99Permissions.pas',
   UnitPrin in 'UnitPrin.pas' {FrmPrin},
   uDM in 'Units\uDM.pas' {DM: TDataModule},
-  uFormat in 'Units\uFormat.pas';
+  uFormat in 'Units\uFormat.pas',
+  VirtualKeyboardBase in 'Units\VirtualKeyboardBase.pas' {VKBaseForm},
+  qdac_fmx_vkhelper in 'Units\qdac_fmx_vkhelper.pas';
 
 {$R *.res}
 
@@ -20,5 +22,6 @@ begin
   Application.Initialize;
   Application.CreateForm(TFrmPrin, FrmPrin);
   Application.CreateForm(TDM, DM);
+  Application.CreateForm(TVKBaseForm, VKBaseForm);
   Application.Run;
 end.

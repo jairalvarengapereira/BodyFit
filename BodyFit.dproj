@@ -384,39 +384,35 @@
         </DelphiCompile>
         <DCCReference Include="UnitPrincipal.pas">
             <Form>FrmPrincipal</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="UnitCliente.pas">
             <Form>FrmCliente</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="UnitRanking.pas">
             <Form>FrmRanking</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="UnitBioimpedancia.pas">
             <Form>FrmBiomimpedancia</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="UnitIMC.pas">
             <Form>FrmIMC</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="UnitFotos.pas">
             <Form>FrmFotos</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="Units\u99Permissions.pas"/>
         <DCCReference Include="UnitPrin.pas">
             <Form>FrmPrin</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="Units\uDM.pas">
             <Form>DM</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="Units\uFormat.pas"/>
+        <DCCReference Include="Units\VirtualKeyboardBase.pas">
+            <Form>VKBaseForm</Form>
+        </DCCReference>
+        <DCCReference Include="Units\qdac_fmx_vkhelper.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
