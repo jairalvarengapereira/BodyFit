@@ -66,6 +66,9 @@ type
     procedure rectCancelClick(Sender: TObject);
     procedure lvDetalheInvesteItemClick(const Sender: TObject;
       const AItem: TListViewItem);
+    procedure edtValorKeyDown(Sender: TObject; var Key: Word;
+      var KeyChar: WideChar; Shift: TShiftState);
+    procedure edtValorExit(Sender: TObject);
   private
     procedure ListarRanking;
     procedure Add_Ranking(valor: double; id: integer; nome: string);
@@ -156,6 +159,20 @@ begin
     TabControl.GotoVisibleTab(TabControl.TabIndex-1)
   else
     Close;
+end;
+
+procedure TFrmRanking.edtValorExit(Sender: TObject);
+begin
+  edtValor.Text := FormatCurr('R$ #,##0.00', StrToCurr(edtValor.Text));
+end;
+
+procedure TFrmRanking.edtValorKeyDown(Sender: TObject; var Key: Word;
+  var KeyChar: WideChar; Shift: TShiftState);
+begin
+  if (not(KeyChar in ['0'..'9', '.', ','])) and (Ord(keychar)<>8) and (keychar <> #0) then
+    keychar := #0;
+  if KeyChar = #46 then
+    keychar := #44;
 end;
 
 procedure TFrmRanking.Add_Ranking(valor:double ; id:integer; nome:string);

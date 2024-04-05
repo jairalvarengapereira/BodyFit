@@ -45090,7 +45090,7 @@ object FrmRanking: TFrmRanking
     Size.Height = 543.000000000000000000
     Size.PlatformDefault = False
     TabHeight = 49.000000000000000000
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 1
     TabPosition = None
     Sizes = (
@@ -45105,7 +45105,7 @@ object FrmRanking: TFrmRanking
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = True
+      IsSelected = False
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -45608,7 +45608,7 @@ object FrmRanking: TFrmRanking
           TabOrder = 1
         end
         object dtIniGrafico: TDateEdit
-          Date = 45377.000000000000000000
+          Date = 45386.000000000000000000
           TodayDefault = True
           Align = Left
           Position.X = 41.000000000000000000
@@ -45635,7 +45635,7 @@ object FrmRanking: TFrmRanking
           TabOrder = 0
         end
         object dtFinGrafico: TDateEdit
-          Date = 45377.000000000000000000
+          Date = 45386.000000000000000000
           TodayDefault = True
           Align = Left
           Position.X = 172.000000000000000000
@@ -45908,7 +45908,7 @@ object FrmRanking: TFrmRanking
         item
         end>
       TextSettings.Trimming = None
-      IsSelected = False
+      IsSelected = True
       Size.Width = 8.000000000000000000
       Size.Height = 8.000000000000000000
       Size.PlatformDefault = False
@@ -46051,7 +46051,7 @@ object FrmRanking: TFrmRanking
           end
         end
         object edtData: TDateEdit
-          Date = 45377.000000000000000000
+          Date = 45386.000000000000000000
           TodayDefault = True
           Align = Left
           Margins.Left = 5.000000000000000000
@@ -46081,6 +46081,8 @@ object FrmRanking: TFrmRanking
           Size.PlatformDefault = False
           TextPrompt = 'R$ 0,00'
           StyledSettings = [Family, Style, FontColor]
+          OnKeyDown = edtValorKeyDown
+          OnExit = edtValorExit
         end
         object Rectangle10: TRectangle
           Align = Bottom

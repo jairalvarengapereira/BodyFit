@@ -95,7 +95,7 @@ type
     edtCpGordura: TEdit;
     rectMassaMagra: TRectangle;
     Image4: TImage;
-    rectGordo: TRectangle;
+    rectGordura: TRectangle;
     Image6: TImage;
     Label36: TLabel;
     Label35: TLabel;
@@ -318,6 +318,9 @@ end;
 procedure TFrmBiomimpedancia.edtDoRCQKeyDown(Sender: TObject; var Key: Word;
   var KeyChar: WideChar; Shift: TShiftState);
 begin
+  if (not(KeyChar in ['0'..'9', '.', ','])) and (Ord(keychar)<>8) and (keychar <> #0) then
+    keychar := #0;
+
   if KeyChar = #46 then
     keychar := #44;
 end;
@@ -332,31 +335,43 @@ end;
 procedure TFrmBiomimpedancia.FormCreate(Sender: TObject);
 begin
   TabControl.GotoVisibleTab(0);
-  rectForte.Height := TabControl.Height / 2;
-  rectGordo.Height := rectForte.Height - 15;
 end;
 
 procedure TFrmBiomimpedancia.FormVirtualKeyboardHidden(Sender: TObject;
   KeyboardVisible: Boolean; const Bounds: TRect);
 begin
-  tabcontrol.Margins.Bottom := 0;
+  lbBio.Margins.Bottom := 0;
+  lbSeg.Margins.Bottom := 0;
 end;
 
 procedure TFrmBiomimpedancia.FormVirtualKeyboardShown(Sender: TObject;
   KeyboardVisible: Boolean; const Bounds: TRect);
 begin
-  if TabControl.TabIndex = 0 then
-    tabcontrol.Margins.Bottom := 90
-  else
-    tabcontrol.Margins.Bottom := 300;
+    lbBio.Margins.Bottom := 100;
+    lbSeg.Margins.Bottom := 330;
 end;
 
 procedure TFrmBiomimpedancia.GlyphChanged(Sender: TObject);
+var
+  i : integer;
 begin
   if Glyph.ImageIndex = 0 then
-    Glyph.ImageIndex := 1
+  begin
+  for i := 0 to ComponentCount -1 do
+    begin
+      if Components[i] is TEdit then
+        TEdit(Components[i]).Text := EmptyStr;
+
+      if Components[i] is TComboBox then
+        TComboBox(Components[i]).ItemIndex := 0;
+    end;
+
+    Glyph.ImageIndex := 1;
+  end
   else
+  begin
     Glyph.ImageIndex := 0;
+  end;
 end;
 
 procedure TFrmBiomimpedancia.Image5Click(Sender: TObject);

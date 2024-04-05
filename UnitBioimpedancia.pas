@@ -16,7 +16,7 @@ type
     Image1: TImage;
     Image5: TImage;
     rectCliente: TRectangle;
-    cbCliente: TComboBox;
+    cbNome: TComboBox;
     lytCabecalho: TLayout;
     rectAcc: TRectangle;
     Rectangle2: TRectangle;
@@ -177,7 +177,6 @@ type
     Circle2: TCircle;
     Image7: TImage;
     Rectangle56: TRectangle;
-    Label2: TLabel;
     ImageList: TImageList;
     rectAddBio: TRectangle;
     Glyph: TGlyph;
@@ -250,7 +249,6 @@ type
     procedure Image5Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure edtAccTBWChange(Sender: TObject);
-    procedure GlyphChanged(Sender: TObject);
     procedure edtDoIMCExit(Sender: TObject);
     procedure edtDoPGCExit(Sender: TObject);
     procedure edtDoRCQExit(Sender: TObject);
@@ -260,8 +258,13 @@ type
       KeyboardVisible: Boolean; const Bounds: TRect);
     procedure FormVirtualKeyboardShown(Sender: TObject;
       KeyboardVisible: Boolean; const Bounds: TRect);
+    procedure rectAddBioClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure cbNomeChange(Sender: TObject);
   private
     Foco : TControl;
+    procedure LimpaForm;
+    procedure ListarClientes;
     { Private declarations }
   public
     { Public declarations }
@@ -273,6 +276,16 @@ var
 implementation
 
 {$R *.fmx}
+
+uses uDM;
+
+procedure TFrmBiomimpedancia.cbNomeChange(Sender: TObject);
+begin
+  if cbNome.ItemIndex = 0 then
+    lblCodigo.Text := EmptyStr
+  else
+    lblCodigo.Text := FormatFloat('00', DM.qryCliente.FieldByName('Cliente_ID').AsFloat);
+end;
 
 procedure TFrmBiomimpedancia.edtAccTBWChange(Sender: TObject);
 begin
@@ -318,6 +331,9 @@ end;
 procedure TFrmBiomimpedancia.edtDoRCQKeyDown(Sender: TObject; var Key: Word;
   var KeyChar: WideChar; Shift: TShiftState);
 begin
+  if (not(KeyChar in ['0'..'9', '.', ','])) and (Ord(keychar)<>8) and (keychar <> #0) then
+    keychar := #0;
+
   if KeyChar = #46 then
     keychar := #44;
 end;
@@ -332,31 +348,48 @@ end;
 procedure TFrmBiomimpedancia.FormCreate(Sender: TObject);
 begin
   TabControl.GotoVisibleTab(0);
-  rectMassaMagra.Height := TabControl.Height / 2;
-  rectGordura.Height := rectMassaMagra.Height - 15;
+end;
+
+procedure TFrmBiomimpedancia.FormShow(Sender: TObject);
+begin
+  ListarClientes;
+end;
+
+procedure TFrmBiomimpedancia.ListarClientes;
+begin
+  DM.ListarCliente;
+  with DM.qryCliente do
+  begin
+    if DM.qryCliente.RecordCount > 0 then
+    begin
+      cbNome.Items.Clear;
+      cbNome.Items.Add('Selecione Cliente');
+      while not eof do
+      begin
+        cbNome.Items.Add(DM.qryCliente.FieldByName('Cliente_Nome').AsString);
+        Next;
+      end;
+      cbNome.ItemIndex := 0;
+    end
+    else
+    begin
+      ShowMessage('Nenhum cliente cadastrado');
+    end;
+  end;
 end;
 
 procedure TFrmBiomimpedancia.FormVirtualKeyboardHidden(Sender: TObject;
   KeyboardVisible: Boolean; const Bounds: TRect);
 begin
-  tabcontrol.Margins.Bottom := 0;
+  lbBio.Margins.Bottom := 0;
+  lbSeg.Margins.Bottom := 0;
 end;
 
 procedure TFrmBiomimpedancia.FormVirtualKeyboardShown(Sender: TObject;
   KeyboardVisible: Boolean; const Bounds: TRect);
 begin
-  if TabControl.TabIndex = 0 then
-    tabcontrol.Margins.Bottom := 90
-  else
-    tabcontrol.Margins.Bottom := 300;
-end;
-
-procedure TFrmBiomimpedancia.GlyphChanged(Sender: TObject);
-begin
-  if Glyph.ImageIndex = 0 then
-    Glyph.ImageIndex := 1
-  else
-    Glyph.ImageIndex := 0;
+    lbBio.Margins.Bottom := 100;
+    lbSeg.Margins.Bottom := 330;
 end;
 
 procedure TFrmBiomimpedancia.Image5Click(Sender: TObject);
@@ -365,6 +398,33 @@ begin
     close
   else
     TabControl.GotoVisibleTab(0);
+end;
+
+procedure TFrmBiomimpedancia.rectAddBioClick(Sender: TObject);
+begin
+  if Glyph.ImageIndex = 0 then
+  begin
+    LimpaForm;
+    Glyph.ImageIndex := 1;
+  end
+  else
+  begin
+    Glyph.ImageIndex := 0;
+  end;
+end;
+
+procedure TFrmBiomimpedancia.LimpaForm;
+var
+  i : integer;
+begin
+  for i := 0 to ComponentCount -1 do
+  begin
+    if Components[i] is TEdit then
+        TEdit(Components[i]).Text := EmptyStr;
+
+    if (Components[i] is TComboBox) and (TComboBox(Components[i]).Name <> 'cbNome') then
+      TComboBox(Components[i]).ItemIndex := 0;
+  end;
 end;
 
 procedure TFrmBiomimpedancia.SpeedButton1Click(Sender: TObject);
