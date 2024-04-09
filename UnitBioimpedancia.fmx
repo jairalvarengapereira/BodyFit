@@ -45397,7 +45397,7 @@
                 TextSettings.HorzAlign = Center
                 TextSettings.Trimming = None
                 Text = 'Massa Magra Segmentar'
-                TabOrder = 6
+                TabOrder = 5
               end
               object Label30: TLabel
                 Align = Top
@@ -45412,7 +45412,7 @@
                 TextSettings.HorzAlign = Center
                 TextSettings.Trimming = None
                 Text = 'Gordura Segmentar'
-                TabOrder = 8
+                TabOrder = 7
               end
             end
           end
@@ -45523,6 +45523,90 @@
               Margins.Bottom = 7.000000000000000000
               Size.Width = 23.000000000000000000
               Size.Height = 42.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+          object Circle1: TCircle
+            Align = Left
+            Fill.Color = xFF948B6D
+            Margins.Left = 10.000000000000000000
+            Position.X = 57.000000000000000000
+            Size.Width = 37.000000000000000000
+            Size.Height = 56.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            object Image2: TImage
+              MultiResBitmap.Height = 256
+              MultiResBitmap.Width = 256
+              MultiResBitmap = <
+                item
+                  Width = 256
+                  Height = 256
+                  PNG = {
+                    89504E470D0A1A0A0000000D49484452000001000000010008060000005C72A8
+                    660000000473424954080808087C0864880000063A49444154789CEDD75972DD
+                    380C0550DBFBDF8AB380EEC5A93F3A2CBB3C3E491C00F09CBF54A512F15E80D2
+                    7B7A020000000000000000000000000000000000000000000000000000000000
+                    0000000000000000000000000000000000000000000080609E573FC02AC7711C
+                    EFFFFCFCFCBC6D163BD2FFFFB63AF4C7D2BFB3EB3054A7FFCF5E563FC00CC771
+                    BC3E5AFEDFBF7F1CC7F1CFC867621EFD7FAFFC4D77A6F8AFECF436A848FF3F2B
+                    FD05701CC76B877FE3D600B14E8FEE7ACC5064A56FB79ECB5BFD4D508DEE1F53
+                    F66023DEDC9507A112DD3FAEF44F80DEFC1C884F47E7B8004E326071E9E6BC92
+                    9F353306A1EA2761563ABFC617C045DE3671E8E23A17C00D066F3D1DDCE302B8
+                    C900AE23FBFBCAFDA669660F47C5DF8791E9B70F5F009D781BCD23EB7E5C001D
+                    19CCF164DC57C9CF9A66D5B054FD5C5C4D9FFD55FF02F8B3E23FF596EA6F61A6
+                    4B666896B2375BB372192BBF3966D2E138A50FD718A0BC743756F9033606291F
+                    9D8DB7C5211B039587AEE6D8E6A08DC18A4F47F36C75D8C680C5A59BB9B63B70
+                    63D0E2D1C97C5B1EBA317071E8628D6D0FDE18BCF574B0CED6876F0CE03AB25F
+                    6BFB001A83389FCCD713C23B06721E59C720880F0CE678328E43185F30A0E3C8
+                    3616817CC3A0F627D37884F20303DB8F2C6312CC2F0CEE7D328C4B380F30C0D7
+                    C92E36013DC8209F27B3F8847482817E9CAC7210D44906FB7732CA43581718F0
+                    EFC92617815D64D03F93493E42BBC1C0BF91454E82BBC9E0CB2033E175B0F302
+                    EC7CF60A04D8C98E8BB0E399AB1162473B2DC44E67AD4C909DEDB0183B9C7117
+                    C21CA0F282543EDB8E043A48C545A978A6DD0975A04A0B53E92CBC11EC601516
+                    A7C219F89A7027C8BC40999F9DDF0978928C8B94F1993947C813655AA84CCFCA
+                    75829E2CC362657846FA10F60291172CF2B3D19FC01789B868119F89B184BE50
+                    A4858BF42CCC23F8C5222C5E8467600DE107B0720157B2FCEB292088DD2E01CB
+                    1F831202D9E512B0FC71282298EA9780E58F45190155BD042C7F3C0A09AADA25
+                    60F963524A60552E01CB1F976282CB7E0958FED8949340D64BC0F2C7A7A024B2
+                    5D02963F07252592E512B0FC79282A99E89780E5CF45590945BD042C7F3E0A4B
+                    2ADA2560F973525A62512E01CB9F97E2925B7D0958FEDC5E563F00B08EDB3BB1
+                    D56FFFC657405E8A4B2ACAF2372E819C949650B4E56F5C02F9282C99A8CBDFB8
+                    0472515622D197BF7109E4A1A824B22C7FE312C8414909645BFEC625109F8282
+                    CBBAFC8D4B2036E504967DF91B97405C8A09AACAF2372E8198941250B5E56F5C
+                    02F1282498AACBDFB80462514620D597BF7109C4A188207659FEC62510831202
+                    D86DF91B97C07A0A586CE5F2B7058CF00CAC21FC85222D5EA467611EC12F1271
+                    E1223E1363097D81C88B16F9D9E84FE0936558B00CCF481FC29E28D362657A56
+                    AE13F42419172AE333738E9027C8BC48999F9DDF0978B00A0B54E10C7C4DB803
+                    555A9C4A67E18D6007A9B83015CFB43BA10E5079512A9F6D4702ED6C8705D9E1
+                    8CBB1066473B2DC64E67AD4C909DECB8103B9EB91A2176B0F322EC7CF60A0478
+                    9305904166C2BBC1E0BF91454E82BBC8C07F26937C84768141FF9E6C7211D849
+                    06FC7732CA43582718ECC7C92A07413DC8409F27B3F884F400837C9DEC6213D0
+                    2F0CF07D328C4B383F30B8FDC83226C17CC3C0F627D37884F205833A8E6C6311
+                    C80706743C19C7218C770CE63CB28E41107F19C8F964BE9E109E0CE24AB25F6B
+                    FB000CE07A3A5867EBC31BBC3874B1C6B6073770F1E864BE2D0F6DD0E2D2CD5C
+                    DB1DD880C5A7A379B63AACC1CA4357736C735003958FCEC6DBE29006292FDD8D
+                    55FE8006283F1D8EF3B2FA01463A8EE375D5FF5D7D70665A99E5CA199AA1F490
+                    AE7A7358FE31F4D95FD98319969AF4DA57E99F00B3551D924864DC970BA01383
+                    398FACFB2919E4ECCF4403B9869EEFF3057053C5A1C842F6F7B9006E3080EBE9
+                    E01E17C045062F0E5D5C5736B891BF0F0D5C4C3A3FCF17C0495507A102DD9CE7
+                    0238C180C5A7A3734A87D5F393D060E5A2FBC754FF02F8D3E31FA93C005575EC
+                    ACCB0C45557EB0EFBE092C7F6EFAFF59F52F8056E0955BFCDFEAE5EF40FF3F2B
+                    7FC0F71E7D1BEC50FC8EF4FFD93607FDE8E330EC543AFA070000000000000000
+                    0000000000000000000000000000000000000000000000000000000000000000
+                    000000000000000000000080B0FE03F82107DCA71843B50000000049454E44AE
+                    426082}
+                  FileName = 'D:\Projetos\Delphi\BodyFit\Imagens\cancel.png'
+                end>
+              Align = Client
+              Locked = True
+              HitTest = False
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Size.Width = 27.000000000000000000
+              Size.Height = 46.000000000000000000
               Size.PlatformDefault = False
             end
           end
@@ -46031,15 +46115,14 @@
             Size.PlatformDefault = False
             TabOrder = 8
             object rectAMG: TRectangle
-              Align = Top
+              Align = Client
               Fill.Kind = None
               Margins.Left = 10.000000000000000000
               Margins.Top = 5.000000000000000000
               Margins.Right = 10.000000000000000000
-              Position.X = 10.000000000000000000
-              Position.Y = 5.000000000000000000
-              Size.Width = 416.000000000000000000
-              Size.Height = 92.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Size.Width = 260.000000000000000000
+              Size.Height = 91.000000000000000000
               Size.PlatformDefault = False
               Stroke.Color = xFF948B6D
               XRadius = 4.000000000000000000
@@ -46049,7 +46132,7 @@
                 StyledSettings = [Family]
                 Margins.Left = 5.000000000000000000
                 Position.X = 5.000000000000000000
-                Size.Width = 260.000000000000000000
+                Size.Width = 255.000000000000000000
                 Size.Height = 20.000000000000000000
                 Size.PlatformDefault = False
                 TextSettings.FontColor = xFF948B6D
@@ -46066,7 +46149,7 @@
                 Position.X = 5.000000000000000000
                 Position.Y = 20.000000000000000000
                 Size.Width = 80.000000000000000000
-                Size.Height = 69.000000000000000000
+                Size.Height = 68.000000000000000000
                 Size.PlatformDefault = False
                 Stroke.Color = xFF948B6D
                 XRadius = 2.000000000000000000
@@ -46118,7 +46201,7 @@
                 Position.X = 95.000000000000000000
                 Position.Y = 20.000000000000000000
                 Size.Width = 80.000000000000000000
-                Size.Height = 69.000000000000000000
+                Size.Height = 68.000000000000000000
                 Size.PlatformDefault = False
                 Stroke.Color = xFF948B6D
                 XRadius = 2.000000000000000000
@@ -46162,28 +46245,50 @@
                   OnKeyDown = edtDoRCQKeyDown
                 end
               end
-              object Rectangle55: TRectangle
-                Align = MostRight
-                Fill.Kind = None
-                Margins.Top = 3.000000000000000000
-                Margins.Right = 5.000000000000000000
-                Margins.Bottom = 3.000000000000000000
-                Position.X = 265.000000000000000000
-                Position.Y = 3.000000000000000000
+            end
+            object rectMetBasal: TRectangle
+              Align = Right
+              Fill.Kind = None
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 10.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.X = 280.000000000000000000
+              Position.Y = 5.000000000000000000
+              Size.Width = 146.000000000000000000
+              Size.Height = 91.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Color = xFF948B6D
+              XRadius = 2.000000000000000000
+              YRadius = 2.000000000000000000
+              object Layout1: TLayout
+                Align = Client
                 Size.Width = 146.000000000000000000
-                Size.Height = 86.000000000000000000
+                Size.Height = 74.000000000000000000
                 Size.PlatformDefault = False
-                Stroke.Color = xFF948B6D
-                XRadius = 2.000000000000000000
-                YRadius = 2.000000000000000000
+                TabOrder = 0
+                object Label1: TLabel
+                  StyledSettings = [Family, Style]
+                  Position.X = 96.000000000000000000
+                  Position.Y = 32.000000000000000000
+                  Size.Width = 50.000000000000000000
+                  Size.Height = 31.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.FontColor = xFF948B6D
+                  TextSettings.Trimming = None
+                  Text = 'kcal'
+                  TabOrder = 2
+                end
                 object Edit14: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
-                  Align = Center
+                  Align = Left
                   TabOrder = 1
                   KeyboardType = DecimalNumberPad
                   TextSettings.FontColor = xFF948B6D
                   TextSettings.HorzAlign = Center
                   TextSettings.VertAlign = Trailing
+                  Position.X = 10.000000000000000000
+                  Position.Y = 21.000000000000000000
+                  Margins.Left = 10.000000000000000000
                   Size.Width = 65.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
@@ -46191,6 +46296,16 @@
                   OnChange = edtAccTBWChange
                   OnKeyDown = edtDoRCQKeyDown
                 end
+              end
+              object Rectangle1: TRectangle
+                Align = Top
+                Fill.Kind = None
+                Size.Width = 146.000000000000000000
+                Size.Height = 17.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Color = xFF948B6D
+                XRadius = 2.000000000000000000
+                YRadius = 2.000000000000000000
                 object Label27: TLabel
                   Align = Top
                   StyledSettings = [Family]
@@ -46206,21 +46321,6 @@
                   TextSettings.Trimming = None
                   Text = 'Taxa de Metabolismo Basal'
                   TabOrder = 0
-                end
-                object Label1: TLabel
-                  Align = Bottom
-                  StyledSettings = [Family, Style]
-                  Position.Y = 70.000000000000000000
-                  Size.Width = 146.000000000000000000
-                  Size.Height = 16.000000000000000000
-                  Size.PlatformDefault = False
-                  TextSettings.Font.Size = 11.000000000000000000
-                  TextSettings.FontColor = xFF948B6D
-                  TextSettings.HorzAlign = Center
-                  TextSettings.VertAlign = Leading
-                  TextSettings.Trimming = None
-                  Text = 'kcal'
-                  TabOrder = 2
                 end
               end
             end
@@ -47118,7 +47218,7 @@
           TextSettings.HorzAlign = Trailing
           TextSettings.Trimming = None
           Text = 'Direita'
-          TabOrder = 4
+          TabOrder = 3
         end
       end
       object lbSeg: TListBox

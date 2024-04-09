@@ -75,7 +75,7 @@ type
     Label29: TLabel;
     Label30: TLabel;
     Label27: TLabel;
-    Rectangle55: TRectangle;
+    rectMetBasal: TRectangle;
     Edit14: TEdit;
     TabControl: TTabControl;
     tbBio: TTabItem;
@@ -244,6 +244,10 @@ type
     lbSeg: TListBox;
     lbiMassaMagra: TListBoxItem;
     lbiGordura: TListBoxItem;
+    Layout1: TLayout;
+    Rectangle1: TRectangle;
+    Circle1: TCircle;
+    Image2: TImage;
     procedure FormCreate(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure Image5Click(Sender: TObject);
