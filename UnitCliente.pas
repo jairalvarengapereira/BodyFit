@@ -36,7 +36,6 @@ type
     Rectangle1: TRectangle;
     Label1: TLabel;
     edtAltura: TEdit;
-    rectAddCliente: TRectangle;
     cbNome: TComboBox;
     dtNascimento: TDateEdit;
     Label3: TLabel;
@@ -44,7 +43,6 @@ type
     Rectangle5: TRectangle;
     edtEndereco: TEdit;
     lytCEP: TLayout;
-    rectBuscar: TRectangle;
     Image8: TImage;
     Layout1: TLayout;
     Rectangle10: TRectangle;
@@ -62,26 +60,29 @@ type
     MemTable: TFDMemTable;
     btnMenu: TCircle;
     ImageList: TImageList;
-    GlyphAdd: TGlyph;
     edtNome: TEdit;
     lytNome: TLayout;
     rectCodigo: TRectangle;
     lblCodigo: TLabel;
     rectForm: TRectangle;
     rectMenu: TRectangle;
-    Rectangle2: TRectangle;
-    btnMenuAdd: TButton;
-    Rectangle3: TRectangle;
-    btnMenuDel: TButton;
-    Rectangle4: TRectangle;
-    btnMenuAlter: TButton;
     btnConfirm: TCircle;
     GlyphConfirm: TGlyph;
     btnCancel: TCircle;
     GlyphCancel: TGlyph;
+    GlyphMenu: TGlyph;
+    btnMenuAdd: TCircle;
+    Glyph3: TGlyph;
+    btnMenueditar: TCircle;
+    Glyph5: TGlyph;
+    btnMenuDel: TCircle;
+    Glyph4: TGlyph;
     btnMenuSair: TCircle;
     Glyph1: TGlyph;
-    GlyphMenu: TGlyph;
+    Label2: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
 
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure edtCPFKeyDown(Sender: TObject; var Key: Word;
@@ -90,10 +91,7 @@ type
       var KeyChar: WideChar; Shift: TShiftState);
     procedure edtCEPKeyDown(Sender: TObject; var Key: Word;
       var KeyChar: WideChar; Shift: TShiftState);
-    procedure rectBuscarClick(Sender: TObject);
     procedure btnVoltarClick(Sender: TObject);
-    procedure dtNascimentoChange(Sender: TObject);
-    procedure rectAddClienteClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure edtAlturaKeyDown(Sender: TObject; var Key: Word;
       var KeyChar: WideChar; Shift: TShiftState);
@@ -101,11 +99,13 @@ type
     procedure btnMenuClick(Sender: TObject);
     procedure btnMenuAddClick(Sender: TObject);
     procedure btnMenuDelClick(Sender: TObject);
-    procedure btnMenuAlterClick(Sender: TObject);
     procedure cbNomeChange(Sender: TObject);
     procedure btnMenuSairClick(Sender: TObject);
     procedure btnCancelClick(Sender: TObject);
+    procedure btnConfirmClick(Sender: TObject);
+    procedure btnMenuAlterClick(Sender: TObject);
   private
+    AddCli : Boolean;
     procedure ConsultarCEP(cep: string);
     procedure rectBuscaClick(Sender: TObject);
     procedure DelCliente;
@@ -189,9 +189,9 @@ begin
   if (Key = vkBack) then
   exit;
 
-  if Length(edtFone.Text) < 1  then
+  if Pos('(', edtFone.Text) = 0 then
   begin
-     edtFone.Text := edtFone.Text + '(';
+     edtFone.Text := '(';
      edtFone.Selstart := Length(edtFone.text);
   end;
 
@@ -230,10 +230,10 @@ begin
   DM.ListarCliente;
   with DM.qryCliente do
   begin
+    cbNome.Items.Clear;
+//    cbNome.Items.Add('Selecione cliente');
     if RecordCount > 0 then
     begin
-      cbNome.Items.Clear;
-      cbNome.Items.Add('Selecione cliente');
       while not eof do
       begin
         cbNome.Items.Add(DM.qryCliente.FieldByName('Cliente_Nome').AsString);
@@ -248,40 +248,6 @@ begin
   end;
   cbNome.Visible := True;
   cbNome.HitTest := True;
-  cbNome.Locked := False;
-  cbNome.ItemIndex := 0;
-end;
-
-procedure TFrmCliente.rectAddClienteClick(Sender: TObject);
-begin
-  if GlyphAdd.ImageIndex = 0 then
-  begin
-    edtNome.Visible := True;
-    cbNome.Visible := False;
-    GlyphAdd.ImageIndex := 1;
-//    btnCancel.Visible := True;
-//    GlyphCancel.ImageIndex := 2;
-  end
-  else
-  begin
-    if TCircle(Sender).Name = 'btnDel' then
-      DelCliente
-    else
-//    if TCircle(Sender).Name = 'btnCancel' then
-//      ListarClientes
-//    else
-    if edtNome.Visible then
-      AddCliente
-    else
-      AlterCliente;
-
-    LimparCampos;
-
-    GlyphAdd.ImageIndex := 0;
-//    btnCancel.Visible := False;
-    edtNome.Visible := False;
-    cbNome.Visible := True;
-  end;
 end;
 
 procedure TFrmCliente.BlockOn;
@@ -314,11 +280,11 @@ begin
       TEdit(Components[i]).HitTest := True;
       TEdit(Components[i]).Locked := False;
     end;
-    if Components[i] is TComboBox then
-    begin
-      TDateEdit(Components[i]).HitTest := False;
-      TComboBox(Components[i]).Locked := False;
-    end;
+//    if Components[i] is TComboBox then
+//    begin
+//      TDateEdit(Components[i]).HitTest := False;
+//      TComboBox(Components[i]).Locked := False;
+//    end;
     if Components[i] is TDateEdit then
     begin
       TDateEdit(Components[i]).HitTest := True;
@@ -391,16 +357,11 @@ begin
     ParamByName('Cliente_Cidade'     ).Value := edtCidade.Text;
     ParamByName('Cliente_UF'         ).Value := edtUF.Text;
     ExecSQL;
-    ListarClientes;
+//    ListarClientes;
   end;
 end;
 
 procedure TFrmCliente.rectBuscaClick(Sender: TObject);
-begin
-  ConsultarCEP(edtCEP.Text);
-end;
-
-procedure TFrmCliente.rectBuscarClick(Sender: TObject);
 begin
   ConsultarCEP(edtCEP.Text);
 end;
@@ -440,7 +401,7 @@ begin
     ParamByName('Cliente_Cidade'     ).Value := edtCidade.Text;
     ParamByName('Cliente_UF'         ).Value := edtUF.Text;
     ExecSQL;
-    ListarClientes;
+//    ListarClientes;
   end;
 end;
 
@@ -468,36 +429,71 @@ begin
   BlockOn;
 end;
 
+procedure TFrmCliente.btnConfirmClick(Sender: TObject);
+begin
+  if AddCli then
+    AddCliente
+  else
+    AlterCliente;
+  LimparCampos;
+  ListarClientes;
+  cbNome.Visible := True;
+  edtNome.Visible := False;
+  btnCancel.Visible := False;
+  btnConfirm.Visible := False;
+  btnMenu.Visible := True;
+  BlockOn;
+end;
+
 procedure TFrmCliente.btnMenuAddClick(Sender: TObject);
 begin
   BlockOff;
   LimparCampos;
   dtNascimento.Date := Now;
-  lblCodigo.Text := '';
   cbNome.Visible := False;
   edtNome.Visible := True;
-  edtNome.SetFocus;
   btnCancel.Visible := True;
   btnConfirm.Visible := True;
   btnMenu.Visible := False;
   rectForm.Opacity := 1;
   rectMenu.Visible := False;
-end;
-
-procedure TFrmCliente.btnMenuDelClick(Sender: TObject);
-begin
-  DelCliente;
+  AddCli := True;
 end;
 
 procedure TFrmCliente.btnMenuAlterClick(Sender: TObject);
 begin
-  BlockOff;
-  edtNome.Visible := True;
-  edtNome.Text := cbNome.Selected.Text;
-  cbNome.Visible := False;
-  edtNome.SetFocus;
-  rectForm.Opacity := 1;
-  rectMenu.Visible := False;
+  if lblCodigo.Text <> '' then
+  begin
+    BlockOff;
+    edtNome.SetFocus;
+    btnCancel.Visible := True;
+    btnConfirm.Visible := True;
+    btnMenu.Visible := False;
+    rectForm.Opacity := 1;
+    rectMenu.Visible := False;
+    AddCli := False;
+  end
+  else
+  begin
+    ShowMessage('Selecione cliente.');
+  end;
+end;
+
+procedure TFrmCliente.btnMenuDelClick(Sender: TObject);
+begin
+  if lblCodigo.Text <> '' then
+  begin
+    DelCliente;
+    btnMenu.Visible := True;
+    rectForm.Opacity := 1;
+    rectMenu.Visible := False;
+    AddCli := False;
+    ListarClientes;
+  end
+  else
+  begin
+    ShowMessage('Selecione cliente.');
+  end;
 end;
 
 procedure TFrmCliente.cbNomeChange(Sender: TObject);
@@ -530,7 +526,9 @@ begin
       end;
     end
   else
+  begin
     LimparCampos;
+  end;
 end;
 
 procedure TFrmCliente.cbNomeExit(Sender: TObject);
@@ -584,21 +582,22 @@ end;
 
 procedure TFrmCliente.DelCliente;
 begin
-  with DM.qryCliente do
+  if lblCodigo.Text<> '' then
   begin
-    Close;
-    SQL.Clear;
-    SQL.Text:= 'Delete From Cliente where Cliente_ID = ' + lblCodigo.Text;
-    ExecSQL;
+    with DM.qryCliente do
+    begin
+      Close;
+      SQL.Clear;
+      SQL.Text:= 'Delete From Cliente where Cliente_ID = ' + lblCodigo.Text;
+      ExecSQL;
+    end;
+//    ListarClientes;
+    lblCodigo.Text := '';
+  end
+  else
+  begin
+    ShowMessage('Selecione cliente.');
   end;
-  ListarClientes;
-  lblCodigo.Text := '';
-end;
-
-procedure TFrmCliente.dtNascimentoChange(Sender: TObject);
-begin
-  GlyphAdd.ImageIndex := 1;
-//  GlyphCancel.ImageIndex := 2;
 end;
 
 end.
